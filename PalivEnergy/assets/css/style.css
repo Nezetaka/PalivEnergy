@@ -371,8 +371,48 @@ ul {
 
 /* Deliveries */
 .deliveries {
-  margin: 100px 283px;
+  margin: 100px 60px;
   padding-top: 100px;
+}
+
+.deliveries_inner_text {
+  display: inline-block;
+  width: 49%;
+}
+
+.deliveries_inner_gif {
+  display: inline-block;
+  width: 49%;
+}
+
+.deliveries_link {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  font-variant: small-caps;
+  opacity: 0.7;
+  color: #f2f2f2;
+  float: left;
+}
+
+.deliveries_link_active {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  color: #EB4B18;
+  opacity: 1;
 }
 
 .deliveries_text {
