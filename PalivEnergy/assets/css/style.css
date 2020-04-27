@@ -137,7 +137,7 @@ ul {
 }
 
 .top_logo{
-  margin-right: 80em;
+  margin-right: 57%;
   margin-top: 60px;
 }
 
@@ -190,8 +190,9 @@ ul {
 .header {
   width: 100%;
   height: 600px;
-  background: url(../images/intro.png);
-  background-size: cover;
+  background: url(../images/intro.png), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
   /*margin: 100px 283px;
   padding-top: 100px;
   margin-top: 40px;*/
@@ -246,7 +247,7 @@ ul {
 }
 
 .header_intro {
-  margin: 90px 0 0 80em;
+  margin: 80px 0 0 46%;
 }
 
 .intro_text {
@@ -311,6 +312,45 @@ ul {
   font-weight: normal;
   font-size: 20px;
   line-height: 27px;
+}
+
+.aboutus_inner {
+  display: inline-block;
+}
+
+.aboutus_inner_link {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+.aboutus_link {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #AB9477;
+  transform: rotate(90deg) translateX(-61%);
+  position: relative;
+}
+
+.aboutus_link:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-top: 1px solid #AB9477;
+  border-right: 1px solid #AB9477;
+  position: absolute;
+  top: -3px;
+  left: 36%;
+  z-index: 1;
+  transform: translateY(-50%)
+  rotate(-45deg);
 }
 
 /* How to */
@@ -380,9 +420,37 @@ ul {
   width: 49%;
 }
 
-.deliveries_inner_gif {
+.deliveries_more_link {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #AB9477;
+}
+
+.deliveries_gif {
   display: inline-block;
   width: 49%;
+}
+
+.deliveries_inner_gif {
+  background-image: url(../images/gas-animation.gif);
+  background-position: center;
+  height: 400px;
+}
+
+#deliveries_input {
+  display: none;
+}
+
+#deliveries_input:checked + .deliveries_inner_gif{
+  background-image: url(../images/electricity-animation.gif);
+  background-position: center;
 }
 
 .deliveries_link {
@@ -569,8 +637,45 @@ ul {
 
 /* News */
 .news {
-  margin: 100px 283px;
-  padding-top: 100px;
+  margin: 100px 60px;
+}
+
+.news_inner {
+  width: 100%;
+}
+
+.title_news {
+  display: inline-block;
+  margin-left: 283px;
+  margin-bottom: 60px;
+  margin-right: 550px;
+}
+
+.news_link {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  display: inline-block;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #AB9477;
+  position: relative;
+}
+
+.news_link:after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-top: 1px solid #AB9477;
+  border-right: 1px solid #AB9477;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%)
+  rotate(45deg);
 }
 
 .news_left {
