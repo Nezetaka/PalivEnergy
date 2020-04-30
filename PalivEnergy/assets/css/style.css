@@ -312,6 +312,7 @@ ul {
   font-weight: normal;
   font-size: 20px;
   line-height: 27px;
+  margin: 20px 0;
 }
 
 .aboutus_inner {
@@ -441,16 +442,11 @@ ul {
 .deliveries_inner_gif {
   background-image: url(../images/gas-animation.gif);
   background-position: center;
-  height: 460px;
+  height: 560px;
 }
 
 #deliveries_input {
   display: none;
-}
-
-#deliveries_input:checked ~ .deliveries_inner_gif{
-  background-image: url(../images/electricity-animation.gif);
-  background-position: center;
 }
 
 .deliveries_link {
@@ -466,81 +462,7 @@ ul {
   opacity: 0.7;
   color: #f2f2f2;
   float: left;
-  margin-left: 130px;
-}
-
-.deliveries_linkG {
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 26px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.1em;
-  font-variant: small-caps;
-  color: #EB4B18;
-  opacity: 1;
-  position: relative;
-}
-
-#deliveries_input:checked ~ .deliveries_linkG {
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 26px;
-  display: flex;
-  align-items: center;
-  font-variant: small-caps;
-  letter-spacing: 0;
-  opacity: 0.7;
-  color: #f2f2f2;
-  float: left;
-}
-
-#deliveries_input:checked ~ .deliveries_linkG:after {
-  content: "";
-  width: 0px;
-}
-
-#deliveries_input:not(checked) ~ .deliveries_linkG:after {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid #EB4B18;
-  width: 100%;
-  top: 22px;
-}
-
-#deliveries_input:checked ~ .deliveries_linkE {
-  text-decoration: none;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 26px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.1em;
-  font-variant: small-caps;
-  color: #EB4B18;
-  opacity: 1;
-  position: relative;
-}
-
-#deliveries_input:not(:checked) ~ .deliveries_linkE:after {
-  content: "";
-  width: 0px;
-}
-
-#deliveries_input:checked ~ .deliveries_linkE:after {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid #EB4B18;
-  width: 100%;
-  top: 22px;
+  margin-left: 160px;
 }
 
 .deliveries_text {
@@ -574,6 +496,31 @@ ul {
   z-index: 1;
   transform: translateY(-50%)
   rotate(45deg);
+}
+
+.active_fuel {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  color: #EB4B18;
+  opacity: 1;
+  position: relative;
+  transition: .1s linear;
+}
+
+.active_fuel:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #EB4B18;
+  width: 100%;
+  top: 22px;
 }
 
 /* Join us */
