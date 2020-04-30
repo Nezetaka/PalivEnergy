@@ -441,14 +441,14 @@ ul {
 .deliveries_inner_gif {
   background-image: url(../images/gas-animation.gif);
   background-position: center;
-  height: 400px;
+  height: 460px;
 }
 
 #deliveries_input {
   display: none;
 }
 
-#deliveries_input:checked + .deliveries_inner_gif{
+#deliveries_input:checked ~ .deliveries_inner_gif{
   background-image: url(../images/electricity-animation.gif);
   background-position: center;
 }
@@ -466,9 +466,10 @@ ul {
   opacity: 0.7;
   color: #f2f2f2;
   float: left;
+  margin-left: 130px;
 }
 
-.deliveries_link_active {
+.deliveries_linkG {
   text-decoration: none;
   font-family: Roboto;
   font-style: normal;
@@ -481,6 +482,65 @@ ul {
   font-variant: small-caps;
   color: #EB4B18;
   opacity: 1;
+  position: relative;
+}
+
+#deliveries_input:checked ~ .deliveries_linkG {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  font-variant: small-caps;
+  letter-spacing: 0;
+  opacity: 0.7;
+  color: #f2f2f2;
+  float: left;
+}
+
+#deliveries_input:checked ~ .deliveries_linkG:after {
+  content: "";
+  width: 0px;
+}
+
+#deliveries_input:not(checked) ~ .deliveries_linkG:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #EB4B18;
+  width: 100%;
+  top: 22px;
+}
+
+#deliveries_input:checked ~ .deliveries_linkE {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  color: #EB4B18;
+  opacity: 1;
+  position: relative;
+}
+
+#deliveries_input:not(:checked) ~ .deliveries_linkE:after {
+  content: "";
+  width: 0px;
+}
+
+#deliveries_input:checked ~ .deliveries_linkE:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #EB4B18;
+  width: 100%;
+  top: 22px;
 }
 
 .deliveries_text {
