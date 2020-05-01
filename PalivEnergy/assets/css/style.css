@@ -798,3 +798,58 @@ font-family: 'Open Sans Condensed', sans-serif;
   position: fixed;
   z-index: 999;
 }
+
+/*
+---------CONTACTS-----------
+*/
+
+.ourContacts {
+  background: #27282E;
+  padding: 100px 395px;
+}
+
+.Ctitle2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 49px;
+}
+
+.Ctitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #f2f2f2;
+  margin-top: 40px;
+}
+
+.Ctext {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #f2f2f2;
+  margin-top: 10px;
+}
+
+.Ctext2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  font-variant: small-caps;
+  color: #f2f2f2;
+  margin-top: 10px;
+}
