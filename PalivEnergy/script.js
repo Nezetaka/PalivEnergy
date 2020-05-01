@@ -43,7 +43,6 @@ function changeFuel(fuelType) {
 function lightOn(lamp) {
   if (lamp == 'lamp1') {
     lamp1.src = "assets/images/lamp_active01.png";
-    //lamp1.style.background = "url(assets/images/lamp_active01.png) no-repeat";
   } else if (lamp == 'lamp2') {
     lamp2.src = "assets/images/lamp_active02.png";
   } else if (lamp == 'lamp3') {
@@ -52,3 +51,19 @@ function lightOn(lamp) {
     lamp4.src = "assets/images/lamp_active04.png";
   }
 }
+
+var smoothJumpUp = function() {
+        if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
+            window.scrollBy(0,-80);
+            setTimeout(smoothJumpUp, 0.2);
+        }
+    }
+
+    window.onscroll = function() {
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 1000) {
+      	document.getElementById('upbutton').style.display = 'block';
+      } else {
+      	document.getElementById('upbutton').style.display = 'none';
+      }
+    }

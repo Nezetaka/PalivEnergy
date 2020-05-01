@@ -12,7 +12,7 @@
       <div class="header">
         <div class="topmenu">
           <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
-          <a href="#" class="news_link">новини</a>
+          <a href="#" class="top_news_link">новини</a>
           <p class="header_icon">
             <span id="s1"></span>
             <span id="s2"></span>
@@ -29,19 +29,21 @@
       <div class="aboutus">
         <div class="aboutus_inner">
           <h2 class="title">ПРО НАС</h2>
-          <p class="text">Компанія ТОВ "Вільна Енергетична Компанія "ПАЛІВЕНЕРГО" є постачальником електроенергії підприємствам України.</p><br>
-          <p class="text">Ми надаємо вигідні умови для співпраці, при яких враховуються ряд юридичних і фінансових переваг для споживача.</p><br>
-          <p class="text">Найцінніше у нашій організації – це наша репутація, яку ми успішно підтримуємо протягом вже декількох років.</p>
+          <p class="text about_text">Компанія ТОВ "Вільна Енергетична Компанія "ПАЛІВЕНЕРГО" є постачальником електроенергії підприємствам України.</p>
+          <p class="text about_text">Ми надаємо вигідні умови для співпраці, при яких враховуються ряд юридичних і фінансових переваг для споживача.</p>
+          <p class="text about_text">Найцінніше у нашій організації – це наша репутація, яку ми успішно підтримуємо протягом вже декількох років.</p>
         </div>
         <div class="aboutus_inner_link">
           <a href="#" class="aboutus_link">докладніше</a>
         </div>
       </div>
       <div class="howto">
-        <h2 class="title">ЯК СТАТИ КЛІЄНТОМ КОМПАНІЇ</h2>
-        <p class="text">Щоб детальніше ознайомитися з певним етапом, натисніть на відповідну лампочку.</p>
+        <div class="howto_text">
+          <h2 class="title">ЯК СТАТИ КЛІЄНТОМ КОМПАНІЇ</h2>
+          <p class="text">Щоб детальніше ознайомитися з певним етапом, натисніть на відповідну лампочку.</p>
+        </div>
         <div class="lights">
-        <img class="howto_img" id="lamp1" src="assets/images/lamp.png" onclick="lightOn('lamp1')" alt="light">
+          <img class="howto_img" id="lamp1" src="assets/images/lamp.png" onclick="lightOn('lamp1')" alt="light">
           <img class="howto_img" id="lamp2" src="assets/images/lamp.png" onclick="lightOn('lamp2')" alt="light">
           <img class="howto_img" id="lamp3" src="assets/images/lamp.png" onclick="lightOn('lamp3')" alt="light">
           <img class="howto_img" id="lamp4" src="assets/images/lamp.png" onclick="lightOn('lamp4')" alt="light">
@@ -164,7 +166,9 @@
           </ul>
         </div>
       </div>
-
+      <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
+      <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
+      </a>
     </div>
     <script src="script.js"></script>
   </body>

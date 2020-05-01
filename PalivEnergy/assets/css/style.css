@@ -201,7 +201,7 @@ ul {
   position: relative;
 }
 
-.news_link {
+.top_news_link {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -312,6 +312,10 @@ ul {
   margin: 20px 0;
 }
 
+.about_text {
+  margin-bottom: 30px;
+}
+
 .aboutus_inner {
   display: inline-block;
 }
@@ -333,7 +337,7 @@ ul {
   text-align: center;
   letter-spacing: 0.02em;
   color: #AB9477;
-  transform: rotate(90deg) translateX(-61%);
+  transform: rotate(90deg) translateX(-82%);
   position: relative;
 }
 
@@ -353,8 +357,12 @@ ul {
 
 /* How to */
 .howto {
-  margin: 100px 283px;
+  margin-top: 100px;
   padding-top: 100px;
+}
+
+.howto_text {
+  margin-left: 283px;
 }
 
 .lights {
@@ -364,23 +372,17 @@ ul {
   padding-bottom: 80px;
 }
 
-/*#lamp1 {
-  display: inline-block;
-  height: 50vh;
+.howto_img {
   width: 25%;
-  background: url(../images/lamp.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}*/
-
-/*.howto_img:hover {
-  opacity: 0;
-}*/
+  height: 660px;
+  object-fit: none;
+  object-position: top;
+}
 
 /* Deliveries */
 .deliveries {
-  margin: 100px 60px;
-  padding-top: 100px;
+  margin: 0px 60px;
+  margin-bottom: 100px;
 }
 
 .deliveries_inner_text {
@@ -786,4 +788,13 @@ font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+}
+
+#upbutton {
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  z-index: 999;
 }
