@@ -193,9 +193,6 @@ ul {
   background: url(../images/intro.png), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
   background-size: contain;
   background-repeat: no-repeat;
-  /*margin: 100px 283px;
-  padding-top: 100px;
-  margin-top: 40px;*/
 }
 
 .topmenu {
@@ -367,48 +364,18 @@ ul {
   padding-bottom: 80px;
 }
 
-.lights_active {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+/*#lamp1 {
+  display: inline-block;
+  height: 50vh;
+  width: 25%;
+  background: url(../images/lamp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}*/
 
-.howto_img_active {
+/*.howto_img:hover {
   opacity: 0;
-  transition: .1s linear;
-}
-
-.howto_img:hover {
-  opacity: 0;
-}
-
-.howto_img_active:hover {
-  opacity: 1;
-}
-
-.howto_img_active:active {
-  opacity: 1;
-}
-
-.howto_img_active:nth-child(1n) {
-  z-index: 7;
-  transform: translateX(-44%);
-}
-
-.howto_img_active:nth-child(2n) {
-  z-index: 5;
-  transform: translateX(-100%);
-}
-
-.howto_img_active:nth-child(3n) {
-  z-index: 3;
-  transform: translateX(-157%);
-}
-
-.howto_img_active:nth-child(4n) {
-  z-index: 1;
-  transform: translateX(-213%);
-}
+}*/
 
 /* Deliveries */
 .deliveries {

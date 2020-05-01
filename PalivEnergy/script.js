@@ -10,8 +10,9 @@ let pt8 = document.getElementById('pt8');
 let bg_animation = document.getElementById('bg_animation');
 let select_fuelG = document.getElementById('select_fuelG');
 let select_fuelE = document.getElementById('select_fuelE');
+let lamp1 = document.getElementById('lamp1');
 
-function changetext(fuelType) {
+function changeFuel(fuelType) {
   if(fuelType == "electricity") {
     pt1.innerHTML = "Процес укладання договору";
     pt2.innerHTML = "Документи, необхідні для укладання договору з постачальником електроенергії:";
@@ -36,5 +37,18 @@ function changetext(fuelType) {
     bg_animation.style.background = "url(assets/images/gas-animation.gif) no-repeat";
     select_fuelE.classList.remove("active_fuel");
     select_fuelG.classList.add("active_fuel");
+  }
+}
+
+function lightOn(lamp) {
+  if (lamp == 'lamp1') {
+    lamp1.src = "assets/images/lamp_active01.png";
+    //lamp1.style.background = "url(assets/images/lamp_active01.png) no-repeat";
+  } else if (lamp == 'lamp2') {
+    lamp2.src = "assets/images/lamp_active02.png";
+  } else if (lamp == 'lamp3') {
+    lamp3.src = "assets/images/lamp_active03.png";
+  } else if (lamp == 'lamp4') {
+    lamp4.src = "assets/images/lamp_active04.png";
   }
 }

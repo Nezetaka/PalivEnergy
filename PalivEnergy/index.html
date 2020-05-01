@@ -41,16 +41,10 @@
         <h2 class="title">ЯК СТАТИ КЛІЄНТОМ КОМПАНІЇ</h2>
         <p class="text">Щоб детальніше ознайомитися з певним етапом, натисніть на відповідну лампочку.</p>
         <div class="lights">
-          <img class="howto_img" src="assets/images/lamp.png" alt="light">
-          <img class="howto_img" src="assets/images/lamp.png" alt="light">
-          <img class="howto_img" src="assets/images/lamp.png" alt="light">
-          <img class="howto_img" src="assets/images/lamp.png" alt="light">
-        </div>
-        <div class="lights_active">
-          <img class="howto_img_active" src="assets/images/lamp_active01.png" alt="light">
-          <img class="howto_img_active" src="assets/images/lamp_active02.png" alt="light">
-          <img class="howto_img_active" src="assets/images/lamp_active03.png" alt="light">
-          <img class="howto_img_active" src="assets/images/lamp_active04.png" alt="light">
+        <img class="howto_img" id="lamp1" src="assets/images/lamp.png" onclick="lightOn('lamp1')" alt="light">
+          <img class="howto_img" id="lamp2" src="assets/images/lamp.png" onclick="lightOn('lamp2')" alt="light">
+          <img class="howto_img" id="lamp3" src="assets/images/lamp.png" onclick="lightOn('lamp3')" alt="light">
+          <img class="howto_img" id="lamp4" src="assets/images/lamp.png" onclick="lightOn('lamp4')" alt="light">
         </div>
       </div>
       <div class="deliveries">
@@ -71,8 +65,8 @@
         </div>
         <div class="deliveries_gif">
           <input id="deliveries_input" type="checkbox"></input>
-          <label for="deliveries_input" id="select_fuelE" class="deliveries_link" onclick="changetext('electricity')">електроенергія</label>
-          <label for="deliveries_input" id="select_fuelG" class="deliveries_link active_fuel" onclick="changetext('gas')">газ</label>
+          <label for="deliveries_input" id="select_fuelE" class="deliveries_link" onclick="changeFuel('electricity')">електроенергія</label>
+          <label for="deliveries_input" id="select_fuelG" class="deliveries_link active_fuel" onclick="changeFuel('gas')">газ</label>
           <div class="deliveries_inner_gif" id="bg_animation">
 
           </div>
