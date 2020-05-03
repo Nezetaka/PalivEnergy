@@ -1004,3 +1004,92 @@ font-family: 'Open Sans Condensed', sans-serif;
   width: 983px;
   margin-top: 43px;
 }
+
+/*
+---------HOW TO-----------
+*/
+
+.howto_steps {
+  background: #333333;
+  padding: 100px 283px;
+  height: 660px;
+  width: 100%;
+}
+
+.howto_steps_inner {
+  position: relative;
+  width: 100%;
+}
+
+.Htitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+  color: #F2F2F2;
+}
+
+.Htext {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #F2F2F2;
+  width: 550px;
+  margin-top: 25px;
+  z-index: 2;
+  position: absolute;
+}
+
+.Himages {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50px);
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  width: 100%;
+}
+
+#step1img {
+  width: 505px;
+  height: 348px;
+}
+
+#step1img, #step2img, #step3img, #step4img {
+  margin: 0 0 0 auto;
+}
+
+#step2img {
+  width: 417px;
+  height: 399px;
+}
+
+#step3img {
+  width: 619px;
+  height: 442px;
+}
+
+#step4img {
+  width: 429px;
+  height: 438px;
+}
+
+#step1img {
+  width: 505px;
+  height: 348px;
+}
+
+#HtextP2 {
+  margin-top: 170px;
+}
+
+#HtextP3 {
+  margin-top: 265px;
+}
