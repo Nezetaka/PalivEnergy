@@ -1174,3 +1174,121 @@ font-family: 'Open Sans Condensed', sans-serif;
 #HtextP3 {
   margin-top: 265px;
 }
+
+/*
+---------PARTNERS-----------
+*/
+
+.reviews {
+  padding-top: 100px;
+  background: #333333;
+  padding-left: 283px;
+}
+
+.partners {
+  padding-top: 100px;
+  background: #333333;
+}
+
+.partners_title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 49px;
+  color: #F2F2F2;
+  margin-left: 283px;
+}
+
+.partners_subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #F2F2F2;
+  opacity: 0.6;
+  margin-bottom: 70px;
+}
+
+.partners_address {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  color: #F2F2F2;
+}
+
+.invitation {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding-top: 279px;
+  padding-bottom: 278px;
+}
+
+.invite_btn {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  font-variant: small-caps;
+  color: #EB4B18;
+  border: 1px solid #EB4B18;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(233, 74, 24, 0.5);
+  padding: 9px 51px 8px 53px;
+  transition: .2s linear;
+}
+
+.invite_btn:hover {
+  background: #EB4B18;
+  color: #f2f2f2;
+  box-shadow: 0px 0px 10px rgba(233, 74, 24, 0.5);
+}
+
+.partners_sector {
+  padding: 287px 0 287px 283px;
+}
+
+.partners_sector:nth-child(2) {
+  background: #333333;
+}
+
+.partners_sector:nth-child(3) {
+  background: #4D4D4D;
+}
+
+.partners_sector:nth-child(4) {
+  background: #666666;
+}
+
+.partners_sector:nth-child(5) {
+  background: #808080;
+}
+
+.partners_sector:nth-child(6) {
+  background: #999999;
+}
+
+.title_sector {
+  display: inline-block;
+  width: 450px;
+  margin-right: 114px;
+}
+
+.text_sector {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.reviews_sector {
+  padding: 100px 0;
+}

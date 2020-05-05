@@ -40,17 +40,53 @@ function changeFuel(fuelType) {
   }
 }
 
-function lightOn(lamp) {
-  if (lamp == 'lamp1') {
-    lamp1.src = "assets/images/lamp_active01.png";
-  } else if (lamp == 'lamp2') {
-    lamp2.src = "assets/images/lamp_active02.png";
-  } else if (lamp == 'lamp3') {
-    lamp3.src = "assets/images/lamp_active03.png";
-  } else if (lamp == 'lamp4') {
-    lamp4.src = "assets/images/lamp_active04.png";
+function showreview(paper) {
+  switch (paper) {
+    case 1:
+      paper1.src = "assets/images/review1.png";
+      break;
+    case 2:
+      paper2.src = "assets/images/review2.png";
+      break;
+    case 3:
+      paper3.src = "assets/images/review3.png";
+      break;
+    case 4:
+      paper4.src = "assets/images/review4.png";
+      break;
+    case 5:
+      paper5.src = "assets/images/review5.png";
+      break;
+    case 6:
+      paper6.src = "assets/images/review6.png";
+      break;
+    case 7:
+      paper7.src = "assets/images/review7.png";
+      break;
+    default:
+      {}
   }
 }
+
+function lightOn(lamp) {
+  switch (lamp) {
+  case 1:
+    lamp1.src = "assets/images/lamp_active01.png";
+    break;
+  case 2:
+    lamp2.src = "assets/images/lamp_active02.png";
+    break;
+  case 3:
+    lamp3.src = "assets/images/lamp_active03.png";
+    break;
+  case 4:
+    lamp4.src = "assets/images/lamp_active04.png";
+    break;
+  default:
+    {}
+  }
+}
+
 
 var smoothJumpUp = function() {
   if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
