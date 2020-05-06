@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Paliv Energy</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="frame_inner">
+        <div class="nav1line">
+          <img class="top_logo" src="assets/images/nav_logo.png" alt="logo">
+          <a href="#" class="profile_link">особистий кабiнет</a>
+          <p class="nav_icon"></p>
+        </div>
+        <nav id="navnav">
+          <ul class="navul">
+            <li><a class="navigation_link" href="index.html">Головна</a></li>
+            <li><a class="navigation_link" href="about.html">Про нас</a></li>
+            <li><a class="navigation_link" href="partners.html">Партнери</a></li>
+            <li><a class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
+            <li><a class="navigation_link active" href="energydeliveries.html">Постачання електроенергії</a></li>
+            <li><a class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
+            <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="nav3line">
+          <div>
+            <span class="nav3line_label">слідкуйте за нами:</span>
+            <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+          </div>
+          <div>
+            <a class="lang" href="#">RU</a>
+            <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">EN</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliver">
+        <div class="deliver_section">
+          <h2 class="deliver_title" onclick="showdeliver(1)">Документи</h2>
+          <p class="deliver_section_text" id="deliver_section_text1"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link1"></a>
+          <p class="deliver_section_text" id="deliver_section_text2"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link2"></a>
+          <p class="deliver_section_text" id="deliver_section_text3"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link3"></a>
+          <p class="deliver_section_text" id="deliver_section_text4"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link4"></a>
+          <p class="deliver_section_text" id="deliver_section_text5"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link5"></a>
+          <p class="deliver_section_text" id="deliver_section_text6"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link6"></a>
+          <p class="deliver_section_text" id="deliver_section_text7"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link7"></a>
+          <p class="deliver_section_text" id="deliver_section_text8"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link8"></a>
+          <p class="deliver_section_text" id="deliver_section_text9"></p>
+          <a href="#" class="deliver_section_link" id="deliver_section_link9"></a>
+        </div>
+        <div class="deliver_section">
+          <h2 class="deliver_title" onclick="showdeliver(2)">Процес укладання договору</h2>
+          <!--
+          <ul id="slides">
+            <li class="slide showing">
+              <div class="slider_inner">
+                <p class="slider_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p>
+                <ol class="slider_numlist">
+                  <li class="slider_list">довідка про стан обліку електроенергії</li>
+                  <li class="slider_list">перелік технічних характеристик комерційних точок обліку</li>
+                  <li class="slider_list">свідоцтво про ДМА АСКОЕ/ЛУЗОД</li>
+                  <li class="slider_list">акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</li>
+                  <li class="slider_list">Графік денного та почасового прогнозованого споживання електричної енергії</li>
+                </ol>
+              </div>
+              <div class="slider_inner">
+                <img class="slider_image" src="./assets/images/steps1num.png" alt="1">
+              </div>
+              <p class="slider_next" onclick="nextSlide();"></p>
+            </li>
+            <li class="slide">
+              <div class="slider_inner">
+                <p class="slider_text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p>
+                <p class="slider_text">Кінцевим етапом укладення договору є його підписання, та скріплення підписів печатками підприємств.</p>
+              </div>
+              <div class="slider_inner">
+                <img class="slider_image" src="./assets/images/steps2num.png" alt="1">
+              </div>
+              <p class="slider_prev" onclick="prevSlide();"></p>
+              <p class="slider_next" onclick="nextSlide();"></p>
+            </li>
+            <li class="slide">
+              <div class="slider_inner">
+                <p class="slider_text">Слід наголосити, що Споживач має завчасно та у встановлені терміни:</p>
+                <ol class="slider_numlist">
+                  <li class="slider_list">повідомити обленерго про перехід до незалежного постачальника</li>
+                  <li class="slider_list">здійснити остаточний розрахунок з обленерго</li>
+                  <li class="slider_list">призупинити діючий Договір з обленерго в частині постачання активної електричної енергії</li>
+                </ol>
+              </div>
+              <div class="slider_inner">
+                <img class="slider_image" src="./assets/images/steps3num.png" alt="1">
+              </div>
+              <p class="slider_prev" onclick="prevSlide();"></p>
+            </li>
+          </ul>
+         -->
+         <div id="includeSlider">
+           <ul id="slides">
+             <li class="slide showing">
+               <div class="slider_inner">
+                 <p class="slider_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p>
+                 <ol class="slider_numlist">
+                   <li class="slider_list">довідка про стан обліку електроенергії</li>
+                   <li class="slider_list">перелік технічних характеристик комерційних точок обліку</li>
+                   <li class="slider_list">свідоцтво про ДМА АСКОЕ/ЛУЗОД</li>
+                   <li class="slider_list">акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</li>
+                   <li class="slider_list">Графік денного та почасового прогнозованого споживання електричної енергії</li>
+                 </ol>
+               </div>
+               <div class="slider_inner">
+                 <img class="slider_image" src="./assets/images/steps1num.png" alt="1">
+               </div>
+               <p class="slider_next" onclick="nextSlide();"></p>
+             </li>
+             <li class="slide">
+               <div class="slider_inner">
+                 <p class="slider_text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p>
+                 <p class="slider_text">Кінцевим етапом укладення договору є його підписання, та скріплення підписів печатками підприємств.</p>
+               </div>
+               <div class="slider_inner">
+                 <img class="slider_image" src="./assets/images/steps2num.png" alt="1">
+               </div>
+               <p class="slider_prev" onclick="prevSlide();"></p>
+               <p class="slider_next" onclick="nextSlide();"></p>
+             </li>
+             <li class="slide">
+               <div class="slider_inner">
+                 <p class="slider_text">Слід наголосити, що Споживач має завчасно та у встановлені терміни:</p>
+                 <ol class="slider_numlist">
+                   <li class="slider_list">повідомити обленерго про перехід до незалежного постачальника</li>
+                   <li class="slider_list">здійснити остаточний розрахунок з обленерго</li>
+                   <li class="slider_list">призупинити діючий Договір з обленерго в частині постачання активної електричної енергії</li>
+                 </ol>
+               </div>
+               <div class="slider_inner">
+                 <img class="slider_image" src="./assets/images/steps3num.png" alt="1">
+               </div>
+               <p class="slider_prev" onclick="prevSlide();"></p>
+             </li>
+           </ul>
+        </div>
+        </div>
+        <div class="deliver_section">
+          <h2 class="deliver_title" onclick="showdeliver(3);">Нормативно-правові акти</h2>
+          <div id="includeActs"></div>
+        </div>
+        <div class="deliver_section">
+          <h2 class="deliver_title">Вирішення спорів</h2>
+          
+        </div>
+        <div class="deliver_section">
+          <h2 class="deliver_title">Права споживача та електропостачальника</h2>
+        </div>
+      </div>
+
+      <div id="includeStatement"></div>
+
+      <div id="includeFooter"></div>
+
+      <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
+      <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
+      </a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
