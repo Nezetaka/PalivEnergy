@@ -1298,7 +1298,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /*
----------DELIVERIES--------
+-----DELIVERIES_ENERGY-------
 */
 
 .deliver {
@@ -1564,4 +1564,13 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #s2s4 p {
   margin-bottom: 15px;
+}
+
+
+/*
+---------DELIVERIES_GAS------
+*/
+
+#includeLaw a {
+  padding-bottom: 30px;
 }
