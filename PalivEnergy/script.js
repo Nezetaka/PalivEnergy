@@ -127,8 +127,38 @@ function prevSlide(){
 
 function nextSlide(){
     slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1);
+    currentSlide = (currentSlide+1)%slides.length;
     slides[currentSlide].className = 'slide showing';
+}
+
+var slides2 = document.querySelectorAll('#slides2 .slide2');
+var currentSlide2 = 0;
+
+function prevSlide2(){
+    slides2[currentSlide2].className = 'slide2';
+    currentSlide2 =(currentSlide2-1);
+    slides2[currentSlide2].className = 'slide2 showing';
+}
+
+function nextSlide2(){
+    slides2[currentSlide2].className = 'slide2';
+    currentSlide2 = (currentSlide2+1)%slides2.length;
+    slides2[currentSlide2].className = 'slide2 showing';
+}
+
+var slides3 = document.querySelectorAll('#slides3 .slide3');
+var currentSlide3 = 0;
+
+function prevSlide3(){
+    slides3[currentSlide3].className = 'slide3';
+    currentSlide3 =(currentSlide3-1);
+    slides3[currentSlide3].className = 'slide3 showing';
+}
+
+function nextSlide3(){
+    slides3[currentSlide3].className = 'slide3';
+    currentSlide3 = (currentSlide3+1)%slides3.length;
+    slides3[currentSlide3].className = 'slide3 showing';
 }
 
 function lightOn(lamp) {
