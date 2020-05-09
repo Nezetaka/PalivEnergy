@@ -40,6 +40,18 @@ function changeFuel(fuelType) {
   }
 }
 
+function showmenu() {
+  frame_inner.style.height = "100%";
+  frame_inner.style.background = "#2D3039";
+  nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="#" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
+}
+
+function closemenu() {
+  frame_inner.style.height = "155px";
+  frame_inner.style.background = "inherit";
+  nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+}
+
 function showreview(paper) {
   switch (paper) {
     case 1:
@@ -217,11 +229,15 @@ window.onscroll = function() {
   }
 }
 
-var intro='<div class="header"><div class="topmenu"><img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p></div><div class="header_intro"><p class="intro_text">енергія</p><p class="intro_text">вашого</p><p class="lch">бізнесу</p><a href="#" class="intro_btn">замовити розрахунок</a></div></div>';
+var intro='<div class="header"><div class="header_intro"><p class="intro_text">енергія</p><p class="intro_text">вашого</p><p class="lch">бізнесу</p><a href="#" class="intro_btn">замовити розрахунок</a></div></div>';
 
 var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value=""><p class="form_label">Телефон</p><input type="text" value=""><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value=""></div></div><div class="joinus_send"><div id="joinus_choise"><a href="#" class="joinus_link joinus_active">електроенергія</a><a href="#" class="joinus_link">газ</a></div><h2 class="title joinus_title">Заявка на поставку електроенергії</h2><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
 
 var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="#" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
+
+if (includeIntro) {
+  includeIntro.innerHTML = intro;
+} 
 
 if (includeStatement) {
   includeStatement.innerHTML = statement;
@@ -229,10 +245,6 @@ if (includeStatement) {
 
 if (includeFooter) {
   includeFooter.innerHTML = footer;
-}
-
-if (includeIntro) {
-  includeIntro.innerHTML = intro;
 }
 
 //document.getElementById("includeStatement").innerHTML = statement;

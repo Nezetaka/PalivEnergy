@@ -10,10 +10,14 @@
   <body>
     <div class="container">
       <div id="frame_inner">
-        <div class="nav1line">
-          <img class="top_logo" src="assets/images/nav_logo.png" alt="logo">
-          <a href="#" class="profile_link">особистий кабiнет</a>
-          <p class="nav_icon"></p>
+        <div class="nav1line" id="nav1line">
+          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
+          <a href="#" class="top_news_link">новини</a>
+          <p class="header_icon" onclick="showmenu()">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+          </p>
         </div>
         <nav id="navnav">
           <ul class="navul">
@@ -39,23 +43,7 @@
           </div>
         </div>
       </div>
-      <div class="header">
-        <div class="topmenu">
-          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
-          <a href="#" class="top_news_link">новини</a>
-          <p class="header_icon">
-            <span id="s1"></span>
-            <span id="s2"></span>
-            <span id="s3"></span>
-          </p>
-        </div>
-        <div class="header_intro">
-          <p class="intro_text">енергія</p>
-          <p class="intro_text">вашого</p>
-          <p class="lch">бізнесу</p>
-          <a href="#" class="intro_btn">замовити розрахунок</a>
-        </div>
-      </div>
+      <div id="includeIntro"></div>
       <div class="Aabout">
         <h2 class="Ctitle2">ПРО НАС</h2>
         <h4 class="Ctitle">Постачальника електроенергії ТОВ "Вільна Енергетична Компанія "ПАЛІВЕНЕРГО</h4>
