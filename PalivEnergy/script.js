@@ -25,6 +25,7 @@ function changeFuel(fuelType) {
     bg_animation.style.background = "url(assets/images/electricity-animation.gif) no-repeat";
     select_fuelE.classList.add("active_fuel");
     select_fuelG.classList.remove("active_fuel");
+    link_fullinfo.href = 'energydeliveries.html';
   } else if (fuelType) {
     pt1.innerHTML = "Загальні умови постачання";
     pt2.innerHTML = "Підставою для постачання природного газу споживачу є:";
