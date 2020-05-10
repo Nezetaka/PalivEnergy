@@ -223,6 +223,21 @@ function lightOn(lamp) {
   }
 }
 
+function showMoreNews(step) {
+  switch (step) {
+  case 1:
+    news.style.height = "3000px";
+    news_grad.innerHTML = '<div class="news_grad2"><p class="news_more more_link preudo" onclick="showMoreNews(2);">больше новостей</p></div><div class="news_grad"></div>';
+    break;
+  case 2:
+    news.style.height = "auto";
+    news_grad.innerHTML = '<p class="news_more more_link" style="margin-top:100px; margin-left:48%;">всі новини</p>';
+    break;
+  default:
+    {}
+  }
+}
+
 var smoothJumpUp = function() {
   if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
     window.scrollBy(0,-80);
@@ -241,7 +256,7 @@ window.onscroll = function() {
 
 //var intro='<div class="header"><div class="header_intro"><p class="intro_text">енергія</p><p class="intro_text">вашого</p><p class="lch">бізнесу</p><a href="#" class="intro_btn">замовити розрахунок</a></div></div>';
 
-var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value=""><p class="form_label">Телефон</p><input type="text" value=""><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value=""></div></div><div class="joinus_send"><div id="joinus_choise"><a href="#" class="joinus_link joinus_active">електроенергія</a><a href="#" class="joinus_link">газ</a></div><h2 class="title joinus_title">Заявка на поставку електроенергії</h2><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
+var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value=""><p class="form_label">Телефон</p><input type="text" value=""><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value=""></div></div><div class="joinus_send"><div id="joinus_choise"><a href="#" class="joinus_link joinus_active">електроенергія</a><a href="#" class="joinus_link">газ</a></div><h2 class="title joinus_title">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
 
 var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="#" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
 
