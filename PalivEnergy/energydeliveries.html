@@ -47,26 +47,9 @@
       <div class="deliver">
         <div class="deliver_section">
           <h2 class="deliver_title" onclick="showdeliver(1)">Документи</h2>
-          <p class="deliver_section_text" id="deliver_section_text1"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link1"></a>
-          <p class="deliver_section_text" id="deliver_section_text2"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link2"></a>
-          <p class="deliver_section_text" id="deliver_section_text3"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link3"></a>
-          <p class="deliver_section_text" id="deliver_section_text4"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link4"></a>
-          <p class="deliver_section_text" id="deliver_section_text5"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link5"></a>
-          <p class="deliver_section_text" id="deliver_section_text6"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link6"></a>
-          <p class="deliver_section_text" id="deliver_section_text7"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link7"></a>
-          <p class="deliver_section_text" id="deliver_section_text8"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link8"></a>
-          <p class="deliver_section_text" id="deliver_section_text9"></p>
-          <a href="#" class="deliver_section_link" id="deliver_section_link9"></a>
+          <div id="includeDocs"></div>
         </div>
-        <div class="deliver_section">
+        <div class="deliver_section" id="del_section2">
           <h2 class="deliver_title" onclick="showdeliver(2)">Процес укладання договору</h2>
           <!--
           <ul id="slides">
@@ -113,64 +96,62 @@
             </li>
           </ul>
          -->
-         <div id="includeSlider">
-           <ul id="slides">
-             <li class="slide showing">
-               <div>
-                 <p class="slider_next" onclick="nextSlide();"></p>
-               </div>
-               <div class="slider_inner">
-                 <p class="slider_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p>
-                 <ol class="slider_numlist">
-                   <li class="slider_list">довідка про стан обліку електроенергії</li>
-                   <li class="slider_list">перелік технічних характеристик комерційних точок обліку</li>
-                   <li class="slider_list">свідоцтво про ДМА АСКОЕ/ЛУЗОД</li>
-                   <li class="slider_list">акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</li>
-                   <li class="slider_list">Графік денного та почасового прогнозованого споживання електричної енергії</li>
-                 </ol>
-               </div>
-               <div class="slider_inner">
-                 <img class="slider_image" src="./assets/images/steps1num.png" alt="1">
-               </div>
-             </li>
-             <li class="slide">
-               <div>
-                 <p class="slider_prev" onclick="prevSlide();"></p>
-                 <p class="slider_next" onclick="nextSlide();"></p>
-               </div>
-               <div class="slider_inner">
-                 <p class="slider_text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p>
-                 <p class="slider_text">Кінцевим етапом укладення договору є його підписання, та скріплення підписів печатками підприємств.</p>
-               </div>
-               <div class="slider_inner">
-                 <img class="slider_image" src="./assets/images/steps2num.png" alt="1">
-               </div>
-             </li>
-             <li class="slide">
-               <div>
-                 <p class="slider_prev" onclick="prevSlide();"></p>
-               </div>
-               <div class="slider_inner">
-                 <p class="slider_text">Слід наголосити, що Споживач має завчасно та у встановлені терміни:</p>
-                 <ol class="slider_numlist">
-                   <li class="slider_list">повідомити обленерго про перехід до незалежного постачальника</li>
-                   <li class="slider_list">здійснити остаточний розрахунок з обленерго</li>
-                   <li class="slider_list">призупинити діючий Договір з обленерго в частині постачання активної електричної енергії</li>
-                 </ol>
-               </div>
-               <div class="slider_inner">
-                 <img class="slider_image" src="./assets/images/steps3num.png" alt="1">
-               </div>
-             </li>
-           </ul>
-        </div>
+          <ul id="slides">
+           <li class="slide showing">
+             <div>
+               <p class="slider_next" onclick="nextSlide();"></p>
+             </div>
+             <div class="slider_inner">
+               <p class="slider_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p>
+               <ol class="slider_numlist">
+                 <li class="slider_list">довідка про стан обліку електроенергії</li>
+                 <li class="slider_list">перелік технічних характеристик комерційних точок обліку</li>
+                 <li class="slider_list">свідоцтво про ДМА АСКОЕ/ЛУЗОД</li>
+                 <li class="slider_list">акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</li>
+                 <li class="slider_list">Графік денного та почасового прогнозованого споживання електричної енергії</li>
+               </ol>
+              </div>
+             <div class="slider_inner">
+               <img class="slider_image" src="./assets/images/steps1num.png" alt="1">
+             </div>
+           </li>
+           <li class="slide">
+             <div>
+               <p class="slider_prev" onclick="prevSlide();"></p>
+               <p class="slider_next" onclick="nextSlide();"></p>
+             </div>
+             <div class="slider_inner">
+               <p class="slider_text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p>
+               <p class="slider_text">Кінцевим етапом укладення договору є його підписання, та скріплення підписів печатками підприємств.</p>
+             </div>
+             <div class="slider_inner">
+               <img class="slider_image" src="./assets/images/steps2num.png" alt="1">
+             </div>
+           </li>
+           <li class="slide">
+             <div>
+               <p class="slider_prev" onclick="prevSlide();"></p>
+             </div>
+             <div class="slider_inner">
+               <p class="slider_text">Слід наголосити, що Споживач має завчасно та у встановлені терміни:</p>
+               <ol class="slider_numlist">
+                 <li class="slider_list">повідомити обленерго про перехід до незалежного постачальника</li>
+                 <li class="slider_list">здійснити остаточний розрахунок з обленерго</li>
+                 <li class="slider_list">призупинити діючий Договір з обленерго в частині постачання активної електричної енергії</li>
+               </ol>
+             </div>
+             <div class="slider_inner">
+               <img class="slider_image" src="./assets/images/steps3num.png" alt="1">
+             </div>
+           </li>
+         </ul>
         </div>
         <div class="deliver_section">
           <h2 class="deliver_title" onclick="showdeliver(3);">Нормативно-правові акти</h2>
           <div id="includeActs"></div>
         </div>
-        <div class="deliver_section">
-          <h2 class="deliver_title">Вирішення спорів</h2>
+        <div class="deliver_section" id="del_section4">
+          <h2 class="deliver_title" onclick="showdeliver(4);">Вирішення спорів</h2>
           <ul id="slides2">
             <li class="slide2 showing">
               <div>
@@ -236,8 +217,8 @@
             </li>
           </ul>
         </div>
-        <div class="deliver_section">
-          <h2 class="deliver_title">Права споживача та електропостачальника</h2>
+        <div class="deliver_section" id="del_section5">
+          <h2 class="deliver_title" onclick="showdeliver(5);">Права споживача та електропостачальника</h2>
           <ul id="slides3">
             <li class="slide3 showing">
               <div>
