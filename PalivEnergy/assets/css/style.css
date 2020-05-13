@@ -49,6 +49,10 @@ ul {
   margin: 0 auto;
 }
 
+.marked_text {
+  color: #AB9477;
+}
+
 .more_link:hover {
   color: #EB4B18;
 }
@@ -1611,7 +1615,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #slides24 {
   position: relative;
-  height: 780px;
+  height: 3600px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
