@@ -133,16 +133,16 @@ function showdeliver(sec) {
       del_section5.style.height = "auto";
       break;
     case 21:
-      paper4.src = "assets/images/review4.png";
+      del_section21.style.height = "auto";
       break;
     case 22:
       includeLaw.innerHTML = '<p class="deliver_section_text">Закон України "Про ринок природного газу"</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Постанова НКРЕКП № 2496 «Про затвердження правил постачання природного газу»</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Постанова НКРЕКП № 2494 «Про затвердження кодексу газорозподільних систем»</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Загальні умови постачання природного газу</p><a href="#" class="deliver_section_link">посилання на документ</a><p class="deliver_section_text">Права та обов’язки постачальника та споживача</p><a href="#" class="deliver_section_link">посилання на документ</a>';
       break;
     case 23:
-      paper4.src = "assets/images/review4.png";
+      del_section23.style.height = "auto";
       break;
     case 24:
-      paper5.src = "assets/images/review5.png";
+      del_section24.style.height = "auto";
       break;
     case 25:
       includePersonStatus.innerHTML = '<div class="chose_person_status"><p class="person_status active_person" onclick="changePersonStatus(1);" id="physicalPerson">фізична особа</p><p class="person_status" onclick="changePersonStatus(2);" id="legalPerson">юридична особа</p></div><div class="person_inner" id="person_inner_text"><p class="slider_text">Якщо бажаєте мати взимку комфортну температуру в оселі за комфортною ціною, то вам до нас!</p>  <p class="slider_text">Змінюйте старого постачальника та ставайте клієнтом ТОВ “ВЕК “Палівенерго”!</p><p class="slider_text">Приєднатися до нас просто:</p><p class="text deliveries_list">завантажте, заповніть та передайте наявному постачальнику пакет документів. Підписана Додаткова угода до Типового договору має бути у двох примірниках</p><p class="text deliveries_list">завантажте, заповніть та передайте нам заяву-приєднання, додавши копії паспорту, ІПН і документу права на власність або користування об’єктом (ВСІ КОПІЇ МАЮТЬ БУТИ ЗАВІРЕНІ ВАМИ З ПРИПИСОМ, КОПІЯ ДІЙСНА, ДАТА, ПІБ та ПІДПИС)</p><p class="text deliveries_list">отримайте від попереднього постачальника довідку про заборгованість і передайте її нам оригінал або копію</p><p class="slider_text">Ознайомитися з умовами Типового договору можна за посиланням</p></div>';
@@ -211,6 +211,51 @@ function nextSlide3(){
     slides3[currentSlide3].className = 'slide3';
     currentSlide3 = (currentSlide3+1)%slides3.length;
     slides3[currentSlide3].className = 'slide3 showing';
+}
+
+var slides21 = document.querySelectorAll('#slides21 .slide21');
+var currentSlide21 = 0;
+
+function prevSlide21(){
+    slides21[currentSlide21].className = 'slide21';
+    currentSlide21 =(currentSlide21-1);
+    slides21[currentSlide21].className = 'slide21 showing';
+}
+
+function nextSlide21(){
+    slides21[currentSlide21].className = 'slide21';
+    currentSlide21 = (currentSlide21+1)%slides21.length;
+    slides21[currentSlide21].className = 'slide21 showing';
+}
+
+var slides23 = document.querySelectorAll('#slides23 .slide23');
+var currentSlide23 = 0;
+
+function prevSlide23(){
+    slides23[currentSlide23].className = 'slide23';
+    currentSlide23 =(currentSlide23-1);
+    slides23[currentSlide23].className = 'slide23 showing';
+}
+
+function nextSlide23(){
+    slides23[currentSlide23].className = 'slide23';
+    currentSlide23 = (currentSlide23+1)%slides23.length;
+    slides23[currentSlide23].className = 'slide23 showing';
+}
+
+var slides24 = document.querySelectorAll('#slides24 .slide24');
+var currentSlide24 = 0;
+
+function prevSlide24(){
+    slides24[currentSlide24].className = 'slide24';
+    currentSlide24 =(currentSlide24-1);
+    slides24[currentSlide24].className = 'slide24 showing';
+}
+
+function nextSlide24(){
+    slides24[currentSlide24].className = 'slide24';
+    currentSlide24 = (currentSlide24+1)%slides24.length;
+    slides24[currentSlide24].className = 'slide24 showing';
 }
 
 function lightOn(lamp) {
