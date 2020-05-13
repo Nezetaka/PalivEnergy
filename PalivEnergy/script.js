@@ -325,7 +325,3 @@ if (includeStatement) {
 if (includeFooter) {
   includeFooter.innerHTML = footer;
 }
-
-//document.getElementById("includeStatement").innerHTML = statement;
-//document.getElementById("includeFooter").innerHTML = footer;
-//document.getElementById("includeIntro").innerHTML = intro;

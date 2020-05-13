@@ -744,10 +744,11 @@ ul {
   z-index: 2;
   filter: blur(30px);
 }
+
 .news_grad2 {
   position: absolute;
   bottom: 0;
-  height: 600px;
+  height: 60vh;
   width: 100%;
   opacity: .7;
   z-index: 3;
@@ -1615,7 +1616,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #slides24 {
   position: relative;
-  height: 3600px;
+  height: 6000px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
