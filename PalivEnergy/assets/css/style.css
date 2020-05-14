@@ -1454,13 +1454,13 @@ font-family: 'Open Sans Condensed', sans-serif;
   border-bottom: 1px solid #EB4B18;
 }
 
-#del_section2, #del_section4, #del_section5, #del_section21 {
+#del_section2, #del_section4, #del_section21 {
   height: 50px;
   width: 100%;
   overflow: hidden;
 }
 
-#del_section23 {
+ #del_section5, #del_section23 {
   height: 100px;
   width: 100%;
   overflow: hidden;
@@ -1616,7 +1616,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 
 #slides24 {
   position: relative;
-  height: 6000px;
+  height: 10000px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
