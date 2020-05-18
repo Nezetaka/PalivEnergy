@@ -43,6 +43,51 @@ ul {
   margin: 0;
 }
 
+/* 404 */
+.not_found_page {
+  text-align: center;
+  margin-top: 30vh;
+  font-size: 36px;
+}
+
+.not_found_page p {
+  margin-bottom: 30px;
+}
+
+.not_found_page a {
+  text-decoration: none;
+  color: #f2f2f2;
+  border: 1px solid #EB4B18;
+  border-radius: 5px;
+  padding: 20px 40px 20px 60px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 61px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 66px #010101;
+  position: relative;
+  transition: .1s linear;
+}
+
+.not_found_page a:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #f2f2f2;
+  border-right: 2px solid #f2f2f2;
+  position: absolute;
+  top: 26px;
+  left: 40px;
+  z-index: 1;
+  transform: rotate(-135deg);
+}
+
+.not_found_page a:hover {
+  background: #EB4B18;
+}
+
 /* Container */
 .container {
   width: 100%;
