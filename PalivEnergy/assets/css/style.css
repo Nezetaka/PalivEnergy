@@ -509,10 +509,11 @@ ul {
   vertical-align:top;
 }
 
-.deliveries_inner_gif {
-  background-image: url(../images/gas-animation.gif);
+
+#bg_animation {
   background-position: center;
   height: 560px;
+  width: 45vw;
 }
 
 #deliveries_input {
@@ -607,12 +608,13 @@ ul {
   border-bottom: 1px solid #EB4B18;
   width: 100%;
   top: 22px;
+  left: 0;
 }
 
 /* Join us */
 .joinus {
-    background: #f2f2f2;
-    padding: 12vh 10vw;
+  background: #f2f2f2;
+  padding: 12vh 10vw;
 }
 
 .joinus_input {
@@ -1330,10 +1332,6 @@ ul {
   font-weight: normal;
   font-size: 20px;
   line-height: 27px;
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
-  display: flex;
   align-items: center;
   color: #F2F2F2;
   width: 550px;
@@ -1608,10 +1606,6 @@ ul {
   font-weight: normal;
   font-size: 20px;
   line-height: 27px;
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
-  display: flex;
   align-items: center;
   color: #FFFFFF;
   padding-top: 30px;
@@ -1645,10 +1639,6 @@ ul {
   font-weight: normal;
   font-size: 20px;
   line-height: 27px;
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
-  display: flex;
   align-items: center;
   color: #FFFFFF;
   margin-bottom: 15px;
@@ -1713,7 +1703,7 @@ ul {
 
 #slides2 {
   position: relative;
-  height: 550px;
+  height: 650px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
@@ -1721,7 +1711,7 @@ ul {
 
 #slides3 {
   position: relative;
-  height: 800px;
+  height: 1100px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
@@ -1729,7 +1719,7 @@ ul {
 
 #slides21 {
   position: relative;
-  height: 1900px;
+  height: 2500px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
@@ -1737,7 +1727,7 @@ ul {
 
 #slides23 {
   position: relative;
-  height: 675px;
+  height: 1000px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
