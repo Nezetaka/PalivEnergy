@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Paliv Energy</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="frame_inner">
+        <div class="nav1line" id="nav1line">
+          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
+          <a href="#" class="top_news_link">новини</a>
+          <p class="header_icon" onclick="showmenu()">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+          </p>
+        </div>
+        <nav id="navnav">
+          <ul class="navul">
+            <li><a class="navigation_link" href="index.html">Головна</a></li>
+            <li><a class="navigation_link" href="about.html">Про нас</a></li>
+            <li><a class="navigation_link active" href="partners.html">Партнери</a></li>
+            <li><a class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
+            <li><a class="navigation_link" href="energydeliveries.html">Постачання електроенергії</a></li>
+            <li><a class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
+            <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="nav3line">
+          <div>
+            <span class="nav3line_label">слідкуйте за нами:</span>
+            <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+          </div>
+          <div>
+            <a class="lang" href="#">RU</a>
+            <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">EN</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews">
+        <h2 class="partners_title">ВІДГУКИ</h2>
+        <div class="reviews_sector">
+          <h3 class="partners_subtitle" onclick="showreview(1)">ПП ВКФ "Полімер"</h3>
+          <img id="paper1" class="partners_image" src="" alt="">
+        </div>
+        <div class="reviews_sector">
+          <h3 class="partners_subtitle" onclick="showreview(2)">ТОВ “Типографія “Принт-Мастер”</h3>
+          <img id="paper2" class="partners_image" src="" alt="">
+        </div>
+        <div class="reviews_sector">
+          <h3 class="partners_subtitle" onclick="showreview(3)">ТОВ “Глобал Спірітс Груп”</h3>
+          <img id="paper3" class="partners_image" src="" alt="">
+        </div>
+        <div class="reviews_sector">
+          <h3 class="partners_subtitle" onclick="showreview(4)">Запорізька філія ПАТ “Солді і Ко” - “Солді-Запоріжжя”</h3>
+          <img id="paper4" class="partners_image" src="" alt="">
+        </div>
+        <div class="reviews_sector">
+          <h3 class="partners_subtitle" onclick="showreview(5)">ФОП Дузь Максим Анатолійович</h3>
+          <img id="paper5" class="partners_image" src="" alt="">
+        </div>
+        <div class="reviews_sector">
+          <h3 class="partners_subtitle" onclick="showreview(6)">ТОВ Науково-виробниче підприемство “Центр електроиеханічної діагностики”</h3>
+          <img id="paper6" class="partners_image" src="" alt="">
+        </div>
+        <div class="reviews_sector">
+          <h3 class="partners_subtitle" onclick="showreview(7)">ТОВ “Науково-інжиніронговий центр АРСЕКО”</h3>
+          <img id="paper7" class="partners_image" src="" alt="">
+        </div>
+      </div>
+
+      <div class="invitation">
+        <a class="invite_btn" href="#">стати кліентом</a>
+      </div>
+
+      <div class="partners">
+        <h2 class="partners_title">ПАРТНЕРИ</h2>
+        <div class="partners_sector">
+          <div class="title_sector">
+            <p class="partners_subtitle">ТОВ Науково-виробниче підприемство “Центр електроиеханічної діагностики”</p>
+          </div>
+          <div class="text_sector">
+            <p class="partners_address">вул. Мічуріна, 4</p>
+            <p class="partners_address">Дніпро</p>
+            <p class="partners_address">Дніпропетровська область</p>
+            <p class="partners_address">Україна</p>
+          </div>
+        </div>
+        <div class="partners_sector">
+          <div class="title_sector">
+            <p class="partners_subtitle">ТОВ “СТС-Інжиніринг”</p>
+          </div>
+          <div class="text_sector">
+            <p class="partners_address">вул. Старокозацька, 4</p>
+            <p class="partners_address">Дніпро</p>
+            <p class="partners_address">Дніпропетровська область</p>
+            <p class="partners_address">Україна</p>
+          </div>
+        </div>
+        <div class="partners_sector">
+          <div class="title_sector">
+            <p class="partners_subtitle">ТОВ “Науково-інжиніронговий центр АРСЕКО”</p>
+          </div>
+          <div class="text_sector">
+            <p class="partners_address">вул. Чернишевського, 27</p>
+            <p class="partners_address">Дніпро</p>
+            <p class="partners_address">Дніпропетровська область</p>
+            <p class="partners_address">Україна</p>
+          </div>
+        </div>
+        <div class="partners_sector">
+          <div class="title_sector">
+            <p class="partners_subtitle">ЕТК ТОВ “Енерготехноком”</p>
+          </div>
+          <div class="text_sector">
+            <p class="partners_address">вул. Чарівна, 4Б</p>
+            <p class="partners_address">Дніпро</p>
+            <p class="partners_address">Дніпропетровська область</p>
+            <p class="partners_address">Україна</p>
+          </div>
+        </div>
+        <div class="partners_sector">
+          <div class="title_sector">
+            <p class="partners_subtitle">ТОВ “Дніпро електросервіс”</p>
+          </div>
+          <div class="text_sector">
+            <p class="partners_address">вул. Качалова, 1</p>
+            <p class="partners_address">Дніпро</p>
+            <p class="partners_address">Дніпропетровська область</p>
+            <p class="partners_address">Україна</p>
+          </div>
+        </div>
+      </div>
+
+      <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
+      <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
+      </a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

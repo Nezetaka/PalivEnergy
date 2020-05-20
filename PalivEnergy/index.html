@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Paliv Energy</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="frame_inner">
+        <div class="nav1line" id="nav1line">
+          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
+          <a href="#" class="top_news_link">новини</a>
+          <p class="header_icon" onclick="showmenu()">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+          </p>
+        </div>
+        <nav id="navnav">
+          <ul class="navul">
+            <li><a class="navigation_link active" href="index.html">Головна</a></li>
+            <li><a class="navigation_link" href="about.html">Про нас</a></li>
+            <li><a class="navigation_link" href="partners.html">Партнери</a></li>
+            <li><a class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
+            <li><a class="navigation_link" href="energydeliveries.html">Постачання електроенергії</a></li>
+            <li><a class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
+            <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="nav3line">
+          <div>
+            <span class="nav3line_label">слідкуйте за нами:</span>
+            <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+          </div>
+          <div>
+            <a class="lang" href="#">RU</a>
+            <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">EN</a>
+          </div>
+        </div>
+      </div>
+
+      <ul id="intro_slides">
+        <li class="intro_slide showing">
+          <div class="intro_slider_inner">
+            <div class="header">
+              <div class="header_intro">
+                <p class="intro_text">енергія</p>
+                <p class="intro_text">вашого</p>
+                <p class="lch">бізнесу</p>
+                <a href="#" class="intro_btn">замовити розрахунок</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="intro_slide">
+          <div class="intro_slider_inner">
+            <div class="header_alt">
+              <div class="header_intro_alt">
+                <p class="intro_text">надійний</p>
+                <p class="intro_text">постачальник</p>
+                <p class="lch">природного газу</p>
+                <a href="#" class="intro_btn">замовити розрахунок</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- <div class="header">
+        <div class="topmenu">
+          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
+          <a href="#" class="top_news_link">новини</a>
+          <p class="header_icon">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+          </p>
+        </div>
+        <div class="header_intro">
+          <p class="intro_text">енергія</p>
+          <p class="intro_text">вашого</p>
+          <p class="lch">бізнесу</p>
+          <a href="#" class="intro_btn">замовити розрахунок</a>
+        </div>
+      </div> -->
+
+      <div class="aboutus">
+        <div class="aboutus_inner">
+          <h2 class="title">ПРО НАС</h2>
+          <p class="text about_text">Компанія ТОВ "Вільна Енергетична Компанія "ПАЛІВЕНЕРГО" є постачальником електроенергії підприємствам України.</p>
+          <p class="text about_text">Ми надаємо вигідні умови для співпраці, при яких враховуються ряд юридичних і фінансових переваг для споживача.</p>
+          <p class="text about_text">Найцінніше у нашій організації – це наша репутація, яку ми успішно підтримуємо протягом вже декількох років.</p>
+        </div>
+        <div class="aboutus_inner_link">
+          <a href="about.html" class="aboutus_link more_link">докладніше</a>
+        </div>
+      </div>
+      <div class="howto">
+        <div class="howto_text">
+          <h2 class="title">ЯК СТАТИ КЛІЄНТОМ КОМПАНІЇ</h2>
+          <p class="text">Щоб детальніше ознайомитися з певним етапом, натисніть на відповідну лампочку.</p>
+        </div>
+        <div class="lights">
+          <img class="howto_img" id="lamp1" src="assets/images/lamp.png" onclick="lightOn(1)" alt="light">
+          <img class="howto_img" id="lamp2" src="assets/images/lamp.png" onclick="lightOn(2)" alt="light">
+          <img class="howto_img" id="lamp3" src="assets/images/lamp.png" onclick="lightOn(3)" alt="light">
+          <img class="howto_img" id="lamp4" src="assets/images/lamp.png" onclick="lightOn(4)" alt="light">
+        </div>
+      </div>
+      <div class="deliveries">
+        <div class="deliveries_inner_text">
+          <h2 class="title">ПОСТАВКИ</h2>
+          <label for="deliveries_input" id="deliveries_fuel" class="deliveries_inner_text_gas">
+            <p class="text deliveries_text" id="pt1">Загальні умови постачання</p>
+            <p class="text" id="pt2">Підставою для постачання природного газу споживачу є:</p>
+            <p class="text deliveries_list" id="p3">наявність у споживача, об’єкт якого підключений до газорозподільної системи, договору розподілу природного газу, укладеного в установленому порядку між споживачем та Оператором ГРМ, та присвоєння споживачу Оператором ГРМ персонального EIC-коду як суб’єкту ринку природного газу;</p>
+            <p class="text deliveries_list" id="p4">наявність у споживача, об’єкт якого підключений до газотранспортної системи, договору транспортування природного газу, укладеного в установленому порядку між споживачем та Оператором ГТС, та присвоєння споживачу Оператором ГТС персонального EIC-коду як суб’єкту ринку природного газу;</p>
+            <p class="text deliveries_list" id="p5">наявність у споживача укладеного з постачальником договору постачання природного газу та дотримання його умов;</p>
+            <p class="text deliveries_list" id="p6">наявність підтвердженого обсягу природного газу на відповідний розрахунковий період для потреб споживача;</p>
+            <p class="text deliveries_list" id="p7">відсутність простроченої заборгованості споживача за поставлений природний газ перед діючим постачальником (за його наявності), що має підтверджуватися письмовою довідкою діючого постачальника або складеним з ним актом звірки взаєморозрахунків.</p>
+            <p class="text" id="pt8"></p>
+            <br>
+          </label>
+          <a href="gasdeliveries.html" id="link_fullinfo" class="deliveries_more_link more_link">дивитися повністю</a>
+        </div>
+        <div class="deliveries_gif">
+          <input id="deliveries_input" type="checkbox"></input>
+          <label for="deliveries_input" id="select_fuelE" class="deliveries_link" onclick="changeFuel('electricity')">електроенергія</label>
+          <label for="deliveries_input" id="select_fuelG" class="deliveries_link active_fuel" onclick="changeFuel('gas')">газ</label>
+          <div class="deliveries_inner_gif" id="bg_animation">
+
+          </div>
+        </div>
+      </div>
+
+      <div id="includeStatement"></div>
+      <!--
+      <div class="joinus">
+        <form class="joinus_form">
+          <div class="joinus_input">
+            <div class="joinus_input_inner">
+              <p class="form_label">Ваше ім'я</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Телефон</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Плановане споживання</p>
+              <p class="form_subtitle">(кВт⋅ч в місяць)</p>
+              <input type="text" value="" class="join_data">
+            </div>
+          </div>
+          <div class="joinus_send">
+            <div id="joinus_choise">
+              <p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p>
+              <p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p>
+            </div>
+            <h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2>
+            <p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p>
+            <span class="checkbox"><a href="#" class="joinus_send_link">відправити</a>
+            <input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span>
+          </div>
+          <div class="clear">
+
+          </div>
+        </form>
+      </div>
+      -->
+
+      <div class="news" id="news">
+        <div class="news_inner">
+          <h2 class="title title_news">НОВИНИ</h2>
+          <a href="#" class="news_link more_link">до новин</a>
+        </div>
+
+        <div class="news_inner">
+          <div class="news_line">
+            <img src="assets/images/news1.jpg" class="news_line_img" alt="news">
+            <img src="assets/images/news2.jpg" class="news_line_img" alt="news">
+          </div>
+          <div class="news_line">
+            <img src="assets/images/news3.jpg" class="news_line_img" alt="news">
+            <img src="assets/images/news4.jpg" class="news_line_img" alt="news">
+          </div>
+          <div class="news_line">
+            <img src="assets/images/news5.jpg" class="news_line_img" alt="news">
+            <img src="assets/images/news6.jpg" class="news_line_img" alt="news">
+          </div>
+          <div class="news_line">
+            <img src="assets/images/news7.jpg" class="news_line_img" alt="news">
+            <img src="assets/images/news8.jpg" class="news_line_img" alt="news">
+          </div>
+          <div class="news_line">
+            <img src="assets/images/news3.jpg" class="news_line_img" alt="news">
+            <img src="assets/images/news4.jpg" class="news_line_img" alt="news">
+          </div>
+        </div>
+
+        <div id="news_grad">
+          <div class="news_grad2">
+            <p class="news_more more_link preudo" onclick="showMoreNews(1);">больше новостей</p>
+          </div>
+          <div class="news_grad" >
+          </div>
+        </div>
+
+        <!-- <div class="news_inner">
+          <div class="news_left">
+            <img src="assets/images/news1.jpg" alt="news">
+            <img src="assets/images/news3.jpg" alt="news">
+            <img src="assets/images/news5.jpg" alt="news">
+            <img src="assets/images/news7.jpg" alt="news">
+            <img src="assets/images/news3.jpg" alt="news">
+          </div>
+          <div class="news_right">
+            <img src="assets/images/news2.jpg" alt="news">
+            <img src="assets/images/news4.jpg" alt="news">
+            <img src="assets/images/news6.jpg" alt="news">
+            <img src="assets/images/news8.jpg" alt="news">
+            <img src="assets/images/news4.jpg" alt="news">
+          </div>
+        </div> -->
+
+
+      </div>
+      <div class="presentation">
+        <div class="presentation_inner">
+          <p class="presentation_text text">Мы подготовили для вас презентацию нашего продукта</p>
+          <a class="presentation_btn" href="#">подивитися</a>
+        </div>
+      </div>
+      <div class="map">
+        <img class="map_img" src="assets/images/smallmap.png" alt="map">
+      </div>
+
+      <div id="includeFooter"></div>
+
+      <!-- <div class="footer">
+        <div class="footer_logo">
+          <ul>
+            <li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li>
+            <li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li>
+          </ul>
+        </div>
+        <div class="info">
+          <ul>
+            <li class="footer_info">информация</li>
+            <li><a href="#" class="footer_link">контакты</a></li>
+            <li><a href="#" class="footer_link">новости</a></li>
+            <li><a href="#" class="footer_link">поставка электроэнергии</a></li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <ul>
+            <li>+38 (094) 936-48-81</li>
+            <li>+38 (061) 708-28-81</li>
+            <li>VEK@palivenergy.com.ua</li>
+          </ul>
+        </div>
+        <div class="address">
+          <ul>
+            <li>Пт - Пн</li>
+            <li>9:00 - 18:00</li>
+            <li>пр.Соборний,180 Запорiжжя 69035, Україна</li>
+          </ul>
+        </div>
+      </div>-->
+
+      <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
+      <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
+      </a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
