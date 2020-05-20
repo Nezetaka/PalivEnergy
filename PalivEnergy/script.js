@@ -22,7 +22,7 @@ function changeFuel(fuelType) {
     p6.innerHTML = "акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію";
     p7.innerHTML = "Графік денного та почасового прогнозованого споживання електричної енергії";
     pt8.innerHTML = "Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.";
-    bg_animation.src = "assets/images/electricity-animation.gif";
+    bg_animation.style.background = "url(assets/images/electricity-animation.gif) no-repeat";
     select_fuelE.classList.add("active_fuel");
     select_fuelG.classList.remove("active_fuel");
     link_fullinfo.href = 'energydeliveries.html';
@@ -35,7 +35,7 @@ function changeFuel(fuelType) {
     p6.innerHTML = "наявність підтвердженого обсягу природного газу на відповідний розрахунковий період для потреб споживача;";
     p7.innerHTML = "відсутність простроченої заборгованості споживача за поставлений природний газ перед діючим постачальником (за його наявності), що має підтверджуватися письмовою довідкою діючого постачальника або складеним з ним актом звірки взаєморозрахунків.";
     pt8.innerHTML = "";
-    bg_animation.src = "assets/images/gas-animation.gif";
+    bg_animation.style.background = "url(assets/images/gas-animation.gif) no-repeat";
     select_fuelE.classList.remove("active_fuel");
     select_fuelG.classList.add("active_fuel");
   }
