@@ -639,6 +639,7 @@ ul {
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(40vw, 600px));
   grid-template-rows: repeat(1, 600px);
+  justify-content: center;
 }
 
 .joinus_input_inner {
@@ -675,6 +676,7 @@ ul {
   float: left;
   margin-left: 10%;
   width: 100%;
+  margin-top: 40px;
 }
 
 .checkbox {
