@@ -280,7 +280,7 @@ function lightOn(lamp) {
 function showMoreNews(step) {
   switch (step) {
   case 1:
-    news.style.height = "3000px";
+    news.style.height = "2500px";
     news_grad.innerHTML = '<div class="news_grad2"><p class="news_more more_link preudo" onclick="showMoreNews(2);">больше новостей</p></div><div class="news_grad"></div>';
     break;
   case 2:
