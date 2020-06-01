@@ -277,9 +277,9 @@ ul {
 }
 
 #s1, #s2, #s3 {
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
+  -webkit-display: block;
+  -moz-display: block;
+  -ms-display: block;
   display: block;
   border-bottom: 3px solid #f2f2f2;
   margin: 0;
