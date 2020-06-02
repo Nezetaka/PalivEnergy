@@ -99,6 +99,64 @@
       <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
       </a>
     </div>
-    <script src="script.js"></script>
+    <script type="text/javascript">
+    function showmenu() {
+      frame_inner.style.height = "100%";
+      frame_inner.style.background = "#2D3039";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="#" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
+    }
+
+    function closemenu() {
+      frame_inner.style.height = "155px";
+      frame_inner.style.background = "inherit";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+    }
+    function joinusFuel (fuel) {
+      switch (fuel) {
+        case 1:
+          joinusF.innerHTML = "Заявка на поставку електроенергії";
+          joinusEnergy.classList.add("joinus_active");
+          joinusGas.classList.remove("joinus_active");
+          break;
+        case 2:
+          joinusF.innerHTML = "Заявка на поставку природного газу";
+          joinusGas.classList.add("joinus_active");
+          joinusEnergy.classList.remove("joinus_active");
+          break;
+        default:
+          {}
+      }
+    }
+    var smoothJumpUp = function() {
+      if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
+        window.scrollBy(0,-80);
+        setTimeout(smoothJumpUp, 0.2);
+        }
+    }
+
+    window.onscroll = function() {
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 1000) {
+      	document.getElementById('upbutton').style.display = 'block';
+      } else {
+        document.getElementById('upbutton').style.display = 'none';
+      }
+    }
+    var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
+
+    var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="energydeliveries.html" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
+
+    //if (includeIntro) {
+    //  includeIntro.innerHTML = intro;
+    //}
+
+    if (includeStatement) {
+      includeStatement.innerHTML = statement;
+    }
+
+    if (includeFooter) {
+      includeFooter.innerHTML = footer;
+    }
+    </script>
   </body>
 </html>

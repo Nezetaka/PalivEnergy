@@ -232,6 +232,150 @@
       <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
       </a>
     </div>
-    <script src="script.js"></script>
+    <script type="text/javascript">
+    function showmenu() {
+      frame_inner.style.height = "100%";
+      frame_inner.style.background = "#2D3039";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="#" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
+    }
+
+    function closemenu() {
+      frame_inner.style.height = "155px";
+      frame_inner.style.background = "inherit";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+    }
+    function joinusFuel (fuel) {
+      switch (fuel) {
+        case 1:
+          joinusF.innerHTML = "Заявка на поставку електроенергії";
+          joinusEnergy.classList.add("joinus_active");
+          joinusGas.classList.remove("joinus_active");
+          break;
+        case 2:
+          joinusF.innerHTML = "Заявка на поставку природного газу";
+          joinusGas.classList.add("joinus_active");
+          joinusEnergy.classList.remove("joinus_active");
+          break;
+        default:
+          {}
+      }
+    }
+    function showdeliver(sec) {
+      switch (sec) {
+        case 1:
+          includeDocs.innerHTML = '<p class="deliver_section_text">Договір про постачання електричної енергії споживачу з 01.01.2019р.</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №1 - 100% предоплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №2 - 4 планових платіжа по 25% предоплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №3 - подекадна оплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №4 - 50% предоплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Зразок звернення Споживача щодо коригування обсягів постачання</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Відомість про обсяги очікуваного споживання електричної енергії</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Ліцензія електроенергія</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Ліцензія газ</p><a href="#" class="deliver_section_link">завантажити файл</a>';
+          break;
+        case 2:
+          del_section2.style.height = "auto";
+          break;
+        case 3:
+          includeActs.innerHTML = '<p class="deliver_section_text">У своїй діяльності ТОВ "Вільна Енергетична Компанія "ПАЛІВЕНЕРГО" керується наступними нормативно-правовими актами:</p><p class="text deliveries_list">Закон України «Про ринок електричної енергії» № 2019-VIII від 13.04.2017</p><p class="text deliveries_list">Закон України «Про ліцензування видів господарської діяльності»</p><p class="text deliveries_list">Постанова НКРЕ №1421 від 29.10.2010 р. «Про затвердження Порядку доступу постачальників електричної енергії за нерегульованим тарифом до місцевих (локальних) електричних мереж»</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 307 “Про затвердження Правил ринку”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 309 “Про затвердження Кодексу системи передачі”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 311 “Про затвердженння Кодексу комерційного обліку електричної енергії”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 310 “Про затвердження Кодексу системи розподілу”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 308 “Про затвердження Правил ринку “на добу наперед” та внутрішньодобового ринку”</p><p class="text deliveries_list">Постанова НКРЕКП від 27.12.2017 № 1469 “Про затвердження Ліцензійних умов провадження господарської діяльності з постачання електричної енергії споживачу”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 312 “Про затвердження Правил роздрібного ринку електричної енергії”</p><p class="text deliveries_list">Антикорупційна програма</p>'
+          break;
+        case 4:
+          del_section4.style.height = "auto";
+          break;
+        case 5:
+          del_section5.style.height = "auto";
+          break;
+        case 21:
+          del_section21.style.height = "auto";
+          break;
+        case 22:
+          includeLaw.innerHTML = '<p class="deliver_section_text">Закон України "Про ринок природного газу"</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Постанова НКРЕКП № 2496 «Про затвердження правил постачання природного газу»</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Постанова НКРЕКП № 2494 «Про затвердження кодексу газорозподільних систем»</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Загальні умови постачання природного газу</p><a href="#" class="deliver_section_link">посилання на документ</a><p class="deliver_section_text">Права та обов’язки постачальника та споживача</p><a href="#" class="deliver_section_link">посилання на документ</a>';
+          break;
+        case 23:
+          del_section23.style.height = "auto";
+          break;
+        case 24:
+          del_section24.style.height = "auto";
+          break;
+        case 25:
+          includePersonStatus.innerHTML = '<div class="chose_person_status"><p class="person_status active_person" onclick="changePersonStatus(1);" id="physicalPerson">фізична особа</p><p class="person_status" onclick="changePersonStatus(2);" id="legalPerson">юридична особа</p></div><div class="person_inner" id="person_inner_text"><p class="slider_text">Якщо бажаєте мати взимку комфортну температуру в оселі за комфортною ціною, то вам до нас!</p>  <p class="slider_text">Змінюйте старого постачальника та ставайте клієнтом ТОВ “ВЕК “Палівенерго”!</p><p class="slider_text">Приєднатися до нас просто:</p><p class="text deliveries_list">завантажте, заповніть та передайте наявному постачальнику <span class="marked_text">пакет документів</span>. Підписана Додаткова угода до Типового договору має бути у двох примірниках</p><p class="text deliveries_list">завантажте, заповніть та передайте нам <span class="marked_text">заяву-приєднання</span>, додавши копії паспорту, ІПН і документу права на власність або користування об’єктом (ВСІ КОПІЇ МАЮТЬ БУТИ ЗАВІРЕНІ ВАМИ З ПРИПИСОМ, КОПІЯ ДІЙСНА, ДАТА, ПІБ та ПІДПИС)</p><p class="text deliveries_list">отримайте від попереднього постачальника довідку про заборгованість і передайте її нам оригінал або копію</p><p class="slider_text">Ознайомитися з умовами Типового договору можна за <span class="marked_text"> посиланням</span></p></div>';
+          break;
+        case 26:
+          includePrices.innerHTML = '<p class="slider_text">Відповідно до ч.2 ст.12 Закону України «Про ринок природного газу», постачання природного газу здійснюється за цінами, що вільно встановлюються між постачальником та споживачем, крім випадків, передбачених цим Законом. Зважаючи на викладене, ціна, спосіб та умови оплати на природний газ та порядок розрахунків за спожитий газ встановлюється сторонами в Договорі</p><a href="#" class="deliver_section_link">типовий договір</a>';
+          break;
+        case 27:
+          includeDecigion.innerHTML = '<p class="slider_text">Спори, що виникли із цього Договору, вирішуються шляхом двосторонніх переговорів уповноваженими представниками Сторін. У випадку недосягнення згоди шляхом переговорів, суперечки передаються на вирішення в господарські суди України, які мають відповідну юрисдикцію і розглядаються в установленому порядку згідно з чинним законодавством України</p><p class="slider_text">Всі спори і розбіжності, які можуть виникнути щодо тлумачення і застосування договору поставки природного газу або в зв’язку з ним, або інші суперечки, які можуть виникнути при взаємодії між постачальником і споживачем, будуть вирішуватися шляхом переговорів і консультацій</p><p class="slider_text">У випадку виникнення будь-яких спірних питань, будь ласка звертайтеся за адресою пр.Соборний, 180 Запоріжжя 69035, Україна , з понеділка по п’ятницю з 9:00 до 18:00, за телефоном <span class="marked_text">+38 (066) 171-55-05</span>, або на електронну пошту: <span class="marked_text">VEK@palivenergy.com.ua</span></p><p class="slider_text">Особа, відповідальна за врегулювання спорів: Директор Логійко Ігор Станіславович</p><p class="slider_text">У випадку недосягнення згоди шляхом проведення переговорів споживач має право звернутися із відповідною заявою до Регулятора ринку природного газу та/або передати спір на розгляд до суду у відповідності з чинним законодавством України</p><p class="slider_text">Порядок розгляду вказаних скарг Регулятором передбачений ст. 21 Закону України «Про Національну комісію, що здійснює державне регулювання у сферах енергетики та комунальних послуг»</p>';
+          break;
+        default:
+          {}
+      }
+    }
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+
+    function prevSlide(){
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide-1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+    }
+
+    function nextSlide(){
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+    }
+
+    var slides2 = document.querySelectorAll('#slides2 .slide2');
+    var currentSlide2 = 0;
+
+    function prevSlide2(){
+        slides2[currentSlide2].className = 'slide2';
+        currentSlide2 =(currentSlide2-1);
+        slides2[currentSlide2].className = 'slide2 showing';
+    }
+
+    function nextSlide2(){
+        slides2[currentSlide2].className = 'slide2';
+        currentSlide2 = (currentSlide2+1)%slides2.length;
+        slides2[currentSlide2].className = 'slide2 showing';
+    }
+
+    var slides3 = document.querySelectorAll('#slides3 .slide3');
+    var currentSlide3 = 0;
+
+    function prevSlide3(){
+        slides3[currentSlide3].className = 'slide3';
+        currentSlide3 =(currentSlide3-1);
+        slides3[currentSlide3].className = 'slide3 showing';
+    }
+
+    function nextSlide3(){
+        slides3[currentSlide3].className = 'slide3';
+        currentSlide3 = (currentSlide3+1)%slides3.length;
+        slides3[currentSlide3].className = 'slide3 showing';
+    }
+    var smoothJumpUp = function() {
+      if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
+        window.scrollBy(0,-80);
+        setTimeout(smoothJumpUp, 0.2);
+        }
+    }
+
+    window.onscroll = function() {
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 1000) {
+      	document.getElementById('upbutton').style.display = 'block';
+      } else {
+        document.getElementById('upbutton').style.display = 'none';
+      }
+    }
+    var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
+
+    var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="energydeliveries.html" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
+
+    //if (includeIntro) {
+    //  includeIntro.innerHTML = intro;
+    //}
+
+    if (includeStatement) {
+      includeStatement.innerHTML = statement;
+    }
+
+    if (includeFooter) {
+      includeFooter.innerHTML = footer;
+    }
+    </script>
   </body>
 </html>

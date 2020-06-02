@@ -273,6 +273,136 @@
       <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
       </a>
     </div>
-    <script src="script.js"></script>
+    <script type="text/javascript">
+    function changeFuel(fuelType) {
+      if(fuelType == "electricity") {
+        pt1.innerHTML = "Процес укладання договору";
+        pt2.innerHTML = "Документи, необхідні для укладання договору з постачальником електроенергії:";
+        p3.innerHTML = "довідка про стан обліку електроенергії";
+        p4.innerHTML = "перелік технічних характеристик комерційних точок обліку";
+        p5.innerHTML = "свідоцтво про ДМА АСКОЕ/ЛУЗОД";
+        p6.innerHTML = "акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію";
+        p7.innerHTML = "Графік денного та почасового прогнозованого споживання електричної енергії";
+        pt8.innerHTML = "Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.";
+        bg_animation.style.background = "url(assets/images/electricity-animation.gif) no-repeat";
+        select_fuelE.classList.add("active_fuel");
+        select_fuelG.classList.remove("active_fuel");
+        link_fullinfo.href = 'energydeliveries.html';
+      } else if (fuelType) {
+        pt1.innerHTML = "Загальні умови постачання";
+        pt2.innerHTML = "Підставою для постачання природного газу споживачу є:";
+        p3.innerHTML = "наявність у споживача, об’єкт якого підключений до газорозподільної системи, договору розподілу природного газу, укладеного в установленому порядку між споживачем та Оператором ГРМ, та присвоєння споживачу Оператором ГРМ персонального EIC-коду як суб’єкту ринку природного газу;";
+        p4.innerHTML = "наявність у споживача, об’єкт якого підключений до газотранспортної системи, договору транспортування природного газу, укладеного в установленому порядку між споживачем та Оператором ГТС, та присвоєння споживачу Оператором ГТС персонального EIC-коду як суб’єкту ринку природного газу;";
+        p5.innerHTML = "наявність у споживача укладеного з постачальником договору постачання природного газу та дотримання його умов;";
+        p6.innerHTML = "наявність підтвердженого обсягу природного газу на відповідний розрахунковий період для потреб споживача;";
+        p7.innerHTML = "відсутність простроченої заборгованості споживача за поставлений природний газ перед діючим постачальником (за його наявності), що має підтверджуватися письмовою довідкою діючого постачальника або складеним з ним актом звірки взаєморозрахунків.";
+        pt8.innerHTML = "";
+        bg_animation.style.background = "url(assets/images/gas-animation.gif) no-repeat";
+        select_fuelE.classList.remove("active_fuel");
+        select_fuelG.classList.add("active_fuel");
+      }
+    }
+
+    function showmenu() {
+      frame_inner.style.height = "100%";
+      frame_inner.style.background = "#2D3039";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="#" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
+    }
+
+    function closemenu() {
+      frame_inner.style.height = "155px";
+      frame_inner.style.background = "inherit";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+    }
+    function joinusFuel (fuel) {
+      switch (fuel) {
+        case 1:
+          joinusF.innerHTML = "Заявка на поставку електроенергії";
+          joinusEnergy.classList.add("joinus_active");
+          joinusGas.classList.remove("joinus_active");
+          break;
+        case 2:
+          joinusF.innerHTML = "Заявка на поставку природного газу";
+          joinusGas.classList.add("joinus_active");
+          joinusEnergy.classList.remove("joinus_active");
+          break;
+        default:
+          {}
+      }
+    }
+    var intro_slides = document.querySelectorAll('#intro_slides .intro_slide');
+    var currentSlideI = 0;
+    var slideInterval = setInterval(nextSlideI,5000);
+
+    function nextSlideI(){
+        intro_slides[currentSlideI].className = 'intro_slide';
+        currentSlideI = (currentSlideI+1)%intro_slides.length;
+        intro_slides[currentSlideI].className = 'intro_slide showing';
+    }
+    function lightOn(lamp) {
+      switch (lamp) {
+      case 1:
+        lamp1.src = "assets/images/lamp_active01.png";
+        break;
+      case 2:
+        lamp2.src = "assets/images/lamp_active02.png";
+        break;
+      case 3:
+        lamp3.src = "assets/images/lamp_active03.png";
+        break;
+      case 4:
+        lamp4.src = "assets/images/lamp_active04.png";
+        break;
+      default:
+        {}
+      }
+    }
+
+    function showMoreNews(step) {
+      switch (step) {
+      case 1:
+        news.style.height = "2500px";
+        news_grad.innerHTML = '<div class="news_grad2"><p class="news_more more_link preudo" onclick="showMoreNews(2);">больше новостей</p></div><div class="news_grad"></div>';
+        break;
+      case 2:
+        news.style.height = "auto";
+        news_grad.innerHTML = '<p class="news_more more_link" style="margin-top:100px; margin-left:48%;">всі новини</p>';
+        break;
+      default:
+        {}
+      }
+    }
+
+    var smoothJumpUp = function() {
+      if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
+        window.scrollBy(0,-80);
+        setTimeout(smoothJumpUp, 0.2);
+        }
+    }
+
+    window.onscroll = function() {
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 1000) {
+      	document.getElementById('upbutton').style.display = 'block';
+      } else {
+        document.getElementById('upbutton').style.display = 'none';
+      }
+    }
+    var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
+
+    var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="energydeliveries.html" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
+
+    //if (includeIntro) {
+    //  includeIntro.innerHTML = intro;
+    //}
+
+    if (includeStatement) {
+      includeStatement.innerHTML = statement;
+    }
+
+    if (includeFooter) {
+      includeFooter.innerHTML = footer;
+    }
+    </script>
   </body>
 </html>

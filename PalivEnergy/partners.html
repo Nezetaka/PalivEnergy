@@ -144,6 +144,76 @@
       <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
       </a>
     </div>
-    <script src="script.js"></script>
+    <script type="text/javascript">
+    function showmenu() {
+      frame_inner.style.height = "100%";
+      frame_inner.style.background = "#2D3039";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="#" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
+    }
+
+    function closemenu() {
+      frame_inner.style.height = "155px";
+      frame_inner.style.background = "inherit";
+      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+    }
+    function showreview(paper) {
+      switch (paper) {
+        case 1:
+          paper1.src = "assets/images/review1.png";
+          break;
+        case 2:
+          paper2.src = "assets/images/review2.png";
+          break;
+        case 3:
+          paper3.src = "assets/images/review3.png";
+          break;
+        case 4:
+          paper4.src = "assets/images/review4.png";
+          break;
+        case 5:
+          paper5.src = "assets/images/review5.png";
+          break;
+        case 6:
+          paper6.src = "assets/images/review6.png";
+          break;
+        case 7:
+          paper7.src = "assets/images/review7.png";
+          break;
+        default:
+          {}
+      }
+    }
+    function joinusFuel (fuel) {
+      switch (fuel) {
+        case 1:
+          joinusF.innerHTML = "Заявка на поставку електроенергії";
+          joinusEnergy.classList.add("joinus_active");
+          joinusGas.classList.remove("joinus_active");
+          break;
+        case 2:
+          joinusF.innerHTML = "Заявка на поставку природного газу";
+          joinusGas.classList.add("joinus_active");
+          joinusEnergy.classList.remove("joinus_active");
+          break;
+        default:
+          {}
+      }
+    }
+    var smoothJumpUp = function() {
+      if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
+        window.scrollBy(0,-80);
+        setTimeout(smoothJumpUp, 0.2);
+        }
+    }
+
+    window.onscroll = function() {
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrolled > 1000) {
+      	document.getElementById('upbutton').style.display = 'block';
+      } else {
+        document.getElementById('upbutton').style.display = 'none';
+      }
+    }
+    </script>
   </body>
 </html>
