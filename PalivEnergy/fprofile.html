@@ -35,8 +35,8 @@
         <div class="nav3line">
           <div>
             <span class="nav3line_label">слідкуйте за нами:</span>
-            <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
-            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fab fa-instagram fa-2x"></i></a>
           </div>
           <div>
             <a class="lang" href="#">RU</a>
@@ -49,15 +49,18 @@
 
     <div class="activesidebar" id="sidebar">
       <ul>
-        <li class="sidebar_list"><span class="toggle_btn" onclick="openMenu()"><p>згорнути</p></span></li>
-        <li class="sidebar_list"><i class="fas fa-user-circle"></i><p>Профіль</p></li>
-        <li class="sidebar_list"><i class="fas fa-info-square"></i><p>Загальна інформація</p></li>
-        <li class="sidebar_list"><i class="fa fa-usd-circle"></i><p>Відпускні ціни на газ</p></li>
-        <li class="sidebar_list"><i class="far fa-list-alt"></i><p>Розрахунки за газ</p></li>
-        <li class="sidebar_list"><i class="fab fa-free-code-camp"></i><p>Обсяг споживання газу</p></li>
-        <li class="sidebar_list"><i class="fas fa-credit-card"></i><p>Оплатити за газ через сайт</p></li>
-        <li class="sidebar_list"><i class="fas fa-chart-bar"></i><p>Графіки</p></li>
+        <li class="sidebar_list" onclick="openMenu()"><span class="toggle_btn"><p>згорнути</p></span></li>
+        <li class="sidebar_list tab_active" id="sidebar_profile" onclick="showProfileInfo(1)"><i class="fas fa-user-circle"></i><p>Профіль</p></li>
+        <li class="sidebar_list" id="sidebar_info" onclick="showProfileInfo(2)"><i class="fas fa-info-square"></i><p>Загальна інформація</p></li>
+        <li class="sidebar_list" id="sidebar_price" onclick="showProfileInfo(3)"><i class="fa fa-usd-circle"></i><p>Відпускні ціни на газ</p></li>
+        <li class="sidebar_list" id="sidebar_calc" onclick="showProfileInfo(4)"><i class="far fa-list-alt"></i><p>Розрахунки за газ</p></li>
+        <li class="sidebar_list" id="sidebar_amount" onclick="showProfileInfo(5)"><i class="fab fa-free-code-camp"></i><p>Обсяг споживання газу</p></li>
+        <li class="sidebar_list" id="sidebar_pay" onclick="showProfileInfo(6)"><i class="fas fa-credit-card"></i><p>Оплатити за газ через сайт</p></li>
+        <li class="sidebar_list" id="sidebar_graf" onclick="showProfileInfo(7)"><i class="fas fa-chart-bar"></i><p>Графіки</p></li>
       </ul>
+    </div>
+    <div id="includeProfileContent" class="profile_content">
+      <p>Профиль</p>
     </div>
     <script src="pscript.js"></script>
   </body>

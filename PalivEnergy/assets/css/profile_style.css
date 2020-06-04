@@ -194,6 +194,7 @@ ul {
   font-weight: 300;
   font-size: 18px;
   line-height: 25px;
+  color: #f2f2f2;
 }
 
 .social_link {
@@ -395,5 +396,19 @@ ul {
 }
 
 .fa:hover {
-  color: red;
+  color: #EB4B18;
+}
+
+.profile_content {
+  display: inline-block;
+  margin-top: 230px;
+  margin-left: 20vw;
+}
+
+.tab_active {
+  color: #EB4B18;
+}
+
+.content_shift {
+  margin-left: 45vw;
 }
