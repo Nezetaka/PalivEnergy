@@ -403,6 +403,7 @@ ul {
   display: inline-block;
   margin-top: 230px;
   margin-left: 20vw;
+  width: 78vw;
 }
 
 .tab_active {
@@ -411,4 +412,214 @@ ul {
 
 .content_shift {
   margin-left: 45vw;
+  width: 53vw;
+}
+
+.profile_data {
+  display: inline-block;
+  width: 45%;
+  margin-bottom: 7vh;
+}
+
+.profile_data2 {
+  display: inline-block;
+  width: 76%;
+  margin-bottom: 7vh;
+}
+
+.profile_input_data {
+  background: inherit;
+  border: 0;
+  border-bottom: 1px solid #333333;
+  width: 50%;
+  margin-top: 2vh;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333
+}
+
+.profile_input_data2 {
+  background: inherit;
+  border: 0;
+  border-bottom: 1px solid #333333;
+  width: 70%;
+  margin-top: 2vh;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333
+}
+
+.profile_input_data3 {
+  background: inherit;
+  border: 0;
+  border-bottom: 1px solid #333333;
+  width: 30%;
+  margin-top: 2vh;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333
+}
+
+.profile_input_data4 {
+  background: inherit;
+  border: 1px solid #333333;
+  width: 30%;
+  margin-top: 2vh;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333
+}
+
+.profile_data_title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  color: #333333;
+  opacity: 0.7;
+}
+
+.profile_data_subtext {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333;
+}
+
+.profile_confirm_btn {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  font-variant: small-caps;
+  color: #333333;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 6px 36px;
+  margin-left: 20px;
+}
+
+.profile_confirm_btn2 {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  font-variant: small-caps;
+  color: #333333;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 6px 55px;
+  margin-left: 20px;
+}
+
+.checkbox {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  opacity: 0.7;
+  white-space: nowrap;
+  margin-top: 40px;
+}
+
+#checkbox {
+  -webkit-display: inline-flex;
+  -moz-display: inline-flex;
+  -ms-display: inline-flex;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  position: absolute;
+  opacity: 0;
+}
+
+#checkbox+label:before {
+  content: '';
+  -webkit-display: inline-block;
+  -moz-display: inline-block;
+  -ms-display: inline-block;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+
+  margin-right: 6px;
+}
+
+#checkbox:checked+label:before {
+  background-color: #EB4B18;
+}
+
+#checkbox2 {
+  -webkit-display: inline-flex;
+  -moz-display: inline-flex;
+  -ms-display: inline-flex;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  position: absolute;
+  opacity: 0;
+}
+
+#checkbox2+label:before {
+  content: '';
+  -webkit-display: inline-block;
+  -moz-display: inline-block;
+  -ms-display: inline-block;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+
+  margin-right: 6px;
+}
+
+#checkbox2:checked+label:before {
+  background-color: #EB4B18;
 }
