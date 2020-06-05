@@ -79,7 +79,7 @@ function showProfileInfo(tab) {
       sidebar_graf.classList.remove("tab_active");
       break;
     case 7:
-      includeProfileContent.innerHTML = "<p>Графіки</p>";
+      includeProfileContent.innerHTML = '<div class="profile_graf"><p class="profile_graf_title">обсяг споживання</p><img class="profile_graf_img" src="assets/images/graf_amount.png" alt="amount"><p class="profile_graf_title">вартість</p><img class="profile_graf_img" src="assets/images/graf_cost.png" alt="cost"><p class="profile_graf_title">сальдо</p><img class="profile_graf_img" src="assets/images/graf_saldo.png" alt="saldo"></div>';
       sidebar_graf.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
