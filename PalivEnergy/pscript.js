@@ -29,7 +29,7 @@ function showProfileInfo(tab) {
       sidebar_graf.classList.remove("tab_active");
       break;
     case 2:
-      includeProfileContent.innerHTML = "<p>інформація</p>";
+      includeProfileContent.innerHTML = '<div class="profile_data"><h4 class="profile_data_title">Прізвище</h4><p class="profile_data_subtext">Арабаджи</p></div><div class="profile_data"><h4 class="profile_data_title">Ім\'я</h4><p class="profile_data_subtext">Антон</p></div><div class="profile_data"><h4 class="profile_data_title">ИНН</h4><p class="profile_data_subtext">2322002417</p></div><div class="profile_data"><h4 class="profile_data_title">№ договору</h4><p class="profile_data_subtext">123334985</p></div><div class="profile_data"><h4 class="profile_data_title">Особ. рахунок</h4><p class="profile_data_subtext">00000000000000</p></div><div class="profile_data"><h4 class="profile_data_title">EIC</h4><p class="profile_data_subtext">00000000000000000</p></div><div class="profile_data2"><h4 class="profile_data_title">Адреса підключення</h4><p class="profile_data_subtext">Мариуполь, пр. Мира, 25</p></div><div class="profile_data"><h4 class="profile_data_title">Стан</h4><p class="profile_data_subtext">підключений</p></div><div class="profile_data"><h4 class="profile_data_title">Дата підключення</h4><p class="profile_data_subtext">01.01.2020</p></div>';
       sidebar_info.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_price.classList.remove("tab_active");
