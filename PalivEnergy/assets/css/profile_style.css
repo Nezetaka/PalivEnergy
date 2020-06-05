@@ -401,9 +401,7 @@ ul {
 
 .profile_content {
   display: inline-block;
-  margin-top: 230px;
-  margin-left: 20vw;
-  width: 78vw;
+  width: 100%;
 }
 
 .tab_active {
@@ -411,20 +409,29 @@ ul {
 }
 
 .content_shift {
-  margin-left: 45vw;
-  width: 53vw;
+  padding-left: 35vw;
 }
 
 .profile_data {
   display: inline-block;
   width: 45%;
   margin-bottom: 7vh;
+  padding-left: 20vw;
+}
+
+.profile_data:first-child {
+  padding-top: 230px;
 }
 
 .profile_data2 {
   display: inline-block;
   width: 76%;
   margin-bottom: 7vh;
+  padding-left: 20vw;
+}
+
+.profile_data2:first-child {
+  padding-top: 230px;
 }
 
 .profile_input_data {
@@ -631,4 +638,107 @@ ul {
 
 #checkbox2:checked+label:before {
   background-color: #EB4B18;
+}
+
+.gas_calc_table {
+  width: 85%;
+  margin-top: 230px;
+  margin-left: 8vw;
+  border-collapse: collapse;
+}
+.gas_calc_table tr {
+  height: 100px;
+}
+
+.gas_calc_table tr td:nth-child(odd) {
+  background: rgba(141, 147, 165, 0.1);
+}
+
+.gas_amount_table {
+  width: 85%;
+  margin-top: 230px;
+  margin-left: 8vw;
+  border-collapse: collapse;
+}
+.gas_amount_table tr {
+  height: 100px;
+}
+
+.gas_amount_table tr:nth-child(even) {
+  background: rgba(141, 147, 165, 0.1);
+}
+
+.gastable_title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.gastable_data {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.profile_payment {
+  padding-top: 230px;
+  padding-left: 10vw;
+  padding-bottom: 8vh;
+}
+
+.profile_payment label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.profile_payment_title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 49px;
+  color: #333333;
+  margin-bottom: 40px;
+}
+
+.profile_payment_checkbox {
+
+}
+
+.img_payment_type {
+  width: 90%;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.profile_payment_warning {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #EB4B18;
+  margin-top: 8vh;
+}
+
+#profile_warning, #profile_print_payment, #img_payment_type1, #img_payment_type2 {
+  display: none;
 }
