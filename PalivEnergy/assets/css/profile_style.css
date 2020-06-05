@@ -762,3 +762,50 @@ ul {
   width: 90%;
   display: block;
 }
+
+.profile_prices {
+  padding-top: 230px;
+  padding-left: 10vw;
+}
+
+.profile_prices_img {
+  width: 90%;
+  display: block;
+}
+
+.graf_suptext {
+  display: inline-block;
+  margin-left: 15vw;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.select_year {
+  background: inherit;
+  color: #EB4B18;
+  border: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.profile_prices {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 100px;
+}
+.profile_prices tr {
+  height: 100px;
+}
+
+.profile_prices tr:nth-child(even) {
+  background: rgba(141, 147, 165, 0.1);
+}

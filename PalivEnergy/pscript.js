@@ -39,7 +39,7 @@ function showProfileInfo(tab) {
       sidebar_graf.classList.remove("tab_active");
       break;
     case 3:
-      includeProfileContent.innerHTML = "<p>Відпускні ціни на газ</p>";
+      includeProfileContent.innerHTML = '<div class="profile_prices"><table class="profile_prices"><tr><td class="gastable_data">грн/куб.м.</td><td class="gastable_data"></td></tr><tr><td class="gastable_data">6,91399</td><td class="gastable_data">з урахуванням ПДВ</td></tr><tr><td class="gastable_data">в тому числі</td><td class="gastable_data"></td></tr><tr><td class="gastable_data">0,12416</td><td class="gastable_data">послуга транспортування природного газу</td></tr></table><p class="graf_suptext">графік зміни вартості</p><p class="graf_suptext">вибрати рік:</p><select class="select_year"><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option></select><img class="profile_prices_img" src="assets/images/graf_year.png"/></div>';
       sidebar_price.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
