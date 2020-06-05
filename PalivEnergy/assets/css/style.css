@@ -1400,6 +1400,10 @@ ul {
   background: #333333;
 }
 
+#paper1, #paper2, #paper3, #paper4, #paper5, #paper6, #paper7 {
+  display: none;
+}
+
 .partners {
   padding-top: 12vh;
   background: #333333;
