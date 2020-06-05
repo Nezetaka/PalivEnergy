@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/profile_style.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>Paliv Energy</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="frame_inner">
+        <div class="nav1line" id="nav1line">
+          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
+          <a href="#" class="top_news_link">новини</a>
+          <p class="header_icon" onclick="showmenu()">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+          </p>
+        </div>
+        <nav id="navnav">
+          <ul class="navul">
+            <li><a class="navigation_link" href="index.html">Головна</a></li>
+            <li><a class="navigation_link" href="about.html">Про нас</a></li>
+            <li><a class="navigation_link" href="partners.html">Партнери</a></li>
+            <li><a class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
+            <li><a class="navigation_link" href="energydeliveries.html">Постачання електроенергії</a></li>
+            <li><a class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
+            <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="nav3line">
+          <div>
+            <span class="nav3line_label">слідкуйте за нами:</span>
+            <a class="social_link" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+          <div>
+            <a class="lang" href="#">RU</a>
+            <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login">
+      <form class="login_form">
+        <div class="login_input">
+          <div class="login_input_inner">
+            <h3 class="form_title">Увійти</h3>
+            <div id="login_choise">
+              <p class="login_link login_active" onclick="loginType(1);" id="loginf">фізична особа</p>
+              <p class="login_link" onclick="loginType(2);" id="logink">компанія</p>
+            </div>
+            <p class="form_label">Телефон або E-mail</p>
+            <input type="text" value="" class="login_data">
+            <p class="form_label">Пароль</p>
+            <input type="text" value="" class="login_data">
+            <a href="#" class="forget_password">забули пароль?</a>
+            <div class="login_btn">
+              <a href="fprofile.html" id="loginfk" class="login_btnL">увійти</a>
+              <a href="#" class="login_btnR">реєстрація</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="pscript.js"></script>
+  </body>
+</html>

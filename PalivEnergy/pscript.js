@@ -109,3 +109,20 @@ function showPaymentType() {
     profile_print_payment.style.display = "none";
   }
 }
+
+function loginType (t) {
+  switch (t) {
+    case 1:
+      loginf.classList.add("login_active");
+      logink.classList.remove("login_active");
+      loginfk.href = "fprofile.html";
+      break;
+    case 2:
+      logink.classList.add("login_active");
+      loginf.classList.remove("login_active");
+      loginfk.href = "#";
+      break;
+    default:
+      {}
+  }
+}
