@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/profile_style.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>Paliv Energy</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="frame_inner">
+        <div class="nav1line" id="nav1line">
+          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
+          <a href="#" class="top_news_link">новини</a>
+          <p class="header_icon" onclick="showmenu()">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+          </p>
+        </div>
+        <nav id="navnav">
+          <ul class="navul">
+            <li><a class="navigation_link" href="index.html">Головна</a></li>
+            <li><a class="navigation_link" href="about.html">Про нас</a></li>
+            <li><a class="navigation_link" href="partners.html">Партнери</a></li>
+            <li><a class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
+            <li><a class="navigation_link" href="energydeliveries.html">Постачання електроенергії</a></li>
+            <li><a class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
+            <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="nav3line">
+          <div>
+            <span class="nav3line_label">слідкуйте за нами:</span>
+            <a class="social_link" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+          <div>
+            <a class="lang" href="#">RU</a>
+            <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="activesidebar" id="sidebar">
+      <ul>
+        <li class="sidebar_list" onclick="openMenu()"><span class="toggle_btn"><p>згорнути</p></span></li>
+        <li class="sidebar_list tab_active" id="sidebar_profile" onclick="showProfileInfo(1)"><i class="fas fa-user-circle"></i><p>Профіль</p></li>
+        <li class="sidebar_list" id="sidebar_info" onclick="showProfileInfo(2)"><i class="fas fa-info-square"></i><p>Загальна інформація</p></li>
+        <li class="sidebar_list" id="sidebar_price" onclick="showProfileInfo(3)"><i class="fa fa-usd-circle"></i><p>Відпускні ціни на газ</p></li>
+        <li class="sidebar_list" id="sidebar_calc" onclick="showProfileInfo(4)"><i class="far fa-list-alt"></i><p>Розрахунки за газ</p></li>
+        <li class="sidebar_list" id="sidebar_amount" onclick="showProfileInfo(5)"><i class="fab fa-free-code-camp"></i><p>Обсяг споживання газу</p></li>
+        <li class="sidebar_list" id="sidebar_pay" onclick="showProfileInfo(6)"><i class="fas fa-credit-card"></i><p>Оплатити за газ через сайт</p></li>
+        <li class="sidebar_list" id="sidebar_graf" onclick="showProfileInfo(7)"><i class="fas fa-chart-bar"></i><p>Графіки</p></li>
+      </ul>
+    </div>
+    <div id="includeProfileContent" class="profile_content">
+      <div class="profile_data">
+        <h4 class="profile_data_title">Прізвище</h4>
+        <input type="text" name="" value="" class="profile_input_data" placeholder="Арабаджи">
+      </div>
+      <div class="profile_data">
+        <h4 class="profile_data_title">Ім'я</h4>
+        <input type="text" name="" value="" class="profile_input_data" placeholder="Антон">
+      </div>
+      <div class="profile_data">
+        <h4 class="profile_data_title">ИНН</h4>
+        <input type="text" name="" value="" class="profile_input_data" placeholder="2322002417">
+      </div>
+      <div class="profile_data">
+        <h4 class="profile_data_title">№ договору</h4>
+        <input type="text" name="" value="" class="profile_input_data" placeholder="123334985">
+      </div>
+      <div class="profile_data">
+        <h4 class="profile_data_title">Особ. рахунок</h4>
+        <input type="text" name="" value="" class="profile_input_data" placeholder="00000000000000">
+      </div>
+      <div class="profile_data">
+        <h4 class="profile_data_title">EIC</h4>
+        <input type="text" name="" value="" class="profile_input_data" placeholder="00000000000000000">
+      </div>
+      <div class="profile_data2">
+        <h4 class="profile_data_title">Адреса підключення</h4>
+        <input type="text" name="" value="" class="profile_input_data2" placeholder="Мариуполь, пр. Мира, 25">
+      </div>
+      <div class="profile_data2">
+        <h4 class="profile_data_title">Телефон</h4>
+        <input type="tel" pattern="+380[0-9]{3}[0-9]{2}[0-9]{2}" name="" value="" class="profile_input_data3" placeholder="+380954585819">
+        <a href="#" class="profile_confirm_btn">підтвердити</a>
+      </div>
+      <div class="profile_data2">
+        <h4 class="profile_data_title">E-mail</h4>
+        <input type="email" name="" value="" class="profile_input_data3" placeholder="arabadjy0203@gmail">
+        <a href="#" class="profile_confirm_btn">підтвердити</a>
+      </div>
+      <div class="profile_data2">
+        <h4 class="profile_data_title">Пароль</h4>
+        <input type="password" name="" value="" class="profile_input_data3" placeholder="***********">
+        <a href="#" class="profile_confirm_btn">змінити пароль</a>
+      </div>
+      <div class="profile_data2">
+        <h4 class="profile_data_title">Обсяг споживання газу за звітний місяць</h4>
+        <p class="profile_data_subtext">01.01 - 04.02</p>
+        <input type="text" name="" value="" class="profile_input_data4" placeholder="12,12 куб.м.">
+        <a href="#" class="profile_confirm_btn2">зберегти</a>
+      </div>
+      <div class="profile_data2">
+        <span class="checkbox">
+        <input id="checkbox" type="checkbox"><label for="checkbox">Отримувати повідомлення про сплату в браузері та на E-mail</label></span>
+        <span class="checkbox">
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Підписатися на розсилку новин</label></span>
+      </div>
+      <div class="profile_data2">
+        <a href="#" class="profile_confirm_btn2">зберегти</a>
+      </div>
+    </div>
+    <script src="pscript.js"></script>
+  </body>
+</html>

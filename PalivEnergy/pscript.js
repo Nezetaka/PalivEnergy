@@ -119,7 +119,7 @@ function loginType (t) {
     case 2:
       logink.classList.add("login_active");
       loginf.classList.remove("login_active");
-      loginfk.href = "#";
+      loginfk.href = "kprofile.html";
       break;
     default:
       {}
