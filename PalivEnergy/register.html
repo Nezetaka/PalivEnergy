@@ -51,19 +51,28 @@
       <form class="login_form">
         <div class="login_input">
           <div class="login_input_inner">
-            <h3 class="form_title">Увійти</h3>
+            <h3 class="form_title">Реєстрація</h3>
             <div id="login_choise">
-              <p class="login_link login_active" onclick="loginType(1);" id="loginf">фізична особа</p>
-              <p class="login_link" onclick="loginType(2);" id="logink">компанія</p>
+              <p class="login_link login_active" onclick="registerType(1);" id="loginf">фізична особа</p>
+              <p class="login_link" onclick="registerType(2);" id="logink">компанія</p>
             </div>
-            <p class="form_label">Телефон або E-mail</p>
-            <input type="text" value="" class="login_data">
-            <p class="form_label">Пароль</p>
-            <input type="text" value="" class="login_data">
-            <a href="recovery.html" class="forget_password">забули пароль?</a>
+            <div class="" id="register_input_fields">
+              <p class="form_label">Місто</p>
+              <input type="text" value="" class="login_data">
+              <p class="form_label">Телефон</p>
+              <input type="text" value="" class="login_data">
+              <p class="form_label">Придумайте пароль</p>
+              <input type="text" value="" class="login_data">
+            </div>
+            <div class="">
+              <span class="checkbox">
+              <input id="checkbox" type="checkbox"><label for="checkbox">я ознайомився з <span class="marked_text">політикою конфіденційності</span>, і приймаю угоду</label></span>
+            </div>
             <div class="login_btn">
-              <a href="fprofile.html" id="loginfk" class="login_btnL">увійти</a>
-              <a href="register.html" class="login_btnR" id="registerfk">реєстрація</a>
+              <a href="#" id="registerfk" class="login_btnL">реєстрація</a>
+            </div>
+            <div class="">
+              <p class="register_text">вже є обліковий запис? <a href="login.html" class="register_link">увійти</a></p>
             </div>
           </div>
         </div>

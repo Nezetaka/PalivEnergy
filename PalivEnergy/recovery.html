@@ -50,20 +50,13 @@
     <div class="login">
       <form class="login_form">
         <div class="login_input">
-          <div class="login_input_inner">
-            <h3 class="form_title">Увійти</h3>
-            <div id="login_choise">
-              <p class="login_link login_active" onclick="loginType(1);" id="loginf">фізична особа</p>
-              <p class="login_link" onclick="loginType(2);" id="logink">компанія</p>
-            </div>
+          <div class="login_input_inner" id="recovery_inner">
+            <h3 class="form_title">Відновити пароль</h3>
+            <p class="recovery_text">Будь ласка, вкажіть E-mail, який ви використовували для входу на сайт. Якщо ви не пам'ятаєте цих даних, вкажіть телефон, до якого прив'язаниій обліковий запис.</p>
             <p class="form_label">Телефон або E-mail</p>
             <input type="text" value="" class="login_data">
-            <p class="form_label">Пароль</p>
-            <input type="text" value="" class="login_data">
-            <a href="recovery.html" class="forget_password">забули пароль?</a>
             <div class="login_btn">
-              <a href="fprofile.html" id="loginfk" class="login_btnL">увійти</a>
-              <a href="register.html" class="login_btnR" id="registerfk">реєстрація</a>
+              <p id="recovery_nextbtn" class="login_btnL" onclick="recoveryNext(1);">далі</p>
             </div>
           </div>
         </div>

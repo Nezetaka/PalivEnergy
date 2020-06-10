@@ -1,13 +1,12 @@
 function openMenu() {
   document.getElementById("sidebar").classList.toggle('activesidebar');
   document.getElementById("includeProfileContent").classList.toggle('content_shift');
-
 }
 
 function showmenu() {
   frame_inner.style.height = "100%";
   frame_inner.style.background = "#2D3039";
-  nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="#" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
+  nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="login.html" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
 }
 
 function closemenu() {
@@ -121,6 +120,39 @@ function loginType (t) {
       logink.classList.add("login_active");
       loginf.classList.remove("login_active");
       loginfk.href = "#";
+      break;
+    default:
+      {}
+  }
+}
+
+function registerType (t) {
+  switch (t) {
+    case 1:
+      loginf.classList.add("login_active");
+      logink.classList.remove("login_active");
+      register_input_fields.innerHTML = '<p class="form_label">Місто</p><input type="text" value="" class="login_data"><p class="form_label">Телефон</p><input type="text" value="" class="login_data"><p class="form_label">Придумайте пароль</p><input type="text" value="" class="login_data">';
+      break;
+    case 2:
+      logink.classList.add("login_active");
+      loginf.classList.remove("login_active");
+      register_input_fields.innerHTML = '<p class="form_label">Назва компанії</p><input type="text" value="" class="login_data"><p class="form_label">Місто</p><input type="text" value="" class="login_data"><p class="form_label">Телефон</p><input type="text" value="" class="login_data"><p class="form_label">Придумайте пароль</p><input type="text" value="" class="login_data">';
+      break;
+    default:
+      {}
+  }
+}
+
+function recoveryNext(step) {
+  switch (step) {
+    case 1:
+      recovery_inner.innerHTML = '<h3 class="form_title">Відновити пароль</h3><p class="recovery_text">На ваш телефон відправлено повідомлення з кодом для скидання пароля.</p><p class="form_label">Введіть код</p><input type="text" value="" class="login_data"><div class="login_btn"><p id="recovery_nextbtn" class="login_btnL" onclick="recoveryNext(3);">далі</p></div>';
+      break;
+    case 2:
+      recovery_inner.innerHTML = '<h3 class="form_title">Відновити пароль</h3><p class="recovery_text">На ваш E-mail відправлено повідомлення з посиланням для скидання пароля.</p><div class="login_btn"><a href="fprofile.html" class="login_btnL">особистий кабінет</a></div>';
+      break;
+    case 3:
+      recovery_inner.innerHTML = '<h3 class="form_title">Відновити пароль</h3><p class="form_label">Новий пароль</p><input type="text" value="" class="login_data"><p class="form_label">Повторіть пароль</p><input type="text" value="" class="login_data"><div class="login_btn"><p id="recovery_nextbtn" class="login_btnL">змінити пароль</p></div>';
       break;
     default:
       {}
