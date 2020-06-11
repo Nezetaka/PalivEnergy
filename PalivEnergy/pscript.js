@@ -3,6 +3,21 @@ function openMenu() {
   document.getElementById("includeProfileContent").classList.toggle('content_shift');
 }
 
+function openSubMenu(sub) {
+  switch (sub) {
+    case 1:
+      document.getElementById("sidebar_electr").classList.toggle('active_subbar');
+      document.getElementById("sub_ul1").classList.toggle('subbar_displayed');
+      break;
+    case 2:
+      document.getElementById("sidebar_gas").classList.toggle('active_subbar');
+      document.getElementById("sub_ul2").classList.toggle('subbar_displayed');
+      break;
+    default:
+      {}
+  }
+}
+
 function showmenu() {
   frame_inner.style.height = "100%";
   frame_inner.style.background = "#2D3039";
@@ -86,6 +101,36 @@ function showProfileInfo(tab) {
       sidebar_calc.classList.remove("tab_active");
       sidebar_amount.classList.remove("tab_active");
       sidebar_pay.classList.remove("tab_active");
+      break;
+    case 21:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 22:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 23:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 24:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 25:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 26:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 27:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 28:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 29:
+      includeProfileContent.innerHTML = '';
+      break;
+    case 210:
+      includeProfileContent.innerHTML = '';
       break;
     default:
       {}
