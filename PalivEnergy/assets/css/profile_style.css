@@ -1156,6 +1156,7 @@ ul {
 .profile_info_content {
   padding-top: 155px;
   padding-left: 15vw;
+  padding-bottom: 100px;
 }
 
 .kprofile_h2_title {
@@ -1176,5 +1177,15 @@ ul {
 }
 
 .profile_data3:first-child {
+  padding-top: 230px;
+}
+
+.profile_data4 {
+  display: inline-block;
+  width: 45%;
+  margin-bottom: 5vh;
+}
+
+.profile_data4:first-child {
   padding-top: 230px;
 }
