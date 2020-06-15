@@ -473,7 +473,7 @@ ul {
   background: inherit;
   border: 0;
   border-bottom: 1px solid #333333;
-  width: 50%;
+  width: 80%;
   margin-top: 2vh;
   font-family: Open Sans;
   font-style: normal;
@@ -1151,4 +1151,30 @@ ul {
   font-variant: small-caps;
   color: #333333;
   background: rgba(141, 147, 165, 0.1);
+}
+
+.profile_info_content {
+  padding-top: 155px;
+  padding-left: 15vw;
+}
+
+.kprofile_h2_title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 49px;
+  color: #333333;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.profile_data3 {
+  display: inline-block;
+  width: 76%;
+  margin-bottom: 7vh;
+}
+
+.profile_data3:first-child {
+  padding-top: 230px;
 }
