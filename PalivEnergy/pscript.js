@@ -187,7 +187,7 @@ function showProfileInfo(tab) {
       sidebar_gas_graf.classList.remove("tab_active");
       break;
     case 27:
-      includeProfileContent.innerHTML = '<div class="profile_prices">ГРАФИКИ</div>';
+      includeProfileContent.innerHTML = '<div class="profile_graf"><p class="profile_graf_title">обсяг споживання</p><img class="profile_graf_img" src="assets/images/graf_amount.png" alt="amount"><p class="profile_graf_title">вартість</p><img class="profile_graf_img" src="assets/images/graf_cost.png" alt="cost"><p class="profile_graf_title">сальдо</p><img class="profile_graf_img" src="assets/images/graf_saldo.png" alt="saldo"></div>';
       sidebar_el_graf.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
@@ -201,7 +201,7 @@ function showProfileInfo(tab) {
       sidebar_gas_graf.classList.remove("tab_active");
       break;
     case 28:
-      includeProfileContent.innerHTML = '<div class="profile_prices">ЦЕНЫ ГАЗ</div>';
+      includeProfileContent.innerHTML = '<div class="profile_prices"><table class="profile_prices"><tr><td class="gastable_data">грн/куб.м.</td><td class="gastable_data"></td></tr><tr><td class="gastable_data">6,91399</td><td class="gastable_data">з урахуванням ПДВ</td></tr><tr><td class="gastable_data">в тому числі</td><td class="gastable_data"></td></tr><tr><td class="gastable_data">0,12416</td><td class="gastable_data">послуга транспортування природного газу</td></tr></table><p class="graf_suptext">графік зміни вартості</p><p class="graf_suptext">вибрати рік:</p><select class="select_year"><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option></select><img class="profile_prices_img" src="assets/images/graf_year.png"/></div>';
       sidebar_gas_price.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
@@ -215,7 +215,7 @@ function showProfileInfo(tab) {
       sidebar_gas_graf.classList.remove("tab_active");
       break;
     case 29:
-      includeProfileContent.innerHTML = '<div class="profile_prices">РАСЧЁТЫ ГАЗ</div>';
+      includeProfileContent.innerHTML = '<table class="gas_calc_table"><tr><td class="gastable_title">особовий рахунок</td><td class="gastable_title">дата</td><td class="gastable_title">сума нарахування</td><td class="gastable_title">сума оплат</td><td class="gastable_title">обсяг споживання</td><td class="gastable_title">початок періоду</td><td class="gastable_title">кінець періоду</td></tr><tr><td class="gastable_data">112315989</td><td class="gastable_data">2020 січень</td><td class="gastable_data">1400 грн</td><td class="gastable_data">1300 грн</td><td class="gastable_data">0,20 куб.м.</td><td class="gastable_data">—</td><td class="gastable_data">-100</td></tr><tr><td class="gastable_data">112315989</td><td class="gastable_data">2020 лютий</td><td class="gastable_data">1300 грн</td><td class="gastable_data">1500 грн</td><td class="gastable_data">0,17 куб.м.</td><td class="gastable_data">-100</td><td class="gastable_data">100</td></tr><tr><td class="gastable_data">112315989</td><td class="gastable_data">2020 березень</td><td class="gastable_data">1370 грн</td><td class="gastable_data">1450 грн</td><td class="gastable_data">0,18 куб.м.</td><td class="gastable_data">100</td><td class="gastable_data">180</td></tr><tr><td class="gastable_data">112315989</td><td class="gastable_data">2020 квітень</td><td class="gastable_data">1400 грн</td><td class="gastable_data">1400 грн</td><td class="gastable_data">0,20 куб.м.</td><td class="gastable_data">180</td><td class="gastable_data">180</td></tr></table>';
       sidebar_gas_calc.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
@@ -229,7 +229,7 @@ function showProfileInfo(tab) {
       sidebar_gas_graf.classList.remove("tab_active");
       break;
     case 210:
-      includeProfileContent.innerHTML = '<div class="profile_prices">ОБЪЁМ ГАЗ</div>';
+      includeProfileContent.innerHTML = '<table class="gas_amount_table"><tr><td class="gastable_title">дата</td><td class="gastable_title">обсяг споживання</td><td class="gastable_title">сума нарахування</td></tr><tr><td class="gastable_data">08.01.2020</td><td class="gastable_data">12.31 куб. м.</td><td class="gastable_data">1400 грн</td></tr><tr><td class="gastable_data">09.02.2020</td><td class="gastable_data">11.22 куб. м.</td><td class="gastable_data">1300 грн</td></tr><tr><td class="gastable_data">09.03.2020</td><td class="gastable_data">11.44 куб. м.</td><td class="gastable_data">1320 грн</td></tr><tr><td class="gastable_data">08.04.2020</td><td class="gastable_data">13.46 куб. м.</td><td class="gastable_data">1540 грн</td></tr></table>';
       sidebar_gas_amount.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
@@ -243,7 +243,7 @@ function showProfileInfo(tab) {
       sidebar_gas_graf.classList.remove("tab_active");
       break;
     case 211:
-      includeProfileContent.innerHTML = '<div class="profile_prices">ГРАФИКИ</div>';
+      includeProfileContent.innerHTML = '<div class="profile_graf"><p class="profile_graf_title">обсяг споживання</p><img class="profile_graf_img" src="assets/images/graf_amount.png" alt="amount"><p class="profile_graf_title">вартість</p><img class="profile_graf_img" src="assets/images/graf_cost.png" alt="cost"><p class="profile_graf_title">сальдо</p><img class="profile_graf_img" src="assets/images/graf_saldo.png" alt="saldo"></div>';
       sidebar_gas_graf.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
