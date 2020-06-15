@@ -131,7 +131,7 @@ function showProfileInfo(tab) {
       sidebar_gas_graf.classList.remove("tab_active");
       break;
     case 23:
-      includeProfileContent.innerHTML = '<div class="profile_prices">ОПЛАТА</div>';
+      includeProfileContent.innerHTML = '<div class="profile_content_inner"><div class="tab"><button class="tablinks" onclick="openFuel(event, \'tabgas\')"><p>природний газ</p></button><button class="tablinks" onclick="openFuel(event, \'tabelectro\')"><p>електроенергія</p></button></div><div id="tabgas" class="tabcontent"><form class="profile_payment"><h2 class="profile_payment_title">Виберіть спосіб оплати</h2><input class="profile_payment_checkbox" type="radio" id="onlinePay"         name="contact" value="onlinePay" onclick="showPaymentType()"><label for="onlinePay">оплатити онлайн</label><br><img id="img_payment_type1" class="img_payment_type" src="assets/images/onlinepay.png" alt="pay"><input class="profile_payment_checkbox" type="radio" id="receipPay" name="contact" value="receipPay" onclick="showPaymentType()"><label for="receipPay">оплата по квитанції</label><p id="profile_warning" class="profile_payment_warning">Увага! Змінено банківські реквізити</p><img id="img_payment_type2" class="img_payment_type" src="assets/images/receippay.png" alt="pay"><a href="#" id="profile_print_payment" class="profile_confirm_btn2">роздрукувати</a></form></div><div id="tabelectro" class="tabcontent"><form class="profile_payment"><h2 class="profile_payment_title">Виберіть спосіб оплати</h2><input class="profile_payment_checkbox" type="radio" id="onlinePay_2" name="contact" value="onlinePay_2" onclick="showPaymentType2()"><label for="onlinePay_2">оплатити онлайн</label><br><img id="img_payment_type1_2" class="img_payment_type" src="assets/images/onlinepay.png" alt="pay"><input class="profile_payment_checkbox" type="radio" id="receipPay_2" name="contact" value="receipPay_2" onclick="showPaymentType2()"><label for="receipPay_2">оплата по квитанції</label><p id="profile_warning_2" class="profile_payment_warning">Увага! Змінено банківські реквізити</p><img id="img_payment_type2_2" class="img_payment_type" src="assets/images/receippay.png" alt="pay"><a href="#" id="profile_print_payment_2" class="profile_confirm_btn2">роздрукувати</a></form></div></div>';
       sidebar_pay.classList.add("tab_active");
       sidebar_profile.classList.remove("tab_active");
       sidebar_info.classList.remove("tab_active");
@@ -275,6 +275,23 @@ function showPaymentType() {
     profile_warning.style.display = "none";
     img_payment_type2.style.display = "none";
     profile_print_payment.style.display = "none";
+  }
+}
+
+function showPaymentType2() {
+  if (onlinePay_2.checked == true) {
+    img_payment_type1_2.style.display = "block";
+  } else {
+    img_payment_type1_2.style.display = "none";
+  }
+  if (receipPay_2.checked == true) {
+    profile_warning_2.style.display = "block";
+    img_payment_type2_2.style.display = "block";
+    profile_print_payment_2.style.display = "inline-block";
+  } else {
+    profile_warning_2.style.display = "none";
+    img_payment_type2_2.style.display = "none";
+    profile_print_payment_2.style.display = "none";
   }
 }
 

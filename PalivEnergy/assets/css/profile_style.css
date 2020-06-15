@@ -731,6 +731,11 @@ ul {
   padding-bottom: 8vh;
 }
 
+.tabcontent .profile_payment {
+  padding-top: 80px;
+  padding-left: 60px;
+}
+
 .profile_payment label {
   font-family: Roboto;
   font-style: normal;
@@ -774,7 +779,7 @@ ul {
   margin-top: 8vh;
 }
 
-#profile_warning, #profile_print_payment, #img_payment_type1, #img_payment_type2 {
+#profile_warning, #profile_print_payment, #img_payment_type1, #img_payment_type2, #profile_warning_2, #profile_print_payment_2, #img_payment_type1_2, #img_payment_type2_2 {
   display: none;
 }
 
