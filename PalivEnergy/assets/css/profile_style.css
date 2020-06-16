@@ -1229,3 +1229,45 @@ ul {
   transform: rotate(90deg);
   cursor: pointer;
 }
+
+.fill_the_form {
+  padding-top: 155px;
+  padding-left: 7vw;
+}
+
+.fill_text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333;
+  margin-top: 100px;
+  margin-left: 60px;
+  margin-bottom: 60px;
+}
+
+.fill_title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #333333;
+  margin-left: 60px;
+  margin-bottom: 12px;
+}
+
+.fill_subtext {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #EB4B18;
+  margin-left: 60px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
