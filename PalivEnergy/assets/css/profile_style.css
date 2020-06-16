@@ -1189,3 +1189,43 @@ ul {
 .profile_data4:first-child {
   padding-top: 230px;
 }
+
+.profile_add_text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #333333;
+  opacity: 0.7;
+  margin-top: 10px;
+  padding-left: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile_add_text:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid rgba(51, 51, 51, 0.7);
+  position: absolute;
+  left: 0vw;
+  top: 13.5px;
+  z-index: 1;
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+.profile_add_text:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid rgba(51, 51, 51, 0.7);
+  position: absolute;
+  left: -6.5px;
+  top: 7px;
+  z-index: 1;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
