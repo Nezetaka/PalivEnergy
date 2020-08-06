@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <meta name="format-detection" content="telephone=no">
@@ -12,7 +12,9 @@
     <div class="container">
       <div id="frame_inner">
         <div class="nav1line" id="nav1line">
-          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
+          <a href="index.html">
+            <img class="top_logo" src="assets/images/logo.svg" alt="logo">
+          </a>
           <a href="#" class="top_news_link">новини</a>
           <p class="header_icon" onclick="showmenu()">
             <span id="s1"></span>
@@ -114,7 +116,7 @@
       </div>
       <div class="deliveries">
         <div class="deliveries_inner_text">
-          <h2 class="title">ПОСТАВКИ</h2>
+          <h2 class="deltitle">ПОСТАВКИ</h2>
           <label for="deliveries_input" id="deliveries_fuel" class="deliveries_inner_text_gas">
             <p class="text deliveries_text" id="pt1">Загальні умови постачання</p>
             <p class="text" id="pt2">Підставою для постачання природного газу споживачу є:</p>
@@ -133,12 +135,42 @@
           <label for="deliveries_input" id="select_fuelE" class="deliveries_link" onclick="changeFuel('electricity')">електроенергія</label>
           <label for="deliveries_input" id="select_fuelG" class="deliveries_link active_fuel" onclick="changeFuel('gas')">газ</label>
           <div class="deliveries_inner_gif" id="bg_animation">
-
           </div>
         </div>
       </div>
 
-      <div id="includeStatement"></div>
+      <!--<div id="includeStatement"></div>-->
+
+      <div class="joinus">
+        <form class="joinus_form">
+          <div class="joinus_input">
+            <div class="joinus_input_inner">
+              <p class="form_label">Ваше ім'я</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Телефон</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Плановане споживання</p>
+              <p class="form_subtitle">(кВт⋅ч в місяць)</p>
+              <input type="text" value="" class="join_data">
+            </div>
+          </div>
+          <div class="joinus_send">
+            <div id="joinus_choise">
+              <p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p>
+              <p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p>
+            </div>
+            <h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2>
+            <p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p>
+            <span class="checkbox">
+              <a href="#" class="joinus_send_link">відправити</a>
+              <input id="checkbox" type="checkbox">
+              <label for="checkbox">я кліент компанії</label>
+            </span>
+          </div>
+          <div class="clear"></div>
+        </form>
+      </div>
+
       <!--
       <div class="joinus">
         <form class="joinus_form">
@@ -228,7 +260,7 @@
       </div>
       <div class="presentation">
         <div class="presentation_inner">
-          <p class="presentation_text text">Мы подготовили для вас презентацию нашего продукта</p>
+          <p class="presentation_text text">Ми підготували для вас презентацію нашого продукту</p>
           <a class="presentation_btn" href="#">подивитися</a>
         </div>
       </div>
@@ -236,21 +268,35 @@
         <img class="map_img" src="assets/images/smallmap.png" alt="map">
       </div>
 
-      <div id="includeFooter"></div>
+      <!-- <div id="includeFooter"></div> -->
 
-      <!-- <div class="footer">
+      <div class="footer">
         <div class="footer_logo">
           <ul>
-            <li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li>
+            <li>
+              <img class="footer_img" src="assets/images/footer_logo.png" alt="logo">
+            </li>
             <li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li>
+            <li class="footer_pays">
+              <img src="assets/images/apple-pay.svg" alt='apple_pay'></img>
+              <img src="assets/images/android-pay.svg" alt='android_pay'></img></li>
           </ul>
         </div>
         <div class="info">
           <ul>
-            <li class="footer_info">информация</li>
-            <li><a href="#" class="footer_link">контакты</a></li>
-            <li><a href="#" class="footer_link">новости</a></li>
-            <li><a href="#" class="footer_link">поставка электроэнергии</a></li>
+            <li class="footer_info">інформація</li>
+            <li>
+              <a href="contacts.html" class="footer_link">контакти</a>
+            </li>
+            <li>
+              <a href="#" class="footer_link">новини</a>
+            </li>
+            <li>
+              <a href="energydeliveries.html" class="footer_link">поставка електроенергії</a>
+            </li>
+            <li>
+              <a href="gasdeliveries.html" class="footer_link">поставка природного газу</a>
+            </li>
           </ul>
         </div>
         <div class="contacts">
@@ -264,10 +310,10 @@
           <ul>
             <li>Пт - Пн</li>
             <li>9:00 - 18:00</li>
-            <li>пр.Соборний,180 Запорiжжя 69035, Україна</li>
+            <li>пр.Соборності,180 Запорiжжя 69035, Україна</li>
           </ul>
         </div>
-      </div>-->
+      </div>
 
       <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
       <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
@@ -306,13 +352,13 @@
     function showmenu() {
       frame_inner.style.height = "100%";
       frame_inner.style.background = "#2D3039";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="login.html" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
+      nav1line.innerHTML = '<a href="index.html"><img class="top_logo" src="assets/images/logo-menu.svg" alt="logo"></a><a href="login.html" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
     }
 
     function closemenu() {
       frame_inner.style.height = "155px";
       frame_inner.style.background = "inherit";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+      nav1line.innerHTML = '<a href="index.html"><img class="top_logo" src="assets/images/logo.svg" alt="logo"></a><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
     }
     function joinusFuel (fuel) {
       switch (fuel) {
@@ -332,7 +378,7 @@
     }
     var intro_slides = document.querySelectorAll('#intro_slides .intro_slide');
     var currentSlideI = 0;
-    var slideInterval = setInterval(nextSlideI,5000);
+    var slideInterval = setInterval(nextSlideI,8000);
 
     function nextSlideI(){
         intro_slides[currentSlideI].className = 'intro_slide';
@@ -388,13 +434,15 @@
         document.getElementById('upbutton').style.display = 'none';
       }
     }
-    var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
 
-    var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="energydeliveries.html" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
+    /*var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';*/
 
-    //if (includeIntro) {
-    //  includeIntro.innerHTML = intro;
-    //}
+  /*  var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="energydeliveries.html" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';*/
+
+    /*
+    if (includeIntro) {
+      includeIntro.innerHTML = intro;
+    }
 
     if (includeStatement) {
       includeStatement.innerHTML = statement;
@@ -402,7 +450,7 @@
 
     if (includeFooter) {
       includeFooter.innerHTML = footer;
-    }
+    }*/
     </script>
   </body>
 </html>
