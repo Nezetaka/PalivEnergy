@@ -47,38 +47,41 @@
         </div>
       </div>
 
-      <ul id="intro_slides">
-        <li class="intro_slide showing">
-          <div class="intro_slider_inner">
-            <div class="header">
-              <div class="header_intro">
-                <video autoplay muted loop id="video_intro_electrycity">
-                  <source src="assets/images/header-electricity.mp4" type="video/mp4">
-                </video>
-                <p class="intro_text">енергія</p>
-                <p class="intro_text">вашого</p>
-                <p class="lch">бізнесу</p>
-                <a href="#" class="intro_btn">замовити розрахунок</a>
+      <div>
+        <ul id="intro_slides">
+          <li class="intro_slide showing">
+            <div class="intro_slider_inner">
+              <div class="header">
+                <div class="header_intro">
+                  <video autoplay muted loop id="video_intro_electrycity">
+                    <source src="assets/images/header-electricity.mp4" type="video/mp4">
+                  </video>
+                  <p class="intro_text">енергія</p>
+                  <p class="intro_text">вашого</p>
+                  <p class="lch">бізнесу</p>
+                  <a href="#" class="intro_btn">замовити розрахунок</a>
+                </div>
               </div>
             </div>
-          </div>
-        </li>
-        <li class="intro_slide">
-          <div class="intro_slider_inner">
-            <div class="header_alt">
-              <div class="header_intro_alt">
-                <video autoplay muted loop id="video_intro_gas">
-                  <source src="assets/images/header-gas.mp4" type="video/mp4">
-                </video>
-                <p class="intro_text">надійний</p>
-                <p class="intro_text">постачальник</p>
-                <p class="lch">природного газу</p>
-                <a href="#" class="intro_btn">замовити розрахунок</a>
+          </li>
+          <li class="intro_slide">
+            <div class="intro_slider_inner">
+              <div class="header_alt">
+                <div class="header_intro_alt">
+                  <video autoplay muted loop id="video_intro_gas">
+                    <source src="assets/images/header-gas.mp4" type="video/mp4">
+                  </video>
+                  <p class="intro_text">надійний</p>
+                  <p class="intro_text">постачальник</p>
+                  <p class="lch">природного газу</p>
+                  <a href="#" class="intro_btn">замовити розрахунок</a>
+                </div>
               </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+
       <div class="aboutus">
         <div class="aboutus_inner">
           <h2 class="title">ПРО НАС</h2>
@@ -90,6 +93,7 @@
           <a href="about.html" class="aboutus_link more_link">докладніше</a>
         </div>
       </div>
+
       <div class="howto">
         <div class="howto_text">
           <h2 class="title">ЯК СТАТИ КЛІЄНТОМ КОМПАНІЇ</h2>
@@ -114,6 +118,7 @@
           </div>
         </div>
       </div>
+
       <div class="deliveries" id="deliveries">
         <div class="deliveries_inner_text">
           <h2 class="deltitle">ПОСТАВКИ</h2>
@@ -276,10 +281,10 @@
     function changeFuel(fuelType) {
       if(fuelType == "electricity") {
         deliveries.innerHTML = '<div class="deliveries_inner_text"><h2 class="deltitle">ПОСТАВКИ</h2><p class="text deliveries_text">Процес укладання договору</p><p class="text deliveries_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p><ol class="deliveries_numlist"><li class="deliveries_numlist_items"><p>довідка про стан обліку електроенергії</p></li><li class="deliveries_numlist_items"><p>перелік технічних характеристик комерційних точок обліку</p></li><li class="deliveries_numlist_items"><p>свідоцтво про ДМА АСКОЕ/ЛУЗОД</p></li><li class="deliveries_numlist_items"><p>акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</p></li><li class="deliveries_numlist_items"><p>Графік денного та почасового прогнозованого споживання електричної енергії</p></li></ol><p class="text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p><a href="energydeliveries.html" id="link_fullinfo" class="deliveries_more_link more_link">дивитися повністю</a></div><div class="deliveries_gif"><p class="deliveries_link active_fuel" onclick="changeFuel(\'electricity\')" id="physicalPerson">електроенергія</p><p class="deliveries_link" onclick="changeFuel(\'gas\')" id="legalPerson">газ</p><div class="deliveries_inner_gif" id="bg_animation"></div></div>';
-        bg_animation.style.background = "url(assets/images/electricity-animation.gif) no-repeat";
+        bg_animation.style.background = "url(assets/images/electricity-animation.gif) no-repeat center";
       } else if (fuelType) {
         deliveries.innerHTML = '<div class="deliveries_inner_text"><h2 class="deltitle">ПОСТАВКИ</h2><p class="text deliveries_text">Загальні умови постачання</p><p class="text deliveries_text">Підставою для постачання природного газу споживачу є:</p><ol><li><p class="text deliveries_list">наявність у споживача, об’єкт якого підключений до газорозподільної системи, договору розподілу природного газу, укладеного в установленому порядку між споживачем та Оператором ГРМ, та присвоєння споживачу Оператором ГРМ персонального EIC-коду як суб’єкту ринку природного газу;</p></li><li class="text deliveries_list"><p>наявність у споживача, об’єкт якого підключений до газотранспортної системи, договору транспортування природного газу, укладеного в установленому порядку між споживачем та Оператором ГТС, та присвоєння споживачу Оператором ГТС персонального EIC-коду як суб’єкту ринку природного газу;</p></li><li class="text deliveries_list"><p>наявність у споживача укладеного з постачальником договору постачання природного газу та дотримання його умов;</p></li><li class="text deliveries_list"><p>наявність підтвердженого обсягу природного газу на відповідний розрахунковий період для потреб споживача;</p></li><li class="text deliveries_list"><p>відсутність простроченої заборгованості споживача за поставлений природний газ перед діючим постачальником (за його наявності), що має підтверджуватися письмовою довідкою діючого постачальника або складеним з ним актом звірки взаєморозрахунків.</p></li></ol><a href="gasdeliveries.html" id="link_fullinfo" class="deliveries_more_link more_link">дивитися повністю</a></div><div class="deliveries_gif"><p class="deliveries_link" onclick="changeFuel(\'electricity\')" id="physicalPerson">електроенергія</p><p class="deliveries_link active_fuel" onclick="changeFuel(\'gas\')" id="legalPerson">газ</p><div class="deliveries_inner_gif" id="bg_animation"></div></div>';
-        bg_animation.style.background = "url(assets/images/gas-animation.gif) no-repeat";
+        bg_animation.style.background = "url(assets/images/gas-animation.gif) no-repeat center";
       }
     }
 

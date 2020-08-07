@@ -252,6 +252,7 @@ ul {
 #intro_slides li{
   padding: 0px;
   margin: 0px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .intro_slide {
@@ -307,8 +308,7 @@ ul {
 
 #video_intro_electrycity {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: -1;
@@ -316,15 +316,15 @@ ul {
 
 #video_intro_gas {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: -1;
 }
 
 .header_intro {
-  margin: 60px 0 0 47vw;
+  padding: 60px 0 0 47vw;
+  width: 100%;
 }
 
 .intro_text {
