@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background: #303030;
+  background: #333333;
   line-height: 1.6;
   font-size: 15px;
   color: #f2f2f2;
@@ -476,6 +476,39 @@ ul {
   margin-left: 18vw;
 }
 
+
+
+.lights_switch {
+    position: relative;
+    margin: 0 auto;
+    height: 660px;
+    width: 25vw;
+    display: block;
+}
+
+.lights_switch img {
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   transition: linear .3s;
+}
+
+.lights_switch img.light_turnon {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.lights_switch:hover img.light_turnon {
+  opacity: 1;
+  filter: alpha(opacity=1);
+}
+
+.lights_switch:hover img.light_turnoff, .lights_switch img.light_turnoff:hover {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
 .lights {
   -webkit-display: flex;
   -moz-display: flex;
@@ -506,6 +539,11 @@ ul {
   -ms-display: inline-block;
   display: inline-block;
   width: 49%;
+}
+
+.deliveries_inner_text ol {
+  margin: 0;
+  padding: 0;
 }
 
 .deltitle {
@@ -565,6 +603,36 @@ ul {
   align-items: center;
   letter-spacing: 0.02em;
   color: #AB9477;
+}
+.deliveries_numlist_items {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-top: 14px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.deliveries_numlist {
+  margin: 0;
+  padding: 0;
+  counter-reset: num;
+}
+
+.deliveries_numlist_items:before {
+  content: counter(num) ' ';
+  counter-increment: num;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #EB4B18;
+  position: absolute;
+  left: 0px;
 }
 
 .deliveries_gif {
@@ -992,7 +1060,10 @@ ul {
   font-size: 22px;
   line-height: 26px;
   padding: 8px 37px;
-  background: #EB4B18;
+  background: #0062A1;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 98, 161, 0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 98, 161, 0.5);
+  -ms-box-shadow: 0px 0px 10px rgba(0, 98, 161, 0.5);
   box-shadow: 0px 0px 10px rgba(0, 98, 161, 0.5);
   border-radius: 6px;
   -webkit-transition: .1s linear;
@@ -1003,8 +1074,8 @@ ul {
 
 .presentation_btn:hover {
   background: inherit;
-  color: #EB4B18;
-  border: 1px solid #EB4B18;
+  color: #0062A1;
+  border: 1px solid #0062A1;
 }
 
 /* Map */
@@ -1060,7 +1131,17 @@ ul {
 }
 
 .footer_pays img {
-  margin-left:
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+#footer_applepay {
+  margin-left: 10px;
+}
+
+#footer_androidpay {
+  margin-left: 3vw;
 }
 
 .info ul li {

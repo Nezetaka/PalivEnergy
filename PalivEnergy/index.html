@@ -108,14 +108,55 @@
           <p class="text">Щоб детальніше ознайомитися з певним етапом, натисніть на відповідну лампочку.</p>
         </div>
         <div class="lights">
-          <img class="howto_img" id="lamp1" src="assets/images/lamp.png" onclick="lightOn(1)" alt="light">
-          <img class="howto_img" id="lamp2" src="assets/images/lamp.png" onclick="lightOn(2)" alt="light">
-          <img class="howto_img" id="lamp3" src="assets/images/lamp.png" onclick="lightOn(3)" alt="light">
-          <img class="howto_img" id="lamp4" src="assets/images/lamp.png" onclick="lightOn(4)" alt="light">
+          <div class="lights_switch">
+            <img class="howto_img light_turnon" id="lamp1" src="assets/images/lamp_active01.png" onclick="lightOn(1)" alt="light">
+            <img class="howto_img light_turnoff" id="lamp11" src="assets/images/light-bulb_not-active.png" onclick="lightOn(1)" alt="light">
+          </div>
+          <div class="lights_switch">
+            <img class="howto_img light_turnon" id="lamp2" src="assets/images/lamp_active02.png" onclick="lightOn(2)" alt="light">
+            <img class="howto_img light_turnoff" id="lamp11" src="assets/images/light-bulb_not-active.png" onclick="lightOn(2)" alt="light">
+          </div>
+          <div class="lights_switch">
+            <img class="howto_img light_turnon" id="lamp3" src="assets/images/lamp_active03.png" onclick="lightOn(3)" alt="light">
+            <img class="howto_img light_turnoff" id="lamp33" src="assets/images/light-bulb_not-active.png" onclick="lightOn(3)" alt="light">
+          </div>
+          <div class="lights_switch">
+            <img class="howto_img light_turnon" id="lamp4" src="assets/images/lamp_active04.png" onclick="lightOn(4)" alt="light">
+            <img class="howto_img light_turnoff" id="lamp44" src="assets/images/light-bulb_not-active.png" onclick="lightOn(4)" alt="light">
+          </div>
         </div>
       </div>
-      <div class="deliveries">
+      <div class="deliveries" id="deliveries">
         <div class="deliveries_inner_text">
+          <h2 class="deltitle">ПОСТАВКИ</h2>
+          <p class="text deliveries_text">Загальні умови постачання</p>
+          <p class="text deliveries_text">Підставою для постачання природного газу споживачу є:</p>
+          <ol>
+            <li>
+              <p class="text deliveries_list">наявність у споживача, об’єкт якого підключений до газорозподільної системи, договору розподілу природного газу, укладеного в установленому порядку між споживачем та Оператором ГРМ, та присвоєння споживачу Оператором ГРМ персонального EIC-коду як суб’єкту ринку природного газу;</p>
+            </li>
+            <li class="text deliveries_list">
+              <p>наявність у споживача, об’єкт якого підключений до газотранспортної системи, договору транспортування природного газу, укладеного в установленому порядку між споживачем та Оператором ГТС, та присвоєння споживачу Оператором ГТС персонального EIC-коду як суб’єкту ринку природного газу;</p>
+            </li>
+            <li class="text deliveries_list">
+              <p>наявність у споживача укладеного з постачальником договору постачання природного газу та дотримання його умов;</p>
+            </li>
+            <li class="text deliveries_list">
+              <p>наявність підтвердженого обсягу природного газу на відповідний розрахунковий період для потреб споживача;</p>
+            </li>
+            <li class="text deliveries_list">
+              <p>відсутність простроченої заборгованості споживача за поставлений природний газ перед діючим постачальником (за його наявності), що має підтверджуватися письмовою довідкою діючого постачальника або складеним з ним актом звірки взаєморозрахунків.</p>
+            </li>
+          </ol>
+          <a href="gasdeliveries.html" id="link_fullinfo" class="deliveries_more_link more_link">дивитися повністю</a>
+        </div>
+        <div class="deliveries_gif">
+          <p class="deliveries_link" onclick="changeFuel('electricity')" id="physicalPerson">електроенергія</p>
+          <p class="deliveries_link active_fuel" onclick="changeFuel('gas')" id="legalPerson">газ</p>
+          <div class="deliveries_inner_gif" id="bg_animation"></div>
+        </div>
+
+        <!--<div class="deliveries_inner_text">
           <h2 class="deltitle">ПОСТАВКИ</h2>
           <label for="deliveries_input" id="deliveries_fuel" class="deliveries_inner_text_gas">
             <p class="text deliveries_text" id="pt1">Загальні умови постачання</p>
@@ -136,7 +177,7 @@
           <label for="deliveries_input" id="select_fuelG" class="deliveries_link active_fuel" onclick="changeFuel('gas')">газ</label>
           <div class="deliveries_inner_gif" id="bg_animation">
           </div>
-        </div>
+        </div>-->
       </div>
 
       <!--<div id="includeStatement"></div>-->
@@ -278,8 +319,9 @@
             </li>
             <li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li>
             <li class="footer_pays">
-              <img src="assets/images/apple-pay.svg" alt='apple_pay'></img>
-              <img src="assets/images/android-pay.svg" alt='android_pay'></img></li>
+              <img src="assets/images/apple-pay.svg" alt='apple_pay' id="footer_applepay"></img>
+              <img src="assets/images/android-pay.svg" alt='android_pay' id="footer_androidpay"></img>
+            </li>
           </ul>
         </div>
         <div class="info">
@@ -322,7 +364,9 @@
     <script type="text/javascript">
     function changeFuel(fuelType) {
       if(fuelType == "electricity") {
-        pt1.innerHTML = "Процес укладання договору";
+        deliveries.innerHTML = '<div class="deliveries_inner_text"><h2 class="deltitle">ПОСТАВКИ</h2><p class="text deliveries_text">Процес укладання договору</p><p class="text deliveries_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p><ol class="deliveries_numlist"><li class="deliveries_numlist_items"><p>довідка про стан обліку електроенергії</p></li><li class="deliveries_numlist_items"><p>перелік технічних характеристик комерційних точок обліку</p></li><li class="deliveries_numlist_items"><p>свідоцтво про ДМА АСКОЕ/ЛУЗОД</p></li><li class="deliveries_numlist_items"><p>акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</p></li><li class="deliveries_numlist_items"><p>Графік денного та почасового прогнозованого споживання електричної енергії</p></li></ol><p class="text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p><a href="energydeliveries.html" id="link_fullinfo" class="deliveries_more_link more_link">дивитися повністю</a></div><div class="deliveries_gif"><p class="deliveries_link active_fuel" onclick="changeFuel(\'electricity\')" id="physicalPerson">електроенергія</p><p class="deliveries_link" onclick="changeFuel(\'gas\')" id="legalPerson">газ</p><div class="deliveries_inner_gif" id="bg_animation"></div></div>';
+        bg_animation.style.background = "url(assets/images/electricity-animation.gif) no-repeat";
+        /*pt1.innerHTML = "Процес укладання договору";
         pt2.innerHTML = "Документи, необхідні для укладання договору з постачальником електроенергії:";
         p3.innerHTML = "довідка про стан обліку електроенергії";
         p4.innerHTML = "перелік технічних характеристик комерційних точок обліку";
@@ -333,9 +377,11 @@
         bg_animation.style.background = "url(assets/images/electricity-animation.gif) no-repeat";
         select_fuelE.classList.add("active_fuel");
         select_fuelG.classList.remove("active_fuel");
-        link_fullinfo.href = 'energydeliveries.html';
+        link_fullinfo.href = 'energydeliveries.html';*/
       } else if (fuelType) {
-        pt1.innerHTML = "Загальні умови постачання";
+        deliveries.innerHTML = '<div class="deliveries_inner_text"><h2 class="deltitle">ПОСТАВКИ</h2><p class="text deliveries_text">Загальні умови постачання</p><p class="text deliveries_text">Підставою для постачання природного газу споживачу є:</p><ol><li><p class="text deliveries_list">наявність у споживача, об’єкт якого підключений до газорозподільної системи, договору розподілу природного газу, укладеного в установленому порядку між споживачем та Оператором ГРМ, та присвоєння споживачу Оператором ГРМ персонального EIC-коду як суб’єкту ринку природного газу;</p></li><li class="text deliveries_list"><p>наявність у споживача, об’єкт якого підключений до газотранспортної системи, договору транспортування природного газу, укладеного в установленому порядку між споживачем та Оператором ГТС, та присвоєння споживачу Оператором ГТС персонального EIC-коду як суб’єкту ринку природного газу;</p></li><li class="text deliveries_list"><p>наявність у споживача укладеного з постачальником договору постачання природного газу та дотримання його умов;</p></li><li class="text deliveries_list"><p>наявність підтвердженого обсягу природного газу на відповідний розрахунковий період для потреб споживача;</p></li><li class="text deliveries_list"><p>відсутність простроченої заборгованості споживача за поставлений природний газ перед діючим постачальником (за його наявності), що має підтверджуватися письмовою довідкою діючого постачальника або складеним з ним актом звірки взаєморозрахунків.</p></li></ol><a href="gasdeliveries.html" id="link_fullinfo" class="deliveries_more_link more_link">дивитися повністю</a></div><div class="deliveries_gif"><p class="deliveries_link" onclick="changeFuel(\'electricity\')" id="physicalPerson">електроенергія</p><p class="deliveries_link active_fuel" onclick="changeFuel(\'gas\')" id="legalPerson">газ</p><div class="deliveries_inner_gif" id="bg_animation"></div></div>';
+        bg_animation.style.background = "url(assets/images/gas-animation.gif) no-repeat";
+        /*pt1.innerHTML = "Загальні умови постачання";
         pt2.innerHTML = "Підставою для постачання природного газу споживачу є:";
         p3.innerHTML = "наявність у споживача, об’єкт якого підключений до газорозподільної системи, договору розподілу природного газу, укладеного в установленому порядку між споживачем та Оператором ГРМ, та присвоєння споживачу Оператором ГРМ персонального EIC-коду як суб’єкту ринку природного газу;";
         p4.innerHTML = "наявність у споживача, об’єкт якого підключений до газотранспортної системи, договору транспортування природного газу, укладеного в установленому порядку між споживачем та Оператором ГТС, та присвоєння споживачу Оператором ГТС персонального EIC-коду як суб’єкту ринку природного газу;";
@@ -345,7 +391,7 @@
         pt8.innerHTML = "";
         bg_animation.style.background = "url(assets/images/gas-animation.gif) no-repeat";
         select_fuelE.classList.remove("active_fuel");
-        select_fuelG.classList.add("active_fuel");
+        select_fuelG.classList.add("active_fuel");*/
       }
     }
 
@@ -388,16 +434,22 @@
     function lightOn(lamp) {
       switch (lamp) {
       case 1:
-        lamp1.src = "assets/images/lamp_active01.png";
+        //lamp1.src = "assets/images/lamp_active01.png";
+        lamp1.style.opacity = 1;
+        lamp11.style.opacity = 0;
         break;
       case 2:
-        lamp2.src = "assets/images/lamp_active02.png";
+        //lamp2.src = "assets/images/lamp_active02.png";
+        lamp2.style.opacity = 1;
+        lamp22.style.opacity = 0;
         break;
       case 3:
-        lamp3.src = "assets/images/lamp_active03.png";
+        lamp3.style.opacity = 1;
+        lamp33.style.opacity = 0;
         break;
       case 4:
-        lamp4.src = "assets/images/lamp_active04.png";
+        lamp4.style.opacity = 1;
+        lamp44.style.opacity = 0;
         break;
       default:
         {}
