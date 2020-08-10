@@ -95,7 +95,11 @@ ul {
   height: 140px;
 }
 
-.top_logo{
+.nav1line a {
+  display: inline-block;
+}
+
+.top_logo {
   margin-right: 60vw;
   margin-top: 50px;
   margin-bottom: 25px;
@@ -247,12 +251,14 @@ ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
+  width: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  z-index: 0;
 }
 
-#intro_slides li{
+#intro_slides.intro_slide {
   padding: 0px;
   margin: 0px;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .intro_slide {
@@ -309,6 +315,7 @@ ul {
 #video_intro_electrycity {
   position: absolute;
   width: 100%;
+  max-width: 100%;
   top: 0;
   left: 0;
   z-index: -1;
@@ -317,13 +324,14 @@ ul {
 #video_intro_gas {
   position: absolute;
   width: 100%;
+  max-width: 100%;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: -1;
 }
 
 .header_intro {
-  padding: 60px 0 0 47vw;
+  padding: 60px 0 0 55vw;
   width: 100%;
 }
 
@@ -387,7 +395,7 @@ ul {
 }
 
 .header_intro_alt {
-  margin: 80px 50vw 0 0;
+  margin: 80px 52vw 0 0;
   text-align: right;
 }
 
