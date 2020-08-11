@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
   font-size: 15px;
   color: #f2f2f2;
+  overflow-x: hidden;
 }
 
 *,
@@ -355,7 +356,7 @@ ul {
 }
 
 .header_intro {
-  padding: 60px 0 0 55vw;
+  padding: 80px 0 0 55vw;
   width: 100%;
 }
 
@@ -427,7 +428,7 @@ ul {
 .aboutus {
   margin: 12vh 18vw;
   padding-top: 100px;
-    position: relative;
+  position: relative;
 }
 
 .aboutus_inner {
@@ -446,7 +447,7 @@ ul {
 }
 
 .text {
-  width: 44vw;
+  width: 100%;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -457,6 +458,7 @@ ul {
 
 .about_text {
   margin-bottom: 30px;
+  width: 44vw;
 }
 
 .aboutus_inner_link {
@@ -522,6 +524,7 @@ ul {
 
 .howto_text {
   margin-left: 18vw;
+  width: 44vw;
 }
 
 
@@ -578,7 +581,7 @@ ul {
 /* Deliveries */
 .deliveries {
   margin: 0 5vw;
-  margin-bottom: 12vh;
+  padding-bottom: 12vh;
 }
 
 .deliveries_inner_text {
@@ -586,7 +589,7 @@ ul {
   -moz-display: inline-block;
   -ms-display: inline-block;
   display: inline-block;
-  width: 49%;
+  width: 45%;
 }
 
 .deliveries_inner_text ol {
@@ -610,6 +613,7 @@ ul {
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 0.05em;
+  width: 100%;
 }
 
 .deliveries_list {
@@ -621,6 +625,7 @@ ul {
   position: relative;
   padding-left: 20px;
   padding-bottom: 14px;
+  width: 100%;
 }
 
 .deliveries_list:before {
@@ -688,9 +693,14 @@ ul {
   -moz-display: inline-block;
   -ms-display: inline-block;
   display: inline-block;
-  width: 49%;
-  margin-top: 12vh;
+  width: 48%;
+  margin-top: 5vh;
+  margin-left: 44px;
   vertical-align:top;
+}
+
+#bg_animation img {
+  width: 100%;
 }
 
 #deliveries_input {
@@ -717,6 +727,7 @@ ul {
   color: #f2f2f2;
   float: left;
   margin-left: 10vw;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
@@ -749,11 +760,12 @@ ul {
 
 .active_fuel:after {
   content: "";
-  position: absolute;
-  border-bottom: 1px solid #EB4B18;
   width: 100%;
-  top: 22px;
-  left: 0;
+  border-bottom: 1px solid #EB4B18;
+  position: absolute;
+  bottom: -2px;
+  left: -6px;
+  z-index: 1;
 }
 
 .upbutton_svg {
@@ -874,7 +886,17 @@ ul {
   font-weight: normal;
   color: #EB4B18;
   letter-spacing: 0.1em;
+  position: relative;
+}
+
+.joinus_active:after {
+  content: "";
+  width: 100%;
   border-bottom: 1px solid #EB4B18;
+  position: absolute;
+  bottom: -2px;
+  left: -6px;
+  z-index: 1;
 }
 
 .joinus_title {
@@ -1037,7 +1059,7 @@ ul {
   width: 46%;
   display: inline-block;
   vertical-align: middle;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   margin-right: 3%;
   position: relative;
   transition: .2s linear;
@@ -1080,7 +1102,7 @@ ul {
 }
 
 .hover_block:hover {
-  transform: scale(.9);
+  transform: scale(.94);
 }
 
 .hover_block:hover .text_hover, .hover_block:hover .date_hover{
@@ -1090,9 +1112,8 @@ ul {
 .hover_block:hover .img_overhover{
   opacity: 0.2;
   transform: scale(1.25);
+  cursor: pointer;
 }
-
-
 
 .news_line_img {
   width: 46%;
@@ -1104,6 +1125,10 @@ ul {
 
 .news_line_img:hover {
   transform: scale(.8);
+}
+
+.news_line:nth-child(even) {
+  padding-left: 4vw;
 }
 
 .news_grad {
@@ -1173,6 +1198,7 @@ ul {
   font-size: 42px;
   line-height: 49px;
   margin-bottom: 20px;
+  width: 44vw;
 }
 
 .presentation_btn {
