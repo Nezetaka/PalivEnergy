@@ -271,7 +271,7 @@ ul {
 
 #intro_slides {
   position: relative;
-  height: 600px;
+  height: 645px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
@@ -756,11 +756,20 @@ ul {
   left: 0;
 }
 
+.upbutton_svg {
+  fill: #f2f2f2;
+}
+
+#upbutton:hover .upbutton_svg {
+  fill: #EB4B18;
+}
+
 .deliveries_inner_gif {
-  background-image: url(../images/gas-animation.gif);
-  background-position: center;
-  height: 560px;
-  width: 45vw;
+
+}
+
+.deliveries_inner_gif img {
+  width: 100%;
 }
 
 /* Join us */
@@ -1023,11 +1032,78 @@ ul {
   rotate(45deg);
 }
 
+.hover_block {
+  background: rgba(45, 48, 57, 0.8);
+  width: 46%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 120px;
+  margin-right: 3%;
+  position: relative;
+  transition: .2s linear;
+  overflow: hidden;
+}
+
+.img_overhover {
+  width: 100%;
+  transition: .2s linear;
+}
+
+.text_hover {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: .2s linear;
+}
+
+.date_hover {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: .2s linear;
+}
+
+.hover_block:hover {
+  transform: scale(.9);
+}
+
+.hover_block:hover .text_hover, .hover_block:hover .date_hover{
+  opacity: 1;
+}
+
+.hover_block:hover .img_overhover{
+  opacity: 0.2;
+  transform: scale(1.25);
+}
+
+
+
 .news_line_img {
   width: 46%;
   vertical-align: middle;
   margin-bottom: 120px;
   margin-right: 3%;
+  transition: .2s linear;
+}
+
+.news_line_img:hover {
+  transform: scale(.8);
 }
 
 .news_grad {
