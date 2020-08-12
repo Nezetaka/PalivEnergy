@@ -322,15 +322,15 @@
 
       function textIntroAnimationShow() {
         intro_animated_text.style.opacity = "1";
-        setTimeout(textIntroAnimationSwap, 6000);
+        setTimeout(textIntroAnimationSwap, 7000);
       }
 
       function textIntroAnimationSwap() {
-        intro_animated_text.style.padding = "80px 0 0 28vw";
-        setTimeout(textIntroAnimationChange);
-        setTimeout(textIntroAnimationChange2);
-        setTimeout(startIntroAnimation);
-        setTimeout(textIntroAnimationHide, 8700);
+        intro_animated_text.style.padding = "80px 0 0 29vw";
+        setTimeout(textIntroAnimationChange, 1650);
+        setTimeout(textIntroAnimationChange2, 1650);
+        setTimeout(startIntroAnimation, 1650);
+        setTimeout(textIntroAnimationHide, 7700);
       }
 
       function textIntroAnimationHide() {
@@ -383,7 +383,7 @@
         currentSlideI = (currentSlideI+1)%intro_slides.length;
         intro_slides[currentSlideI].className = 'intro_slide showing';*/
         if (currentSlideI == 0) {
-          intro_slides.innerHTML = '<div class="intro_slider_inner"><div class="header_alt"><div class="header_intro_alt"><video autoplay preload="auto" muted id="video_intro_gas"><source src="assets/images/header-gas.mp4" type="video/mp4"></video><div id="intro_animated_text2"><p class="intro_text intro_text_animation_change">енергія</p><p class="intro_text intro_text_animation_change2">вашого</p><p class="lch intro_text_animation">природного газу</p><a href="#" class="intro_btn">замовити розрахунок</a></div></div></div></div>';
+          intro_slides.innerHTML = '<div class="intro_slider_inner"><div class="header_alt"><div class="header_intro_alt"><video autoplay preload="auto" muted id="video_intro_gas"><source src="assets/images/header-gas.mp4" type="video/mp4"></video><div id="intro_animated_text2"><p class="intro_text intro_text_animation_change">енергія</p><p class="intro_text intro_text_animation_change2">вашого</p><p class="lch intro_text_animation">бізнесу</p><a href="#" class="intro_btn">замовити розрахунок</a></div></div></div></div>';
           currentSlideI = 1;
         } else if (currentSlideI == 1) {
           intro_slides.innerHTML = '<div class="intro_slider_inner"><div class="header"><div class="header_intro"><video autoplay preload="auto" muted id="video_intro_electrycity"><source src="assets/images/header-electricity.mp4" type="video/mp4"></video><div class=""><ul><li></li><li id="intro_animated_text"><p class="intro_text">енергія</p><p class="intro_text">вашого</p><p class="lch">бізнесу</p><a href="#" class="intro_btn">замовити розрахунок</a></li></ul></div></div></div></div>';
@@ -646,7 +646,7 @@
         }
         const phrases = [
         'природного газу',
-        'електроенергії',
+        'природного газу',
         ]
 
         const el = document.querySelector('.intro_text_animation')
@@ -655,7 +655,7 @@
         let counter = 0
         const next = () => {
         fx.setText(phrases[counter]).then(() => {
-          setTimeout(next, 4000)
+          setTimeout(next, 8000)
         })
         counter = (counter + 1) % phrases.length
         }
