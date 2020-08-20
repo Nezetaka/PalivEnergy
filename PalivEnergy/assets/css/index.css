@@ -183,7 +183,9 @@ ul {
 }
 
 #navnav {
-  padding-left: 30vw;
+  position: absolute;
+  right: -100%;
+  transition: 1s ease;
 }
 
 .navul {
@@ -200,7 +202,7 @@ ul {
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
-  line-height: 10px;
+  line-height: 2vh;
   letter-spacing: 0.1em;
   color: #f2f2f2;
   position: relative;
@@ -212,23 +214,69 @@ ul {
 
 .navigation_link:hover {
   color: #EB4B18;
-  border-bottom: 1px solid #EB4B18;
   top: -3px;
   left: 10px;
 }
 
+.navigation_link:hover:after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid #EB4B18;
+  position: absolute;
+  bottom: -2px;
+  left: -6px;
+  z-index: 1;
+}
+
 .active {
   color: #EB4B18;
+  top: -3px;
+  left: 10px;
+}
+
+.active:after {
+  content: "";
+  width: 100%;
   border-bottom: 1px solid #EB4B18;
+  position: absolute;
+  bottom: -2px;
+  left: -6px;
+  z-index: 1;
 }
 
 .nav3line {
   margin-top: 10vh;
-  padding: 0 0 60px 60px;
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
-  display: flex;
+  width: 100%;
+  -webkit-display: inline-block;
+  -moz-display: inline-block;
+  -ms-display: inline-block;
+  display: inline-block;
+}
+
+.nav3line_left {
+  padding: 0 0 60px 10vw;
+  width: 50%;
+}
+
+.nav3line_right {
+  padding: 0 0 60px 30%;
+  width: 50%;
+}
+
+#menu_applepay {
+  margin-top: 10px;
+}
+
+#menu_androidpay {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+#nav_social_line {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  transition: .2s linear;
 }
 
 .nav3line_label {
@@ -257,7 +305,6 @@ ul {
 }
 
 .lang:first-child {
-  margin-left: 55vw;
 }
 
 .lang:after {

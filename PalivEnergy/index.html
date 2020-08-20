@@ -35,15 +35,17 @@
             <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
           </ul>
         </nav>
-        <div class="nav3line">
-          <div>
+        <div class="nav3line" id="nav_social_line">
+          <div class="nav3line_left">
             <span class="nav3line_label">слідкуйте за нами:</span>
             <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
-            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+            <img src="assets/images/apple-pay.svg" alt='apple_pay' id="menu_applepay"></img>
+            <img src="assets/images/android-pay.svg" alt='android_pay' id="menu_androidpay"></img>
           </div>
-          <div>
-            <a class="lang" href="#">RU</a>
+          <div class="nav3line_right">
             <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">RU</a>
             <a class="lang" href="#">EN</a>
           </div>
         </div>
@@ -321,16 +323,20 @@
       setTimeout(textIntroAnimationShow, 390);
 
       function textIntroAnimationShow() {
-        intro_animated_text.style.opacity = "1";
-        setTimeout(textIntroAnimationSwap, 7000);
+        try {
+          intro_animated_text.style.opacity = "1";
+          setTimeout(textIntroAnimationSwap, 7000);
+        } catch(err) {}
       }
 
       function textIntroAnimationSwap() {
-        intro_animated_text.style.padding = "80px 52vw 0 0";
-        setTimeout(textIntroAnimationChange, 1650);
-        setTimeout(textIntroAnimationChange2, 1650);
-        setTimeout(startIntroAnimation, 1650);
-        setTimeout(textIntroAnimationHide, 7700);
+        try {
+          intro_animated_text.style.padding = "80px 52vw 0 0";
+          setTimeout(textIntroAnimationChange, 1650);
+          setTimeout(textIntroAnimationChange2, 1650);
+          setTimeout(startIntroAnimation, 1650);
+          setTimeout(textIntroAnimationHide, 7700);
+        } catch {}
       }
 
       function textIntroAnimationHide() {
@@ -349,12 +355,18 @@
 
     function showmenu() {
       frame_inner.style.height = "100%";
+      frame_inner.style.position = "fixed";
+      navnav.style.right = "40%";
+      nav_social_line.style.display = "flex";
       frame_inner.style.background = "#2D3039";
       nav1line.innerHTML = '<a href="index.html" class="top_logo"><img src="assets/images/logo-menu.svg" alt="logo"></a><a href="login.html" class="profile_link">особистий кабiнет</a><span class="header_icon"><svg class="menu_close" onclick="closemenu();" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.06068 24.0606C0.474894 23.4748 0.474894 22.5251 1.06068 21.9393L21.6283 1.37172C22.214 0.785929 23.1638 0.785929 23.7496 1.37172C24.3354 1.9575 24.3354 2.90725 23.7496 3.49304L3.182 24.0606C2.59621 24.6464 1.64647 24.6464 1.06068 24.0606Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M1.06068 1.06068C1.64647 0.474894 2.55753 0.436207 3.09559 0.97427L24.5291 22.4078C25.0672 22.9458 25.0285 23.8569 24.4427 24.4427C23.8569 25.0285 22.9458 25.0672 22.4078 24.5291L0.97427 3.09559C0.436207 2.55753 0.474894 1.64647 1.06068 1.06068Z" /></svg></span>';
     }
 
     function closemenu() {
       frame_inner.style.height = "155px";
+      frame_inner.style.position = "absolute";
+      navnav.style.right = "-100%";
+      nav_social_line.style.display = "none";
       frame_inner.style.background = "inherit";
       nav1line.innerHTML = '<a href="index.html" class="top_logo"><img src="assets/images/logo.svg" alt="logo"></a><a href="#" class="top_news_link">новини</a><span class="header_icon"><svg class="menu_open" onclick="showmenu()" width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H28.5C29.3284 0 30 0.671573 30 1.5C30 2.32843 29.3284 3 28.5 3H1.5C0.671573 3 0 2.32843 0 1.5Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.5C0 14.6716 0.671573 14 1.5 14H19.5C20.3284 14 21 14.6716 21 15.5C21 16.3284 20.3284 17 19.5 17H1.5C0.671573 17 0 16.3284 0 15.5Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M0 29.5C0 28.6716 0.671573 28 1.5 28H34.5C35.3284 28 36 28.6716 36 29.5C36 30.3284 35.3284 31 34.5 31H1.5C0.671573 31 0 30.3284 0 29.5Z" /></span>';
     }
