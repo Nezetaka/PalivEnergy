@@ -1103,7 +1103,7 @@ ul {
   padding-bottom: 12vh;
   overflow: hidden;
   position: relative;
-  height: 1900px;
+  height: 100vw;
 }
 
 .news_inner {
