@@ -117,7 +117,7 @@ ul {
   text-decoration: none;
   color: #f2f2f2;
   margin-top: 70px;
-  margin-right: 15vw;
+  margin-right: 3vw;
 }
 
 .top_news_link:hover {
@@ -127,6 +127,7 @@ ul {
 .header_icon {
   position: relative;
   cursor: pointer;
+  margin-right: 12vw;
 }
 
 .menu_open {
@@ -187,9 +188,19 @@ ul {
   margin: 0;
   padding: 0;
   position: absolute;
-  left: -12vw;
+  left: -0vw;
   z-index: 1;
   border-radius: 10px;
+}
+
+#s1:before, #s2:before, #s3:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
 }
 
 .header_icon:hover #s1, .header_icon:hover #s2, .header_icon:hover #s3{
@@ -349,6 +360,7 @@ ul {
 #intro_slides {
   position: relative;
   height: 645px;
+  overflow: hidden;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
@@ -417,6 +429,7 @@ ul {
   position: absolute;
   width: 100%;
   max-width: 100%;
+  max-height: 100%;
   top: 0;
   left: 0;
   z-index: -1;
@@ -426,6 +439,7 @@ ul {
   position: absolute;
   width: 100%;
   max-width: 100%;
+  max-height: 100%;
   top: 0;
   right: 0;
   z-index: -1;
@@ -890,6 +904,7 @@ ul {
 .joinus_input {
   width: 100%;
   float: left;
+  margin-left: 10%;
 }
 
 .joinus_input_inner {
@@ -1081,10 +1096,6 @@ ul {
   opacity: 0.7;
   white-space: nowrap;
   margin-top: 40px;
-}
-
-.clear {
-  clear: left;
 }
 
 /* News */
@@ -1465,7 +1476,7 @@ ul {
   text-decoration: none;
   color: #f2f2f2;
   margin-top: 70px;
-  margin-right: 15%;
+  margin-right: 3vw;
 }
 
 .profile_link:hover {
