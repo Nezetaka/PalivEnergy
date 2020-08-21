@@ -252,8 +252,8 @@
           <div class="news_grad2">
             <p class="news_more more_link preudo" onclick="showMoreNews(1);">больше новостей</p>
           </div>
-          <div class="news_grad" >
-          </div>
+          <div class="news_grad" ></div>
+          <div class="news_grad_cover"></div>
         </div>
       </div>
       <div class="presentation">
@@ -461,7 +461,7 @@
       switch (step) {
       case 1:
         news.style.height = "2500px";
-        news_grad.innerHTML = '<div class="news_grad2"><p class="news_more more_link preudo" onclick="showMoreNews(2);">больше новостей</p></div><div class="news_grad"></div>';
+        news_grad.innerHTML = '<div class="news_grad2"><p class="news_more more_link preudo" onclick="showMoreNews(2);">больше новостей</p></div><div class="news_grad"></div><div class="news_grad_cover"></div>';
         break;
       case 2:
         news.style.height = "auto";

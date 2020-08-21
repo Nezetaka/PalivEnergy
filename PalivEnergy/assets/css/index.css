@@ -1136,6 +1136,7 @@ ul {
   letter-spacing: 0.02em;
   color: #AB9477;
   position: relative;
+  transition: .1s linear;
 }
 
 .news_link:after {
@@ -1231,18 +1232,32 @@ ul {
 .news_grad {
   position: absolute;
   bottom: 0;
-  height: 600px;
-  width: 100%;
-  opacity: .7;
-  background: linear-gradient(0deg, rgba(28,28,28,1) 5%, rgba(28,28,28,1) 10%, rgba(28,28,28,1) 15%, #333333 33%);
+  height: 350px;
+  width: 200%;
+  opacity: 1;
+  background-image: linear-gradient(0deg, #333333 5%, #333333 10%, #333333 15%, #333333 33%);
+  background-size: cover;
+  background-position: center;
   z-index: 2;
   filter: blur(30px);
+}
+
+.news_grad_cover {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  opacity: 1;
+  background: #333333;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
 }
 
 .news_grad2 {
   position: absolute;
   bottom: 0;
-  height: 60vh;
+  height: 100px;
   width: 100%;
   opacity: .7;
   z-index: 3;
@@ -1263,7 +1278,6 @@ ul {
   letter-spacing: 0.02em;
   color: #AB9477;
   cursor: pointer;
-  margin-top: 25vh;
   margin-left: 46vw;
   position: relative;
 }
