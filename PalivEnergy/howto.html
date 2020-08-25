@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/howto.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <meta name="format-detection" content="telephone=no">
@@ -12,13 +12,22 @@
     <div class="container">
       <div id="frame_inner">
         <div class="nav1line" id="nav1line">
-          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
-          <a href="#" class="top_news_link">новини</a>
-          <p class="header_icon" onclick="showmenu()">
-            <span id="s1"></span>
-            <span id="s2"></span>
-            <span id="s3"></span>
-          </p>
+          <a href="index.html" class="top_logo">
+            <img id="nav1line_img" src="assets/images/logo.svg" alt="logo">
+          </a>
+          <a href="#" id="nav1line_link" class="top_news_link">новини</a>
+          <!--<span class="header_icon">
+            <svg class="menu_open" onclick="showmenu()" width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H28.5C29.3284 0 30 0.671573 30 1.5C30 2.32843 29.3284 3 28.5 3H1.5C0.671573 3 0 2.32843 0 1.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.5C0 14.6716 0.671573 14 1.5 14H19.5C20.3284 14 21 14.6716 21 15.5C21 16.3284 20.3284 17 19.5 17H1.5C0.671573 17 0 16.3284 0 15.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 29.5C0 28.6716 0.671573 28 1.5 28H34.5C35.3284 28 36 28.6716 36 29.5C36 30.3284 35.3284 31 34.5 31H1.5C0.671573 31 0 30.3284 0 29.5Z" />
+          </svg>
+        </span>-->
+        <div class="header_icon" id="menu_icon" onclick="showmenu()">
+          <div class="line line--1" id="s1"></div>
+          <div class="line line--2" id="s2"></div>
+          <div class="line line--3" id="s3"></div>
+        </div>
         </div>
         <nav id="navnav">
           <ul class="navul">
@@ -31,85 +40,194 @@
             <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
           </ul>
         </nav>
-        <div class="nav3line">
-          <div>
+        <div class="nav3line" id="nav_social_line">
+          <div class="nav3line_left">
             <span class="nav3line_label">слідкуйте за нами:</span>
             <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
-            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+            <img src="assets/images/apple-pay.svg" alt='apple_pay' id="menu_applepay"></img>
+            <img src="assets/images/android-pay.svg" alt='android_pay' id="menu_androidpay"></img>
           </div>
-          <div>
-            <a class="lang" href="#">RU</a>
+          <div class="nav3line_right">
             <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">RU</a>
             <a class="lang" href="#">EN</a>
           </div>
         </div>
       </div>
 
       <div class="howto_steps_outher">
-        <div class="howto_steps">
-          <h2 class="Htitle">1. КОМЕРЦІЙНА ПРОПОЗИЦІЯ</h2>
-          <div class="howto_steps_inner">
-            <p class="Htext">заповни <span class="marked_text">форму</span> на сайті і отримай індивідуальну пропозицію від палівенерго</p>
-            <div class="Himages">
-              <img id="step1num" src="assets/images/steps1num.png" alt="step1">
-              <img id="step1img" src="assets/images/steps1img.png" alt="step1">
+        <section>
+          <div class="howto_steps" id="howto_steps1">
+            <h2 class="Htitle">1. КОМЕРЦІЙНА ПРОПОЗИЦІЯ</h2>
+            <div class="howto_steps_inner">
+              <p class="Htext">заповни <a href="#" class="marked_text">форму</a> на сайті і отримай індивідуальну пропозицію від палівенерго</p>
+              <div class="Himages">
+                <img id="step1num" src="assets/images/steps1num.png" alt="step1">
+                <img id="step1img" src="assets/images/commercial-proposal.jpg" alt="step1">
+              </div>
             </div>
-          </div>
 
-        </div>
-        <div class="howto_steps">
-          <h2 class="Htitle">2 .УЗГОДЖЕННЯ ДОГОВОРУ</h2>
-          <div class="howto_steps_inner">
-            <p class="Htext">Після того, як ми з вами обговоримо умови, зазначені в комерційній пропозиції, потрібно погодити умови договору про постачання електричної енергії.</p>
-            <div class="Himages">
-              <img id="step2num" src="assets/images/steps2num.png" alt="step2">
-              <img id="step2img" src="assets/images/steps2img.png" alt="step2">
+          </div>
+        </section>
+        <section>
+          <div class="howto_steps" id="howto_steps2">
+            <h2 class="Htitle">2 .УЗГОДЖЕННЯ ДОГОВОРУ</h2>
+            <div class="howto_steps_inner">
+              <p class="Htext">Після того, як ми з вами обговоримо умови, зазначені в комерційній пропозиції, потрібно погодити умови договору про постачання електричної енергії.</p>
+              <div class="Himages">
+                <img id="step2num" src="assets/images/steps2num.png" alt="step2">
+                <img id="step2img" src="assets/images/contract-approval.jpg" alt="step2">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="howto_steps">
+        </section>
+        <section>
+        <div class="howto_steps" id="howto_steps3">
           <h2 class="Htitle">3. ЗАЯВА ПРИЄДНАННЯ</h2>
           <div class="howto_steps_inner">
             <p class="Htext">Кінцевий етап укладання договору про постачання електричної енергії — заповнення та підписання «Заяви приєднання» до цього договору.</p>
             <div class="Himages">
               <img id="step3num" src="assets/images/steps3num.png" alt="step3">
-              <img id="step3img" src="assets/images/steps3img.png" alt="step3">
+              <img id="step3img" src="assets/images/statement.jpg" alt="step3">
             </div>
           </div>
         </div>
-        <div class="howto_steps">
-          <h2 class="Htitle">4. РОБОТА З ПАЛІВЕНЕРГО</h2>
-          <div class="howto_steps_inner">
-            <p class="Htext" id="HtextP1">Ви починаєте користуватися перевагами співпраці з Палівенерго з першого дня після укладення договору та початку постачання електроенергії на ваше підприємство.</p>
-            <p class="Htext" id="HtextP2">Ми прикладаємо всі зусилля, щоб співпраця з вами була довгою та плідною.</p>
-            <p class="Htext" id="HtextP3">Дякуємо за довіру!</p>
-            <div class="Himages">
-              <img id="step4num" src="assets/images/steps4num.png" alt="step4">
-              <img id="step4img" src="assets/images/steps4img.png" alt="step4">
+      </section>
+        <section>
+          <div class="howto_steps" id="howto_steps4">
+            <h2 class="Htitle">4. РОБОТА З ПАЛІВЕНЕРГО</h2>
+            <div class="howto_steps_inner">
+              <p class="Htext" id="HtextP1">Ви починаєте користуватися перевагами співпраці з Палівенерго з першого дня після укладення договору та початку постачання електроенергії на ваше підприємство.</p>
+              <p class="Htext" id="HtextP2">Ми прикладаємо всі зусилля, щоб співпраця з вами була довгою та плідною.</p>
+              <p class="Htext" id="HtextP3">Дякуємо за довіру!</p>
+              <div class="Himages">
+                <img id="step4num" src="assets/images/steps4num.png" alt="step4">
+                <img id="step4img" src="assets/images/start-cooperation.jpg" alt="step4">
+              </div>
             </div>
           </div>
+        </section>
+      </div>
+
+      <div class="joinus">
+        <form class="joinus_form">
+          <div class="joinus_input">
+            <div class="joinus_input_inner">
+              <p class="form_label">Ваше ім'я</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Телефон</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Плановане споживання</p>
+              <p class="form_subtitle">(кВт⋅ч в місяць)</p>
+              <input type="text" value="" class="join_data">
+            </div>
+          </div>
+          <div class="joinus_send">
+            <div id="joinus_choise">
+              <p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p>
+              <p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p>
+            </div>
+            <h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2>
+            <p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p>
+            <span class="checkbox">
+              <a href="#" class="joinus_send_link">відправити</a>
+              <input id="checkbox" type="checkbox">
+              <label for="checkbox">я кліент компанії</label>
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer">
+        <div class="footer_logo">
+          <ul>
+            <li>
+              <img class="footer_img" src="assets/images/footer_logo.svg" alt="logo">
+            </li>
+            <li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li>
+            <li class="footer_pays">
+              <img src="assets/images/apple-pay.svg" alt='apple_pay' id="footer_applepay"></img>
+              <img src="assets/images/android-pay.svg" alt='android_pay' id="footer_androidpay"></img>
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <ul>
+            <li class="footer_info">інформація</li>
+            <li>
+              <a href="contacts.html" class="footer_link">контакти</a>
+            </li>
+            <li>
+              <a href="#" class="footer_link">новини</a>
+            </li>
+            <li>
+              <a href="energydeliveries.html" class="footer_link">поставка електроенергії</a>
+            </li>
+            <li>
+              <a href="gasdeliveries.html" class="footer_link">поставка природного газу</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <ul>
+            <li>+38 (094) 936-48-81</li>
+            <li>+38 (061) 708-28-81</li>
+            <li>VEK@palivenergy.com.ua</li>
+          </ul>
+        </div>
+        <div class="address">
+          <ul>
+            <li>Пт - Пн</li>
+            <li>9:00 - 18:00</li>
+            <li>пр.Соборності,180 Запорiжжя 69035, Україна</li>
+          </ul>
         </div>
       </div>
 
-      <div id="includeStatement"></div>
-
-      <div id="includeFooter"></div>
-
       <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
-      <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
+        <svg class="upbutton_svg" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0.999986C15.2762 0.999986 15.5 1.22384 15.5 1.49999L15.5 30.5C15.5 30.7761 15.2762 31 15 31C14.7239 31 14.5 30.7761 14.5 30.5L14.5 1.49999C14.5 1.22384 14.7239 0.999986 15 0.999986Z" fill=""/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6264 14.6778C29.4377 14.8581 29.1405 14.8581 28.9518 14.6778L14.9981 1.3507L15.7052 0.675341L29.6264 13.9715C29.8278 14.1638 29.8278 14.4854 29.6264 14.6778Z" fill=""/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.369816 14.6777C0.168395 14.4854 0.168395 14.1638 0.369816 13.9714L14.3074 0.659656C14.6939 0.290531 15.3023 0.290531 15.6888 0.659656L15.7052 0.675341L1.04446 14.6777C0.855707 14.858 0.558567 14.858 0.369816 14.6777Z" fill=""/>
+        </svg>
       </a>
     </div>
     <script type="text/javascript">
-    function showmenu() {
-      frame_inner.style.height = "100%";
-      frame_inner.style.background = "#2D3039";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="login.html" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
-    }
 
-    function closemenu() {
-      frame_inner.style.height = "155px";
-      frame_inner.style.background = "inherit";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+    var counter = 0;
+    function showmenu() {
+      counter+=1;
+      if (counter == 1) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "100%";
+        frame_inner.style.position = "fixed";
+        navnav.style.right = "40%";
+        nav_social_line.style.display = "flex";
+        frame_inner.style.background = "#2D3039";
+        nav1line_img.src = "assets/images/logo-menu.svg";
+        nav1line_link.innerHTML = "особистий кабiнет";
+        nav1line_link.href = "login.html";
+        nav1line_link.classList.add("profile_link");
+        nav1line_link.classList.remove("top_news_link");
+      } else if (counter == 2) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "155px";
+        frame_inner.style.position = "absolute";
+        navnav.style.right = "-100%";
+        nav_social_line.style.display = "none";
+        frame_inner.style.background = "inherit";
+        nav1line_img.src = "assets/images/logo.svg";
+        nav1line_link.innerHTML = "новини";
+        nav1line_link.href = "#";
+        nav1line_link.classList.remove("profile_link");
+        nav1line_link.classList.add("top_news_link");
+        counter = 0;
+      }
     }
     function joinusFuel (fuel) {
       switch (fuel) {
@@ -141,21 +259,6 @@
       } else {
         document.getElementById('upbutton').style.display = 'none';
       }
-    }
-    var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
-
-    var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="energydeliveries.html" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
-
-    //if (includeIntro) {
-    //  includeIntro.innerHTML = intro;
-    //}
-
-    if (includeStatement) {
-      includeStatement.innerHTML = statement;
-    }
-
-    if (includeFooter) {
-      includeFooter.innerHTML = footer;
     }
     </script>
   </body>
