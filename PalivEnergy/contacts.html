@@ -145,6 +145,8 @@
       </a>
     </div>
     <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", introAnimation);
+
     function introAnimation() {
       setTimeout(textIntroAnimationShow, 390);
 
@@ -223,7 +225,7 @@
     }
 
     var currentSlideI = 0;
-    var slideInterval = setInterval(nextSlideI,5000);
+    var slideInterval = setInterval(nextSlideI,8000);
 
     function nextSlideI(){
         /*intro_slides[currentSlideI].className = 'intro_slide';
