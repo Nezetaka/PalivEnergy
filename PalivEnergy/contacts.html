@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contacts.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <meta name="format-detection" content="telephone=no">
@@ -12,13 +12,22 @@
     <div class="container">
       <div id="frame_inner">
         <div class="nav1line" id="nav1line">
-          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
-          <a href="#" class="top_news_link">новини</a>
-          <p class="header_icon" onclick="showmenu()">
-            <span id="s1"></span>
-            <span id="s2"></span>
-            <span id="s3"></span>
-          </p>
+          <a href="index.html" class="top_logo">
+            <img id="nav1line_img" src="assets/images/logo.svg" alt="logo">
+          </a>
+          <a href="#" id="nav1line_link" class="top_news_link">новини</a>
+          <!--<span class="header_icon">
+            <svg class="menu_open" onclick="showmenu()" width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H28.5C29.3284 0 30 0.671573 30 1.5C30 2.32843 29.3284 3 28.5 3H1.5C0.671573 3 0 2.32843 0 1.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.5C0 14.6716 0.671573 14 1.5 14H19.5C20.3284 14 21 14.6716 21 15.5C21 16.3284 20.3284 17 19.5 17H1.5C0.671573 17 0 16.3284 0 15.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 29.5C0 28.6716 0.671573 28 1.5 28H34.5C35.3284 28 36 28.6716 36 29.5C36 30.3284 35.3284 31 34.5 31H1.5C0.671573 31 0 30.3284 0 29.5Z" />
+          </svg>
+        </span>-->
+        <div class="header_icon" id="menu_icon" onclick="showmenu()">
+          <div class="line line--1" id="s1"></div>
+          <div class="line line--2" id="s2"></div>
+          <div class="line line--3" id="s3"></div>
+        </div>
         </div>
         <nav id="navnav">
           <ul class="navul">
@@ -31,46 +40,44 @@
             <li><a class="navigation_link active" href="contacts.html">Контакти</a></li>
           </ul>
         </nav>
-        <div class="nav3line">
-          <div>
+        <div class="nav3line" id="nav_social_line">
+          <div class="nav3line_left">
             <span class="nav3line_label">слідкуйте за нами:</span>
             <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
-            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+            <img src="assets/images/apple-pay.svg" alt='apple_pay' id="menu_applepay"></img>
+            <img src="assets/images/android-pay.svg" alt='android_pay' id="menu_androidpay"></img>
           </div>
-          <div>
-            <a class="lang" href="#">RU</a>
+          <div class="nav3line_right">
             <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">RU</a>
             <a class="lang" href="#">EN</a>
           </div>
         </div>
       </div>
 
-      <ul id="intro_slides">
-        <li class="intro_slide showing">
-          <div class="intro_slider_inner">
-            <div class="header">
-              <div class="header_intro">
-                <p class="intro_text">енергія</p>
-                <p class="intro_text">вашого</p>
-                <p class="lch">бізнесу</p>
-                <a href="#" class="intro_btn">замовити розрахунок</a>
+      <div id="intro_slides">
+        <div class="intro_slider_inner">
+          <div class="header">
+            <div class="header_intro">
+              <video autoplay preload="auto" muted loop id="video_intro_electrycity">
+                <source src="assets/images/header-electricity.mp4" type="video/mp4">
+              </video>
+              <div class="">
+                <ul>
+                  <li></li>
+                  <li id="intro_animated_text">
+                    <p class="intro_text">енергія</p>
+                    <p class="intro_text">вашого</p>
+                    <p class="lch">бізнесу</p>
+                    <a href="#" class="intro_btn">замовити розрахунок</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </li>
-        <li class="intro_slide">
-          <div class="intro_slider_inner">
-            <div class="header_alt">
-              <div class="header_intro_alt">
-                <p class="intro_text">надійний</p>
-                <p class="intro_text">постачальник</p>
-                <p class="lch">природного газу</p>
-                <a href="#" class="intro_btn">замовити розрахунок</a>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <div class="ourContacts">
         <h2 class="Ctitle2">НАШІ КОНТАКТИ</h2>
@@ -85,7 +92,34 @@
         <p class="Ctext2">https://www.facebook.com/palivenergo</p>
       </div>
 
-      <div id="includeStatement"></div>
+      <div class="joinus">
+        <form class="joinus_form">
+          <div class="joinus_input">
+            <div class="joinus_input_inner">
+              <p class="form_label">Ваше ім'я</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Телефон</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Плановане споживання</p>
+              <p class="form_subtitle">(кВт⋅ч в місяць)</p>
+              <input type="text" value="" class="join_data">
+            </div>
+          </div>
+          <div class="joinus_send">
+            <div id="joinus_choise">
+              <p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p>
+              <p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p>
+            </div>
+            <h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2>
+            <p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p>
+            <span class="checkbox">
+              <a href="#" class="joinus_send_link">відправити</a>
+              <input id="checkbox" type="checkbox">
+              <label for="checkbox">я кліент компанії</label>
+            </span>
+          </div>
+        </form>
+      </div>
 
       <div class="howtoFind">
         <h2 class="Ctitle2">ЯК НАС ЗНАЙТИ</h2>
@@ -103,20 +137,71 @@
       </div>
 
       <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
-      <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
+        <svg class="upbutton_svg" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0.999986C15.2762 0.999986 15.5 1.22384 15.5 1.49999L15.5 30.5C15.5 30.7761 15.2762 31 15 31C14.7239 31 14.5 30.7761 14.5 30.5L14.5 1.49999C14.5 1.22384 14.7239 0.999986 15 0.999986Z" fill=""/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6264 14.6778C29.4377 14.8581 29.1405 14.8581 28.9518 14.6778L14.9981 1.3507L15.7052 0.675341L29.6264 13.9715C29.8278 14.1638 29.8278 14.4854 29.6264 14.6778Z" fill=""/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.369816 14.6777C0.168395 14.4854 0.168395 14.1638 0.369816 13.9714L14.3074 0.659656C14.6939 0.290531 15.3023 0.290531 15.6888 0.659656L15.7052 0.675341L1.04446 14.6777C0.855707 14.858 0.558567 14.858 0.369816 14.6777Z" fill=""/>
+        </svg>
       </a>
     </div>
     <script type="text/javascript">
-    function showmenu() {
-      frame_inner.style.height = "100%";
-      frame_inner.style.background = "#2D3039";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="login.html" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
-    }
+    function introAnimation() {
+      setTimeout(textIntroAnimationShow, 390);
 
-    function closemenu() {
-      frame_inner.style.height = "155px";
-      frame_inner.style.background = "inherit";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+      function textIntroAnimationShow() {
+        try {
+          intro_animated_text.style.opacity = "1";
+          setTimeout(textIntroAnimationSwap, 7000);
+        } catch(err) {}
+      }
+
+      function textIntroAnimationSwap() {
+        try {
+          intro_animated_text.style.padding = "80px 52vw 0 0";
+          setTimeout(textIntroAnimationChange, 1650);
+          setTimeout(textIntroAnimationChange2, 1650);
+          setTimeout(startIntroAnimation, 1650);
+          setTimeout(textIntroAnimationHide, 7700);
+        } catch {}
+      }
+
+      function textIntroAnimationHide() {
+        intro_animated_text2.style.opacity = "0";
+      }
+      setTimeout(introAnimation);
+    }
+    var counter = 0;
+    function showmenu() {
+      counter+=1;
+      if (counter == 1) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "100%";
+        frame_inner.style.position = "fixed";
+        navnav.style.right = "40%";
+        nav_social_line.style.display = "flex";
+        frame_inner.style.background = "#2D3039";
+        nav1line_img.src = "assets/images/logo-menu.svg";
+        nav1line_link.innerHTML = "особистий кабiнет";
+        nav1line_link.classList.add("profile_link");
+        nav1line_link.classList.remove("top_news_link");
+      } else if (counter == 2) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "155px";
+        frame_inner.style.position = "absolute";
+        navnav.style.right = "-100%";
+        nav_social_line.style.display = "none";
+        frame_inner.style.background = "inherit";
+        nav1line_img.src = "assets/images/logo.svg";
+        nav1line_link.innerHTML = "новини";
+        nav1line_link.classList.remove("profile_link");
+        nav1line_link.classList.add("top_news_link");
+        counter = 0;
+      }
+      //nav1line.innerHTML = '<a href="index.html" class="top_logo"><img src="assets/images/logo-menu.svg" alt="logo"></a><a href="login.html" class="profile_link">особистий кабiнет</a><span class="header_icon"><svg class="menu_close" onclick="closemenu();" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.06068 24.0606C0.474894 23.4748 0.474894 22.5251 1.06068 21.9393L21.6283 1.37172C22.214 0.785929 23.1638 0.785929 23.7496 1.37172C24.3354 1.9575 24.3354 2.90725 23.7496 3.49304L3.182 24.0606C2.59621 24.6464 1.64647 24.6464 1.06068 24.0606Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M1.06068 1.06068C1.64647 0.474894 2.55753 0.436207 3.09559 0.97427L24.5291 22.4078C25.0672 22.9458 25.0285 23.8569 24.4427 24.4427C23.8569 25.0285 22.9458 25.0672 22.4078 24.5291L0.97427 3.09559C0.436207 2.55753 0.474894 1.64647 1.06068 1.06068Z" /></svg></span>';
     }
     function joinusFuel (fuel) {
       switch (fuel) {
@@ -134,14 +219,21 @@
           {}
       }
     }
-    var intro_slides = document.querySelectorAll('#intro_slides .intro_slide');
+
     var currentSlideI = 0;
     var slideInterval = setInterval(nextSlideI,5000);
 
     function nextSlideI(){
-        intro_slides[currentSlideI].className = 'intro_slide';
+        /*intro_slides[currentSlideI].className = 'intro_slide';
         currentSlideI = (currentSlideI+1)%intro_slides.length;
-        intro_slides[currentSlideI].className = 'intro_slide showing';
+        intro_slides[currentSlideI].className = 'intro_slide showing';*/
+        if (currentSlideI == 0) {
+          intro_slides.innerHTML = '<div class="intro_slider_inner"><div class="header_alt"><div class="header_intro_alt"><video autoplay preload="auto" muted id="video_intro_gas"><source src="assets/images/header-gas.mp4" type="video/mp4"></video><div id="intro_animated_text2"><p class="intro_text intro_text_animation_change">енергія</p><p class="intro_text intro_text_animation_change2">вашого</p><p class="lch intro_text_animation">бізнесу</p><a href="#" class="intro_btn">замовити розрахунок</a></div></div></div></div>';
+          currentSlideI = 1;
+        } else if (currentSlideI == 1) {
+          intro_slides.innerHTML = '<div class="intro_slider_inner"><div class="header"><div class="header_intro"><video autoplay preload="auto" muted id="video_intro_electrycity"><source src="assets/images/header-electricity.mp4" type="video/mp4"></video><div class=""><ul><li></li><li id="intro_animated_text"><p class="intro_text">енергія</p><p class="intro_text">вашого</p><p class="lch">бізнесу</p><a href="#" class="intro_btn">замовити розрахунок</a></li></ul></div></div></div></div>';
+          currentSlideI = 0;
+        }
     }
     var smoothJumpUp = function() {
       if (document.body.scrollTop>0 || document.documentElement.scrollTop>0) {
@@ -158,9 +250,223 @@
         document.getElementById('upbutton').style.display = 'none';
       }
     }
-    var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
-    if (includeStatement) {
-      includeStatement.innerHTML = statement;
+    function textIntroAnimationChange() {
+      class TextScramble {
+        constructor(el) {
+          this.el = el
+          this.chars = '!<>-_\\/[]{}—=+*^?#__-___'
+          this.update = this.update.bind(this)
+        }
+        setText(newText) {
+          const oldText = this.el.innerText
+          const length = Math.max(oldText.length, newText.length)
+          const promise = new Promise((resolve) => this.resolve = resolve)
+          this.queue = []
+          for (let i = 0; i < length; i++) {
+            const from = oldText[i] || ''
+            const to = newText[i] || ''
+            const start = Math.floor(Math.random() * 40)
+            const end = start + Math.floor(Math.random() * 40)
+            this.queue.push({ from, to, start, end })
+          }
+          cancelAnimationFrame(this.frameRequest)
+          this.frame = 0
+          this.update()
+          return promise
+        }
+        update() {
+          let output = ''
+          let complete = 0
+          for (let i = 0, n = this.queue.length; i < n; i++) {
+            let { from, to, start, end, char } = this.queue[i]
+            if (this.frame >= end) {
+              complete++
+              output += to
+            } else if (this.frame >= start) {
+              if (!char || Math.random() < 0.28) {
+                char = this.randomChar()
+                this.queue[i].char = char
+              }
+              output += `<span class="dud">${char}</span>`
+            } else {
+              output += from
+            }
+          }
+          this.el.innerHTML = output
+          if (complete === this.queue.length) {
+            this.resolve()
+          } else {
+            this.frameRequest = requestAnimationFrame(this.update)
+            this.frame++
+          }
+        }
+        randomChar() {
+          return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
+        }
+        const phrases = [
+        'надійний',
+        'надійний',
+        ]
+
+        const el = document.querySelector('.intro_text_animation_change')
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, 8000)
+        })
+        counter = (counter + 1) % phrases.length
+        }
+
+        next()
+    }
+
+    function textIntroAnimationChange2() {
+      class TextScramble {
+        constructor(el) {
+          this.el = el
+          this.chars = '!<>-_\\/[]{}—=+*^?#__-___'
+          this.update = this.update.bind(this)
+        }
+        setText(newText) {
+          const oldText = this.el.innerText
+          const length = Math.max(oldText.length, newText.length)
+          const promise = new Promise((resolve) => this.resolve = resolve)
+          this.queue = []
+          for (let i = 0; i < length; i++) {
+            const from = oldText[i] || ''
+            const to = newText[i] || ''
+            const start = Math.floor(Math.random() * 40)
+            const end = start + Math.floor(Math.random() * 40)
+            this.queue.push({ from, to, start, end })
+          }
+          cancelAnimationFrame(this.frameRequest)
+          this.frame = 0
+          this.update()
+          return promise
+        }
+        update() {
+          let output = ''
+          let complete = 0
+          for (let i = 0, n = this.queue.length; i < n; i++) {
+            let { from, to, start, end, char } = this.queue[i]
+            if (this.frame >= end) {
+              complete++
+              output += to
+            } else if (this.frame >= start) {
+              if (!char || Math.random() < 0.28) {
+                char = this.randomChar()
+                this.queue[i].char = char
+              }
+              output += `<span class="dud">${char}</span>`
+            } else {
+              output += from
+            }
+          }
+          this.el.innerHTML = output
+          if (complete === this.queue.length) {
+            this.resolve()
+          } else {
+            this.frameRequest = requestAnimationFrame(this.update)
+            this.frame++
+          }
+        }
+        randomChar() {
+          return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
+        }
+        const phrases = [
+        'постачальник',
+        'постачальник',
+        ]
+
+        const el = document.querySelector('.intro_text_animation_change2')
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, 8000)
+        })
+        counter = (counter + 1) % phrases.length
+        }
+
+        next()
+    }
+
+    function startIntroAnimation() {
+      class TextScramble {
+        constructor(el) {
+          this.el = el
+          this.chars = '!<>-_\\/[]{}—=+*^?#__-___'
+          this.update = this.update.bind(this)
+        }
+        setText(newText) {
+          const oldText = this.el.innerText
+          const length = Math.max(oldText.length, newText.length)
+          const promise = new Promise((resolve) => this.resolve = resolve)
+          this.queue = []
+          for (let i = 0; i < length; i++) {
+            const from = oldText[i] || ''
+            const to = newText[i] || ''
+            const start = Math.floor(Math.random() * 40)
+            const end = start + Math.floor(Math.random() * 40)
+            this.queue.push({ from, to, start, end })
+          }
+          cancelAnimationFrame(this.frameRequest)
+          this.frame = 0
+          this.update()
+          return promise
+        }
+        update() {
+          let output = ''
+          let complete = 0
+          for (let i = 0, n = this.queue.length; i < n; i++) {
+            let { from, to, start, end, char } = this.queue[i]
+            if (this.frame >= end) {
+              complete++
+              output += to
+            } else if (this.frame >= start) {
+              if (!char || Math.random() < 0.28) {
+                char = this.randomChar()
+                this.queue[i].char = char
+              }
+              output += `<span class="dud">${char}</span>`
+            } else {
+              output += from
+            }
+          }
+          this.el.innerHTML = output
+          if (complete === this.queue.length) {
+            this.resolve()
+          } else {
+            this.frameRequest = requestAnimationFrame(this.update)
+            this.frame++
+          }
+        }
+        randomChar() {
+          return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
+        }
+        const phrases = [
+        'природного газу',
+        'природного газу',
+        ]
+
+        const el = document.querySelector('.intro_text_animation')
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, 8000)
+        })
+        counter = (counter + 1) % phrases.length
+        }
+
+        next()
     }
     </script>
   </body>
