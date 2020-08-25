@@ -184,6 +184,7 @@
         frame_inner.style.background = "#2D3039";
         nav1line_img.src = "assets/images/logo-menu.svg";
         nav1line_link.innerHTML = "особистий кабiнет";
+        nav1line_link.href = "login.html";
         nav1line_link.classList.add("profile_link");
         nav1line_link.classList.remove("top_news_link");
       } else if (counter == 2) {
@@ -197,6 +198,7 @@
         frame_inner.style.background = "inherit";
         nav1line_img.src = "assets/images/logo.svg";
         nav1line_link.innerHTML = "новини";
+        nav1line_link.href = "#";
         nav1line_link.classList.remove("profile_link");
         nav1line_link.classList.add("top_news_link");
         counter = 0;
