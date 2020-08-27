@@ -668,6 +668,14 @@ ul {
   color: #333333;
 }
 
+.title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 49px;
+}
+
 .form_subtitle {
   font-family: Open Sans;
   font-weight: lighter;
