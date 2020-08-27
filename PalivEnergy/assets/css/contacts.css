@@ -234,6 +234,7 @@ ul {
 
 .navul li{
   margin: 35px 0;
+  max-width: 33vw;
 }
 
 .navigation_link {
