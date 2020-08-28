@@ -101,10 +101,10 @@ ul {
 }
 
 .top_logo {
-  margin-right: 60vw;
-  margin-top: 50px;
+  position: absolute;
+  left: 4vw;
+  margin-top: 40px;
   margin-bottom: 25px;
-  transform: translateX(50%);
 }
 
 .top_news_link {
