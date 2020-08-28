@@ -548,8 +548,3 @@ ul {
 #upbutton:hover .upbutton_svg {
   fill: #EB4B18;
 }
-
-#showScroll {
-  position: fixed;
-  top: 0;
-}

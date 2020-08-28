@@ -91,9 +91,7 @@
       <div class="invitation">
         <a class="invite_btn" href="#">стати кліентом</a>
       </div>
-      <div id="showScroll">
 
-      </div>
       <div class="partners" id="partner">
         <h2 class="partners_title">ПАРТНЕРИ</h2>
         <div class="partners_sector">
@@ -169,16 +167,21 @@
 
     <script type="text/javascript">
     window.addEventListener('scroll', function() {
-      document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
-      if ((pageYOffset >= 2856) && (pageYOffset < 3450)) {
+      var scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      );
+
+      if ((pageYOffset >= (scrollHeight*0.422)) && (pageYOffset < (scrollHeight*0.5098))) {
         document.querySelector(".partners").style.background = "#333333";
-      } else if ((pageYOffset >= 3450) && (pageYOffset < 4250)) {
+      } else if ((pageYOffset >= (scrollHeight*0.5098)) && (pageYOffset < (scrollHeight*0.628))) {
         document.querySelector(".partners").style.background = "#4D4D4D";
-      } else  if ((pageYOffset >= 4250) && (pageYOffset < 4990)) {
+      } else  if ((pageYOffset >= (scrollHeight*0.628)) && (pageYOffset < (scrollHeight*0.7374))) {
         document.querySelector(".partners").style.background = "#666666";
-      } else  if ((pageYOffset >= 4990) && (pageYOffset < 5850)) {
+      } else  if ((pageYOffset >= (scrollHeight*0.7374)) && (pageYOffset < (scrollHeight*0.8645))) {
         document.querySelector(".partners").style.background = "#808080";
-      } else  if (pageYOffset >= 5850) {
+      } else  if (pageYOffset >= (scrollHeight*0.8645)) {
         document.querySelector(".partners").style.background = "#999999";
       }
     });
