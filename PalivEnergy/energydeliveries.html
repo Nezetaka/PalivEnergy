@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/energydeliveries.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <meta name="format-detection" content="telephone=no">
@@ -12,34 +12,45 @@
     <div class="container">
       <div id="frame_inner">
         <div class="nav1line" id="nav1line">
-          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
-          <a href="#" class="top_news_link">новини</a>
-          <p class="header_icon" onclick="showmenu()">
-            <span id="s1"></span>
-            <span id="s2"></span>
-            <span id="s3"></span>
-          </p>
+          <a href="index.html" class="top_logo">
+            <img id="nav1line_img" src="assets/images/logo.svg" alt="logo">
+          </a>
+          <a href="#" id="nav1line_link" class="top_news_link">новини</a>
+          <!--<span class="header_icon">
+            <svg class="menu_open" onclick="showmenu()" width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H28.5C29.3284 0 30 0.671573 30 1.5C30 2.32843 29.3284 3 28.5 3H1.5C0.671573 3 0 2.32843 0 1.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.5C0 14.6716 0.671573 14 1.5 14H19.5C20.3284 14 21 14.6716 21 15.5C21 16.3284 20.3284 17 19.5 17H1.5C0.671573 17 0 16.3284 0 15.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 29.5C0 28.6716 0.671573 28 1.5 28H34.5C35.3284 28 36 28.6716 36 29.5C36 30.3284 35.3284 31 34.5 31H1.5C0.671573 31 0 30.3284 0 29.5Z" />
+          </svg>
+        </span>-->
+        <div class="header_icon" id="menu_icon" onclick="showmenu()">
+          <div class="line line--1" id="s1"></div>
+          <div class="line line--2" id="s2"></div>
+          <div class="line line--3" id="s3"></div>
+        </div>
         </div>
         <nav id="navnav">
           <ul class="navul">
-            <li><a class="navigation_link" href="index.html">Головна</a></li>
-            <li><a class="navigation_link" href="about.html">Про нас</a></li>
-            <li><a class="navigation_link" href="partners.html">Партнери</a></li>
-            <li><a class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
-            <li><a class="navigation_link active" href="energydeliveries.html">Постачання електроенергії</a></li>
-            <li><a class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
-            <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="index.html">Головна</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="about.html">Про нас</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="partners.html">Партнери</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
+            <li><a tabindex="-1" class="navigation_link active" href="energydeliveries.html">Постачання електроенергії</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="contacts.html">Контакти</a></li>
           </ul>
         </nav>
-        <div class="nav3line">
-          <div>
+        <div class="nav3line" id="nav_social_line">
+          <div class="nav3line_left">
             <span class="nav3line_label">слідкуйте за нами:</span>
             <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
-            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+            <img src="assets/images/apple-pay.svg" alt='apple_pay' id="menu_applepay"></img>
+            <img src="assets/images/android-pay.svg" alt='android_pay' id="menu_androidpay"></img>
           </div>
-          <div>
-            <a class="lang" href="#">RU</a>
+          <div class="nav3line_right">
             <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">RU</a>
             <a class="lang" href="#">EN</a>
           </div>
         </div>
@@ -48,201 +59,326 @@
       <div class="deliver">
         <div class="deliver_section">
           <h2 class="deliver_title" onclick="showdeliver(1)">Документи</h2>
-          <div id="includeDocs"></div>
+          <div id="includeDocs">
+            <p class="deliver_section_text">Договір про постачання електричної енергії споживачу з 01.01.2019р.</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Комерційна пропозиція №1 - 100% предоплата без розподілу</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Комерційна пропозиція №2 - 4 планових платіжа по 25% предоплата без розподілу</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Комерційна пропозиція №3 - подекадна оплата без розподілу</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Комерційна пропозиція №4 - 50% предоплата без розподілу</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Зразок звернення Споживача щодо коригування обсягів постачання</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Відомість про обсяги очікуваного споживання електричної енергії</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Ліцензія електроенергія</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+            <p class="deliver_section_text">Ліцензія газ</p>
+            <a href="#" class="deliver_section_link">завантажити файл</a>
+          </div>
         </div>
         <div class="deliver_section" id="del_section2">
           <h2 class="deliver_title" onclick="showdeliver(2)">Процес укладання договору</h2>
-          <ul id="slides">
-           <li class="slide showing">
-             <div>
-               <p class="slider_next" onclick="nextSlide();"></p>
-             </div>
-             <div class="slider_inner">
-               <p class="slider_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p>
-               <ol class="slider_numlist">
-                 <li class="slider_list">довідка про стан обліку електроенергії</li>
-                 <li class="slider_list">перелік технічних характеристик комерційних точок обліку</li>
-                 <li class="slider_list">свідоцтво про ДМА АСКОЕ/ЛУЗОД</li>
-                 <li class="slider_list">акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</li>
-                 <li class="slider_list">Графік денного та почасового прогнозованого споживання електричної енергії</li>
-               </ol>
-              </div>
-             <div class="slider_inner">
-               <img class="slider_image" src="./assets/images/slidernum1.png" alt="1">
-             </div>
-           </li>
-           <li class="slide">
-             <div>
-               <p class="slider_prev" onclick="prevSlide();"></p>
-               <p class="slider_next" onclick="nextSlide();"></p>
-             </div>
-             <div class="slider_inner">
-               <p class="slider_text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p>
-               <p class="slider_text">Кінцевим етапом укладення договору є його підписання, та скріплення підписів печатками підприємств.</p>
-             </div>
-             <div class="slider_inner">
-               <img class="slider_image" src="./assets/images/slidernum2.png" alt="1">
-             </div>
-           </li>
-           <li class="slide">
-             <div>
-               <p class="slider_prev" onclick="prevSlide();"></p>
-             </div>
-             <div class="slider_inner">
-               <p class="slider_text">Слід наголосити, що Споживач має завчасно та у встановлені терміни:</p>
-               <ol class="slider_numlist">
-                 <li class="slider_list">повідомити обленерго про перехід до незалежного постачальника</li>
-                 <li class="slider_list">здійснити остаточний розрахунок з обленерго</li>
-                 <li class="slider_list">призупинити діючий Договір з обленерго в частині постачання активної електричної енергії</li>
-               </ol>
-             </div>
-             <div class="slider_inner">
-               <img class="slider_image" src="./assets/images/slidernum3.png" alt="1">
-             </div>
-           </li>
-          </ul>
+          <div id="del_slider">
+            <ul id="slides">
+             <li class="slide showing">
+               <div>
+                 <p class="slider_next" onclick="nextSlide();"></p>
+               </div>
+               <div class="slider_inner">
+                 <p class="slider_text">Документи, необхідні для укладання договору з постачальником електроенергії:</p>
+                 <ol class="slider_numlist">
+                   <li class="slider_list">довідка про стан обліку електроенергії</li>
+                   <li class="slider_list">перелік технічних характеристик комерційних точок обліку</li>
+                   <li class="slider_list">свідоцтво про ДМА АСКОЕ/ЛУЗОД</li>
+                   <li class="slider_list">акт вводу АСКОЕ/ЛУЗОД у промислову експлуатацію</li>
+                   <li class="slider_list">Графік денного та почасового прогнозованого споживання електричної енергії</li>
+                 </ol>
+                </div>
+               <div class="slider_inner">
+                 <img class="slider_image" src="./assets/images/slidernum1.png" alt="1">
+               </div>
+             </li>
+             <li class="slide">
+               <div>
+                 <p class="slider_prev" onclick="prevSlide();"></p>
+                 <p class="slider_next" onclick="nextSlide();"></p>
+               </div>
+               <div class="slider_inner">
+                 <p class="slider_text">Після одержання перерахованих документів, фахівці ТОВ «ВЕК «ПАЛИВЕНЕРГО» оперативно готують проект Договору про постачання електричної енергії. Цей проект відправляється споживачеві, для погодження його тексту згідно внутрішніх процедур споживача.</p>
+                 <p class="slider_text">Кінцевим етапом укладення договору є його підписання, та скріплення підписів печатками підприємств.</p>
+               </div>
+               <div class="slider_inner">
+                 <img class="slider_image" src="./assets/images/slidernum2.png" alt="1">
+               </div>
+             </li>
+             <li class="slide">
+               <div>
+                 <p class="slider_prev" onclick="prevSlide();"></p>
+               </div>
+               <div class="slider_inner">
+                 <p class="slider_text">Слід наголосити, що Споживач має завчасно та у встановлені терміни:</p>
+                 <ol class="slider_numlist">
+                   <li class="slider_list">повідомити обленерго про перехід до незалежного постачальника</li>
+                   <li class="slider_list">здійснити остаточний розрахунок з обленерго</li>
+                   <li class="slider_list">призупинити діючий Договір з обленерго в частині постачання активної електричної енергії</li>
+                 </ol>
+               </div>
+               <div class="slider_inner">
+                 <img class="slider_image" src="./assets/images/slidernum3.png" alt="1">
+               </div>
+             </li>
+            </ul>
+          </div>
         </div>
         <div class="deliver_section">
           <h2 class="deliver_title" onclick="showdeliver(3);">Нормативно-правові акти</h2>
-          <div id="includeActs"></div>
+          <div id="includeActs">
+            <p class="deliver_section_text">У своїй діяльності ТОВ "Вільна Енергетична Компанія "ПАЛІВЕНЕРГО" керується наступними нормативно-правовими актами:</p><p class="text deliveries_list">Закон України «Про ринок електричної енергії» № 2019-VIII від 13.04.2017</p><p class="text deliveries_list">Закон України «Про ліцензування видів господарської діяльності»</p><p class="text deliveries_list">Постанова НКРЕ №1421 від 29.10.2010 р. «Про затвердження Порядку доступу постачальників електричної енергії за нерегульованим тарифом до місцевих (локальних) електричних мереж»</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 307 “Про затвердження Правил ринку”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 309 “Про затвердження Кодексу системи передачі”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 311 “Про затвердженння Кодексу комерційного обліку електричної енергії”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 310 “Про затвердження Кодексу системи розподілу”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 308 “Про затвердження Правил ринку “на добу наперед” та внутрішньодобового ринку”</p><p class="text deliveries_list">Постанова НКРЕКП від 27.12.2017 № 1469 “Про затвердження Ліцензійних умов провадження господарської діяльності з постачання електричної енергії споживачу”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 312 “Про затвердження Правил роздрібного ринку електричної енергії”</p><p class="text deliveries_list">Антикорупційна програма</p>
+          </div>
         </div>
         <div class="deliver_section" id="del_section4">
           <h2 class="deliver_title" onclick="showdeliver(4);">Вирішення спорів</h2>
-          <ul id="slides2">
-            <li class="slide2 showing">
-              <div>
-                <p class="slider_next" onclick="nextSlide2();"></p>
-              </div>
-              <div class="slider_inner" id="s2s1">
-                <p class="deliver_section_text">Як подати письмове звернення/скаргу/претензію до ТОВ «ВІЛЬНА ЕНЕРГЕТИЧНА КОМПАНІЯ «ПАЛІВЕНЕРГО»</p>
-                <p class="deliver_section_text">Письмове звернення до Товариства можна подати наступним чином:</p>
-                <p class="deliveries_list">Надіслати поштою на адресу: 69035, місто Запоріжжя, проспект Соборний, будинок 180, офіс 410,</p>
-                <p class="deliveries_list">Особисто передати до Товариства, за зазначеною вище адресою;</p>
-                <p class="deliveries_list">Надіслати електронний лист на адресу: <span class="marked_text">VEK@palivenergy.com.ua</span></p>
-                <p class="deliveries_list">Зателефонувати за номером: <span class="marked_text">+38 (094) 936-48-81</span></p>
-              </div>
-              <div class="slider_inner">
-                <img class="slider_image" src="./assets/images/slidernum1.png" alt="1">
-              </div>
-            </li>
-            <li class="slide2">
-              <div>
-                <p class="slider_prev" onclick="prevSlide2();"></p>
-                <p class="slider_next" onclick="nextSlide2();"></p>
-              </div>
-              <div class="slider_inner">
-                <p class="deliver_section_text">Вимоги до оформлення звернення/скарги/претензій</p>
-                <ol class="slider_numlist">
-                  <li class="slider_list">Повинно бути зазначено:
-                    <p class="deliveries_list">Для фізичної особи: прізвище, ім’я, по батькові, адреса</p>
-                    <p class="deliveries_list">Для юридичного споживача, фізичної особи підприємця: назва, юридична адреса, адреса знаходження об’єкта електропостачання</p>
-                  </li>
-                  <li class="slider_list">Викладено суть порушеного питання пропозиції, заяви чи скарги, прохання чи вимоги</li>
-                  <li class="slider_list">Письмове звернення/скарга/претензія повинно бути підписано заявником (заявниками) із зазначенням дати. При поданні звернення/скарги/претензії в електронному вигляді також має бути зазначено електронну поштову адресу, на яку заявнику може бути надіслано відповідь, або відомості про інші засоби зв’язку з ним. Застосування електронного цифрового підпису при надсиланні електронним зв’язком не вимагається</li>
-                </ol>
-              </div>
-              <div class="slider_inner">
-                <img class="slider_image" src="./assets/images/slidernum2.png" alt="1">
-              </div>
-            </li>
-            <li class="slide2">
-              <div>
-                <p class="slider_prev" onclick="prevSlide2();"></p>
-                <p class="slider_next" onclick="nextSlide2();"></p>
-              </div>
-              <div class="slider_inner" id="s2s3">
-                <p class="deliver_section_text">Розгляд звернення/скарги/претензії, надісланих до ТОВ «ВІЛЬНА ЕНЕРГЕТИЧНА КОМПАНІЯ «ПАЛІВЕНЕРГО»</p>
-                <p class="deliver_section_text">Якщо в зверненні/скарзі/претензії вказана адреса електронної пошти, номер телефону або така інформація відома Товариству здійснюється надання попередньої відповіді щодо можливості вирішення питання або повідомлення про початок розгляду звернення/скарги/претензії та строки його розгляду. Попередня відповідь надається протягом 1 робочого дня від дня отримання звернення/скарги/претензії.</p>
-                <p class="deliver_section_text">Звернення/скарга/претензія розглядається в термін, визначений чинним законодавством України</p>
-              </div>
-              <div class="slider_inner">
-                <img class="slider_image" src="./assets/images/slidernum3.png" alt="1">
-              </div>
-            </li>
-            <li class="slide2">
-              <div>
-                <p class="slider_prev" onclick="prevSlide2();"></p>
-              </div>
-              <div class="slider_inner" id="s2s4">
-                <p class="deliver_section_text">Надання повідомлень про загрозу електробезпеки</p>
-                <p class="deliver_section_text">Для надання повідомлення про загрозу електробезпеки необхідно зателефонувати за номерами телефонів <span class="marked_text">+38 (094) 936-48-81</span> або надіслати листа електронною поштою на адресу: <span class="marked_text">VEK@palivenergy.com.ua</span>. При цьому в темі звернення обов’язково зазначається «Загроза електробезпеки»</p>
-              </div>
-              <div class="slider_inner">
-                <img class="slider_image" src="./assets/images/slidernum4.png" alt="1">
-              </div>
-            </li>
-          </ul>
+          <div id="del_slider2">
+            <ul id="slides2">
+              <li class="slide2 showing">
+                <div>
+                  <p class="slider_next" onclick="nextSlide2();"></p>
+                </div>
+                <div class="slider_inner" id="s2s1">
+                  <p class="deliver_section_text">Як подати письмове звернення/скаргу/претензію до ТОВ «ВІЛЬНА ЕНЕРГЕТИЧНА КОМПАНІЯ «ПАЛІВЕНЕРГО»</p>
+                  <p class="deliver_section_text">Письмове звернення до Товариства можна подати наступним чином:</p>
+                  <p class="deliveries_list">Надіслати поштою на адресу: 69035, місто Запоріжжя, проспект Соборний, будинок 180, офіс 410,</p>
+                  <p class="deliveries_list">Особисто передати до Товариства, за зазначеною вище адресою;</p>
+                  <p class="deliveries_list">Надіслати електронний лист на адресу: <a href="" class="marked_text">VEK@palivenergy.com.ua</a></p>
+                  <p class="deliveries_list">Зателефонувати за номером: <a href="" class="marked_text">+38 (094) 936-48-81</a></p>
+                </div>
+                <div class="slider_inner">
+                  <img class="slider_image" src="./assets/images/slidernum1.png" alt="1">
+                </div>
+              </li>
+              <li class="slide2">
+                <div>
+                  <p class="slider_prev" onclick="prevSlide2();"></p>
+                  <p class="slider_next" onclick="nextSlide2();"></p>
+                </div>
+                <div class="slider_inner">
+                  <p class="deliver_section_text">Вимоги до оформлення звернення/скарги/претензій</p>
+                  <ol class="slider_numlist">
+                    <li class="slider_list">Повинно бути зазначено:
+                      <p class="deliveries_list">Для фізичної особи: прізвище, ім’я, по батькові, адреса</p>
+                      <p class="deliveries_list">Для юридичного споживача, фізичної особи підприємця: назва, юридична адреса, адреса знаходження об’єкта електропостачання</p>
+                    </li>
+                    <li class="slider_list">Викладено суть порушеного питання пропозиції, заяви чи скарги, прохання чи вимоги</li>
+                    <li class="slider_list">Письмове звернення/скарга/претензія повинно бути підписано заявником (заявниками) із зазначенням дати. При поданні звернення/скарги/претензії в електронному вигляді також має бути зазначено електронну поштову адресу, на яку заявнику може бути надіслано відповідь, або відомості про інші засоби зв’язку з ним. Застосування електронного цифрового підпису при надсиланні електронним зв’язком не вимагається</li>
+                  </ol>
+                </div>
+                <div class="slider_inner">
+                  <img class="slider_image" src="./assets/images/slidernum2.png" alt="1">
+                </div>
+              </li>
+              <li class="slide2">
+                <div>
+                  <p class="slider_prev" onclick="prevSlide2();"></p>
+                  <p class="slider_next" onclick="nextSlide2();"></p>
+                </div>
+                <div class="slider_inner" id="s2s3">
+                  <p class="deliver_section_text">Розгляд звернення/скарги/претензії, надісланих до ТОВ «ВІЛЬНА ЕНЕРГЕТИЧНА КОМПАНІЯ «ПАЛІВЕНЕРГО»</p>
+                  <p class="deliver_section_text">Якщо в зверненні/скарзі/претензії вказана адреса електронної пошти, номер телефону або така інформація відома Товариству здійснюється надання попередньої відповіді щодо можливості вирішення питання або повідомлення про початок розгляду звернення/скарги/претензії та строки його розгляду. Попередня відповідь надається протягом 1 робочого дня від дня отримання звернення/скарги/претензії.</p>
+                  <p class="deliver_section_text">Звернення/скарга/претензія розглядається в термін, визначений чинним законодавством України</p>
+                </div>
+                <div class="slider_inner">
+                  <img class="slider_image" src="./assets/images/slidernum3.png" alt="1">
+                </div>
+              </li>
+              <li class="slide2">
+                <div>
+                  <p class="slider_prev" onclick="prevSlide2();"></p>
+                </div>
+                <div class="slider_inner" id="s2s4">
+                  <p class="deliver_section_text">Надання повідомлень про загрозу електробезпеки</p>
+                  <p class="deliver_section_text">Для надання повідомлення про загрозу електробезпеки необхідно зателефонувати за номерами телефонів <a href="" class="marked_text">+38 (094) 936-48-81</a> або надіслати листа електронною поштою на адресу: <a href="" class="marked_text">VEK@palivenergy.com.ua</a>. При цьому в темі звернення обов’язково зазначається «Загроза електробезпеки»</p>
+                </div>
+                <div class="slider_inner">
+                  <img class="slider_image" src="./assets/images/slidernum4.png" alt="1">
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="deliver_section" id="del_section5">
           <h2 class="deliver_title" onclick="showdeliver(5);">Права споживача та електропостачальника</h2>
-          <ul id="slides3">
-            <li class="slide3 showing">
-              <div>
-                <p class="slider_next" onclick="nextSlide3();"></p>
-              </div>
-              <div class="slider_inner">
-                <p class="slider_text">Споживач має право:</p>
-                <ol class="slider_numlist">
-                  <li class="slider_list">купувати електричну енергію для власного споживання</li>
-                  <li class="slider_list">змінювати електропостачальника на умовах, визначених цим Законом та правилами роздрібного ринку</li>
-                  <li class="slider_list">отримувати електричну енергію належної якості згідно з умовами договору та стандартами якості електричної енергії</li>
-                  <li class="slider_list">на компенсацію, що застосовується у разі недотримання показників якості послуг електропостачання</li>
-                  <li class="slider_list">на відшкодування збитків, завданих внаслідок невиконання його контрагентами умов договорів, укладених на ринку електричної енергії</li>
-                  <li class="slider_list">на недискримінаційний доступ до системи передачі, систем розподілу на підставі договорів з оператором системи передачі, оператором системи розподілу відповідно до вимог кодексу системи передачі, кодексу систем розподілу</li>
-                  <li class="slider_list">на доступ до інформації щодо діяльності на ринку електричної енергії у порядку та обсягах, визначених правилами ринку та іншими нормативно-правовими актами, що регулюють функціонування ринку електричної енергії</li>
-                  <li class="slider_list">подавати відповідному електропостачальнику, оператору системи розподілу звернення, скарги та претензії, зокрема щодо якості електропостачання, щодо надання послуг з постачання електричної енергії та отримувати в установленому законодавством порядку вмотивовані відповіді або повідомлення про заходи щодо усунення електропостачальником причин скарги</li>
-                  <li class="slider_list">отримувати від відповідного електропостачальника інформацію, передбачену законодавством та умовами договору постачання електричної енергії споживачу</li>
-                  <li class="slider_list">отримувати від відповідного електропостачальника повідомлення про його наміри внести зміни до будь-яких умов договору постачання електричної енергії споживачу не пізніше ніж за 20 днів до внесення та у разі незгоди із запропонованими змінами розірвати договір з електропостачальником у визначеному договором порядку</li>
-                </ol>
-              </div>
-              <div class="slider_inner">
-                <img class="slider_image" src="./assets/images/slidernum1.png" alt="1">
-              </div>
+          <div id="del_slider3">
+            <ul id="slides3">
+              <li class="slide3 showing">
+                <div>
+                  <p class="slider_next" onclick="nextSlide3();"></p>
+                </div>
+                <div class="slider_inner">
+                  <p class="slider_text">Споживач має право:</p>
+                  <ol class="slider_numlist">
+                    <li class="slider_list">купувати електричну енергію для власного споживання</li>
+                    <li class="slider_list">змінювати електропостачальника на умовах, визначених цим Законом та правилами роздрібного ринку</li>
+                    <li class="slider_list">отримувати електричну енергію належної якості згідно з умовами договору та стандартами якості електричної енергії</li>
+                    <li class="slider_list">на компенсацію, що застосовується у разі недотримання показників якості послуг електропостачання</li>
+                    <li class="slider_list">на відшкодування збитків, завданих внаслідок невиконання його контрагентами умов договорів, укладених на ринку електричної енергії</li>
+                    <li class="slider_list">на недискримінаційний доступ до системи передачі, систем розподілу на підставі договорів з оператором системи передачі, оператором системи розподілу відповідно до вимог кодексу системи передачі, кодексу систем розподілу</li>
+                    <li class="slider_list">на доступ до інформації щодо діяльності на ринку електричної енергії у порядку та обсягах, визначених правилами ринку та іншими нормативно-правовими актами, що регулюють функціонування ринку електричної енергії</li>
+                    <li class="slider_list">подавати відповідному електропостачальнику, оператору системи розподілу звернення, скарги та претензії, зокрема щодо якості електропостачання, щодо надання послуг з постачання електричної енергії та отримувати в установленому законодавством порядку вмотивовані відповіді або повідомлення про заходи щодо усунення електропостачальником причин скарги</li>
+                    <li class="slider_list">отримувати від відповідного електропостачальника інформацію, передбачену законодавством та умовами договору постачання електричної енергії споживачу</li>
+                    <li class="slider_list">отримувати від відповідного електропостачальника повідомлення про його наміри внести зміни до будь-яких умов договору постачання електричної енергії споживачу не пізніше ніж за 20 днів до внесення та у разі незгоди із запропонованими змінами розірвати договір з електропостачальником у визначеному договором порядку</li>
+                  </ol>
+                </div>
+                <div class="slider_inner">
+                  <img class="slider_image" src="./assets/images/slidernum1.png" alt="1">
+                </div>
+              </li>
+              <li class="slide3">
+                <div>
+                  <p class="slider_prev" onclick="prevSlide3();"></p>
+                </div>
+                <div class="slider_inner">
+                  <p class="slider_text">Електропостачальник мають право:</p>
+                  <ol class="slider_numlist">
+                    <li class="slider_list">купувати та продавати електроенергію на ринку електричної енергії, здійснювати експорт-імпорт електричної енергії за вільними цінами</li>
+                    <li class="slider_list">вільно обирати контрагента за двостороннім договором</li>
+                    <li class="slider_list">на своєчасне та в повному обсязі отримання коштів за продану електричну енергію та послуги з постачання електричної енергії відповідно до укладених договорів</li>
+                    <li class="slider_list">звертатися до оператора системи передачі або оператора системи розподілу щодо відключення електроживлення споживача у випадках, визначених правилами роздрібного ринку, крім випадків постачання вразливим споживачам</li>
+                    <li class="slider_list">звертатися до оператора системи передачі або оператора системи розподілу щодо відновлення електроживлення споживачу у випадках, визначених правилами роздрібного ринку</li>
+                    <li class="slider_list">на недискримінаційний доступ до системи передачі, систем розподілу на підставі договорів з оператором системи передачі, оператором системи розподілу відповідно до вимог кодексу системи передачі, кодексу системи розподілу</li>
+                    <li class="slider_list">доступу до інформації щодо діяльності на ринку електричної енергії у порядку та обсягах, визначених правилами ринку та іншими нормативно-правовими актами, що регулюють функціонування ринку електричної енергії</li>
+                    <li class="slider_list">інші права, передбачені нормативно-правовими актами, що регулюють функціонування ринку електричної енергії, та договорами, укладеними ними на ринку електричної енергії</li>
+                  </ol>
+                </div>
+                <div class="slider_inner">
+                  <img class="slider_image" src="./assets/images/slidernum2.png" alt="1">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="joinus">
+        <form class="joinus_form">
+          <div class="joinus_input">
+            <div class="joinus_input_inner">
+              <p class="form_label">Ваше ім'я</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Телефон</p>
+              <input type="text" value="" class="join_data">
+              <p class="form_label">Плановане споживання</p>
+              <p class="form_subtitle">(кВт⋅ч в місяць)</p>
+              <input type="text" value="" class="join_data">
+            </div>
+          </div>
+          <div class="joinus_send">
+            <div id="joinus_choise">
+              <p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p>
+              <p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p>
+            </div>
+            <h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2>
+            <p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p>
+            <span class="checkbox">
+              <a href="#" class="joinus_send_link">відправити</a>
+              <input id="checkbox" type="checkbox">
+              <label for="checkbox">я кліент компанії</label>
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer">
+        <div class="footer_logo">
+          <ul>
+            <li>
+              <img class="footer_img" src="assets/images/footer_logo.svg" alt="logo">
             </li>
-            <li class="slide3">
-              <div>
-                <p class="slider_prev" onclick="prevSlide3();"></p>
-              </div>
-              <div class="slider_inner">
-                <p class="slider_text">Електропостачальник мають право:</p>
-                <ol class="slider_numlist">
-                  <li class="slider_list">купувати та продавати електроенергію на ринку електричної енергії, здійснювати експорт-імпорт електричної енергії за вільними цінами</li>
-                  <li class="slider_list">вільно обирати контрагента за двостороннім договором</li>
-                  <li class="slider_list">на своєчасне та в повному обсязі отримання коштів за продану електричну енергію та послуги з постачання електричної енергії відповідно до укладених договорів</li>
-                  <li class="slider_list">звертатися до оператора системи передачі або оператора системи розподілу щодо відключення електроживлення споживача у випадках, визначених правилами роздрібного ринку, крім випадків постачання вразливим споживачам</li>
-                  <li class="slider_list">звертатися до оператора системи передачі або оператора системи розподілу щодо відновлення електроживлення споживачу у випадках, визначених правилами роздрібного ринку</li>
-                  <li class="slider_list">на недискримінаційний доступ до системи передачі, систем розподілу на підставі договорів з оператором системи передачі, оператором системи розподілу відповідно до вимог кодексу системи передачі, кодексу системи розподілу</li>
-                  <li class="slider_list">доступу до інформації щодо діяльності на ринку електричної енергії у порядку та обсягах, визначених правилами ринку та іншими нормативно-правовими актами, що регулюють функціонування ринку електричної енергії</li>
-                  <li class="slider_list">інші права, передбачені нормативно-правовими актами, що регулюють функціонування ринку електричної енергії, та договорами, укладеними ними на ринку електричної енергії</li>
-                </ol>
-              </div>
-              <div class="slider_inner">
-                <img class="slider_image" src="./assets/images/slidernum2.png" alt="1">
-              </div>
+            <li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li>
+            <li class="footer_pays">
+              <img src="assets/images/apple-pay.svg" alt='apple_pay' id="footer_applepay"></img>
+              <img src="assets/images/android-pay.svg" alt='android_pay' id="footer_androidpay"></img>
             </li>
+          </ul>
+        </div>
+        <div class="info">
+          <ul>
+            <li class="footer_info">інформація</li>
+            <li>
+              <a href="contacts.html" class="footer_link">контакти</a>
+            </li>
+            <li>
+              <a href="#" class="footer_link">новини</a>
+            </li>
+            <li>
+              <a href="energydeliveries.html" class="footer_link">поставка електроенергії</a>
+            </li>
+            <li>
+              <a href="gasdeliveries.html" class="footer_link">поставка природного газу</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts">
+          <ul>
+            <li><a href="" class="footer_contact_link">+38 (094) 936-48-81</a></li>
+            <li><a href="" class="footer_contact_link">+38 (061) 708-28-81</a></li>
+            <li><a href="" class="footer_contact_link">VEK@palivenergy.com.ua</a></li>
+          </ul>
+        </div>
+        <div class="address">
+          <ul>
+            <li>Пт - Пн</li>
+            <li>9:00 - 18:00</li>
+            <li>пр.Соборності,180 Запорiжжя 69035, Україна</li>
           </ul>
         </div>
       </div>
 
-      <div id="includeStatement"></div>
-
-      <div id="includeFooter"></div>
-
       <a id="upbutton" href="#" onclick="smoothJumpUp(); return false;">
-      <img src="assets/images/vector.png" alt="Top" border="none" title="Наверх">
+        <svg class="upbutton_svg" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0.999986C15.2762 0.999986 15.5 1.22384 15.5 1.49999L15.5 30.5C15.5 30.7761 15.2762 31 15 31C14.7239 31 14.5 30.7761 14.5 30.5L14.5 1.49999C14.5 1.22384 14.7239 0.999986 15 0.999986Z" fill=""/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6264 14.6778C29.4377 14.8581 29.1405 14.8581 28.9518 14.6778L14.9981 1.3507L15.7052 0.675341L29.6264 13.9715C29.8278 14.1638 29.8278 14.4854 29.6264 14.6778Z" fill=""/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.369816 14.6777C0.168395 14.4854 0.168395 14.1638 0.369816 13.9714L14.3074 0.659656C14.6939 0.290531 15.3023 0.290531 15.6888 0.659656L15.7052 0.675341L1.04446 14.6777C0.855707 14.858 0.558567 14.858 0.369816 14.6777Z" fill=""/>
+        </svg>
       </a>
     </div>
     <script type="text/javascript">
+    var counter = 0;
     function showmenu() {
-      frame_inner.style.height = "100%";
-      frame_inner.style.background = "#2D3039";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="login.html" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
-    }
-
-    function closemenu() {
-      frame_inner.style.height = "155px";
-      frame_inner.style.background = "inherit";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+      counter+=1;
+      if (counter == 1) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "100%";
+        frame_inner.style.position = "fixed";
+        navnav.style.right = "40%";
+        nav_social_line.style.display = "flex";
+        frame_inner.style.background = "#2D3039";
+        nav1line_img.src = "assets/images/logo-menu.svg";
+        nav1line_link.innerHTML = "особистий кабiнет";
+        nav1line_link.href = "login.html";
+        nav1line_link.classList.add("profile_link");
+        nav1line_link.classList.remove("top_news_link");
+      } else if (counter == 2) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "155px";
+        frame_inner.style.position = "absolute";
+        navnav.style.right = "-100%";
+        nav_social_line.style.display = "none";
+        frame_inner.style.background = "inherit";
+        nav1line_img.src = "assets/images/logo.svg";
+        nav1line_link.innerHTML = "новини";
+        nav1line_link.href = "#";
+        nav1line_link.classList.remove("profile_link");
+        nav1line_link.classList.add("top_news_link");
+        counter = 0;
+      }
     }
     function joinusFuel (fuel) {
       switch (fuel) {
@@ -263,40 +399,45 @@
     function showdeliver(sec) {
       switch (sec) {
         case 1:
-          includeDocs.innerHTML = '<p class="deliver_section_text">Договір про постачання електричної енергії споживачу з 01.01.2019р.</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №1 - 100% предоплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №2 - 4 планових платіжа по 25% предоплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №3 - подекадна оплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Комерційна пропозиція №4 - 50% предоплата без розподілу</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Зразок звернення Споживача щодо коригування обсягів постачання</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Відомість про обсяги очікуваного споживання електричної енергії</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Ліцензія електроенергія</p><a href="#" class="deliver_section_link">завантажити файл</a><p class="deliver_section_text">Ліцензія газ</p><a href="#" class="deliver_section_link">завантажити файл</a>';
+          if (includeDocs.style.display == "") {
+            includeDocs.style.display = "block";
+          } else if (includeDocs.style.display == "block") {
+            includeDocs.style.display = "";
+          }
           break;
         case 2:
-          del_section2.style.height = "auto";
+          if (del_slider.style.display == "") {
+            del_slider.style.display = "block";
+            del_section2.style.height = "auto";
+          } else if (del_slider.style.display == "block") {
+            del_slider.style.display = "";
+            del_section2.style.height = "50px";
+          }
           break;
         case 3:
-          includeActs.innerHTML = '<p class="deliver_section_text">У своїй діяльності ТОВ "Вільна Енергетична Компанія "ПАЛІВЕНЕРГО" керується наступними нормативно-правовими актами:</p><p class="text deliveries_list">Закон України «Про ринок електричної енергії» № 2019-VIII від 13.04.2017</p><p class="text deliveries_list">Закон України «Про ліцензування видів господарської діяльності»</p><p class="text deliveries_list">Постанова НКРЕ №1421 від 29.10.2010 р. «Про затвердження Порядку доступу постачальників електричної енергії за нерегульованим тарифом до місцевих (локальних) електричних мереж»</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 307 “Про затвердження Правил ринку”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 309 “Про затвердження Кодексу системи передачі”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 311 “Про затвердженння Кодексу комерційного обліку електричної енергії”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 310 “Про затвердження Кодексу системи розподілу”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 308 “Про затвердження Правил ринку “на добу наперед” та внутрішньодобового ринку”</p><p class="text deliveries_list">Постанова НКРЕКП від 27.12.2017 № 1469 “Про затвердження Ліцензійних умов провадження господарської діяльності з постачання електричної енергії споживачу”</p><p class="text deliveries_list">Постанова НКРЕКП від 14.03.2018 № 312 “Про затвердження Правил роздрібного ринку електричної енергії”</p><p class="text deliveries_list">Антикорупційна програма</p>'
+        if (includeActs.style.display == "") {
+          includeActs.style.display = "block";
+        } else if (includeActs.style.display == "block") {
+          includeActs.style.display = "";
+        }
           break;
         case 4:
-          del_section4.style.height = "auto";
+          if (del_slider2.style.display == "") {
+            del_slider2.style.display = "block";
+            del_section4.style.height = "auto";
+          } else if (del_slider2.style.display == "block") {
+            del_slider2.style.display = "";
+            del_section4.style.height = "50px";
+          }
           break;
         case 5:
-          del_section5.style.height = "auto";
-          break;
-        case 21:
-          del_section21.style.height = "auto";
-          break;
-        case 22:
-          includeLaw.innerHTML = '<p class="deliver_section_text">Закон України "Про ринок природного газу"</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Постанова НКРЕКП № 2496 «Про затвердження правил постачання природного газу»</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Постанова НКРЕКП № 2494 «Про затвердження кодексу газорозподільних систем»</p><a href="#" class="deliver_section_link">дивитися</a><p class="deliver_section_text">Загальні умови постачання природного газу</p><a href="#" class="deliver_section_link">посилання на документ</a><p class="deliver_section_text">Права та обов’язки постачальника та споживача</p><a href="#" class="deliver_section_link">посилання на документ</a>';
-          break;
-        case 23:
-          del_section23.style.height = "auto";
-          break;
-        case 24:
-          del_section24.style.height = "auto";
-          break;
-        case 25:
-          includePersonStatus.innerHTML = '<div class="chose_person_status"><p class="person_status active_person" onclick="changePersonStatus(1);" id="physicalPerson">фізична особа</p><p class="person_status" onclick="changePersonStatus(2);" id="legalPerson">юридична особа</p></div><div class="person_inner" id="person_inner_text"><p class="slider_text">Якщо бажаєте мати взимку комфортну температуру в оселі за комфортною ціною, то вам до нас!</p>  <p class="slider_text">Змінюйте старого постачальника та ставайте клієнтом ТОВ “ВЕК “Палівенерго”!</p><p class="slider_text">Приєднатися до нас просто:</p><p class="text deliveries_list">завантажте, заповніть та передайте наявному постачальнику <span class="marked_text">пакет документів</span>. Підписана Додаткова угода до Типового договору має бути у двох примірниках</p><p class="text deliveries_list">завантажте, заповніть та передайте нам <span class="marked_text">заяву-приєднання</span>, додавши копії паспорту, ІПН і документу права на власність або користування об’єктом (ВСІ КОПІЇ МАЮТЬ БУТИ ЗАВІРЕНІ ВАМИ З ПРИПИСОМ, КОПІЯ ДІЙСНА, ДАТА, ПІБ та ПІДПИС)</p><p class="text deliveries_list">отримайте від попереднього постачальника довідку про заборгованість і передайте її нам оригінал або копію</p><p class="slider_text">Ознайомитися з умовами Типового договору можна за <span class="marked_text"> посиланням</span></p></div>';
-          break;
-        case 26:
-          includePrices.innerHTML = '<p class="slider_text">Відповідно до ч.2 ст.12 Закону України «Про ринок природного газу», постачання природного газу здійснюється за цінами, що вільно встановлюються між постачальником та споживачем, крім випадків, передбачених цим Законом. Зважаючи на викладене, ціна, спосіб та умови оплати на природний газ та порядок розрахунків за спожитий газ встановлюється сторонами в Договорі</p><a href="#" class="deliver_section_link">типовий договір</a>';
-          break;
-        case 27:
-          includeDecigion.innerHTML = '<p class="slider_text">Спори, що виникли із цього Договору, вирішуються шляхом двосторонніх переговорів уповноваженими представниками Сторін. У випадку недосягнення згоди шляхом переговорів, суперечки передаються на вирішення в господарські суди України, які мають відповідну юрисдикцію і розглядаються в установленому порядку згідно з чинним законодавством України</p><p class="slider_text">Всі спори і розбіжності, які можуть виникнути щодо тлумачення і застосування договору поставки природного газу або в зв’язку з ним, або інші суперечки, які можуть виникнути при взаємодії між постачальником і споживачем, будуть вирішуватися шляхом переговорів і консультацій</p><p class="slider_text">У випадку виникнення будь-яких спірних питань, будь ласка звертайтеся за адресою пр.Соборний, 180 Запоріжжя 69035, Україна , з понеділка по п’ятницю з 9:00 до 18:00, за телефоном <span class="marked_text">+38 (066) 171-55-05</span>, або на електронну пошту: <span class="marked_text">VEK@palivenergy.com.ua</span></p><p class="slider_text">Особа, відповідальна за врегулювання спорів: Директор Логійко Ігор Станіславович</p><p class="slider_text">У випадку недосягнення згоди шляхом проведення переговорів споживач має право звернутися із відповідною заявою до Регулятора ринку природного газу та/або передати спір на розгляд до суду у відповідності з чинним законодавством України</p><p class="slider_text">Порядок розгляду вказаних скарг Регулятором передбачений ст. 21 Закону України «Про Національну комісію, що здійснює державне регулювання у сферах енергетики та комунальних послуг»</p>';
+          if (del_slider3.style.display == "") {
+            del_slider3.style.display = "block";
+            del_section5.style.height = "auto";
+          } else if (del_slider3.style.display == "block") {
+            del_slider3.style.display = "";
+            del_section5.style.height = "100px";
+          }
           break;
         default:
           {}
@@ -361,21 +502,7 @@
         document.getElementById('upbutton').style.display = 'none';
       }
     }
-    var statement='<div class="joinus"><form class="joinus_form"><div class="joinus_input"><div class="joinus_input_inner"><p class="form_label">Ваше ім\'я</p><input type="text" value="" class="join_data"><p class="form_label">Телефон</p><input type="text" value="" class="join_data"><p class="form_label">Плановане споживання</p><p class="form_subtitle">(кВт⋅ч в місяць)</p><input type="text" value="" class="join_data"></div></div><div class="joinus_send"><div id="joinus_choise"><p class="joinus_link joinus_active" onclick="joinusFuel(1);" id="joinusEnergy">електроенергія</p><p class="joinus_link" onclick="joinusFuel(2);" id="joinusGas">газ</p></div><h2 class="title joinus_title" id="joinusF">Заявка на поставку електроенергії</h2><p class="text joinus_text">Заповніть форму і ми вам передзвонимо</p><span class="checkbox"><a href="#" class="joinus_send_link">відправити</a><input id="checkbox" type="checkbox"><label for="checkbox">я кліент компанії</label></span></div><div class="clear"></div></form></div>';
 
-    var footer='<div class="footer"><div class="footer_logo"><ul><li><img class="footer_img" src="assets/images/footer_logo.png" alt="logo"></li><li class="footer_imgsubtitle">© 2013-2019 ТОВ "Вільна Енергетична Компанія ПАЛІВЕНЕРГО"</li></ul></div><div class="info"><ul><li class="footer_info">информация</li><li><a href="contacts.html" class="footer_link">контакты</a></li><li><a href="#" class="footer_link">новости</a></li><li><a href="energydeliveries.html" class="footer_link">поставка электроэнергии</a></li></ul></div><div class="contacts"><ul><li>+38 (094) 936-48-81</li><li>+38 (061) 708-28-81</li><li>VEK@palivenergy.com.ua</li></ul></div><div class="address"><ul><li>Пт - Пн</li><li>9:00 - 18:00</li><li>пр.Соборний,180 Запорiжжя 69035, Україна</li></ul></div></div>';
-
-    //if (includeIntro) {
-    //  includeIntro.innerHTML = intro;
-    //}
-
-    if (includeStatement) {
-      includeStatement.innerHTML = statement;
-    }
-
-    if (includeFooter) {
-      includeFooter.innerHTML = footer;
-    }
     </script>
   </body>
 </html>

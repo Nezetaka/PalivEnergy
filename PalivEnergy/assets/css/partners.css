@@ -76,6 +76,11 @@ ul {
 .marked_text {
   color: #AB9477;
   text-decoration: none;
+  transition: .1s linear;
+}
+
+.marked_text:hover {
+  color: #EB4B18;
 }
 
 /* Navigation */
