@@ -871,6 +871,7 @@ ul {
   margin-bottom: 30px;
   cursor: pointer;
   width: 651px;
+  transition: .1s linear;
 }
 
 .deliver_title:hover {
