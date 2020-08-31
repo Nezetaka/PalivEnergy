@@ -609,6 +609,15 @@ ul {
   margin-top: 10px;
 }
 
+.Ccontact_link {
+  text-decoration: none;
+  transition: .1s linear;
+}
+
+.Ccontact_link:hover {
+  color: #EB4B18;
+}
+
 /* Join us */
 .joinus {
   background: #f2f2f2;
