@@ -1450,6 +1450,16 @@ ul {
   line-height: 30px;
 }
 
+.footer_contact_link {
+  text-decoration: none;
+  transition: .1s linear;
+  color: #f2f2f2;
+}
+
+.footer_contact_link:hover {
+  color: #EB4B18;
+}
+
 .address ul li {
   font-family: Roboto;
   font-style: normal;
