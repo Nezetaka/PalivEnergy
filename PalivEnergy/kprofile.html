@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/profile_style.css">
+    <link rel="stylesheet" href="assets/css/kprofile.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>-->
     <meta name="format-detection" content="telephone=no">
     <title>Paliv Energy</title>
   </head>
@@ -13,34 +13,45 @@
     <div class="container">
       <div id="frame_inner">
         <div class="nav1line" id="nav1line">
-          <img class="top_logo" src="assets/images/header_logo.png" alt="logo">
-          <a href="#" class="top_news_link">новини</a>
-          <p class="header_icon" onclick="showmenu()">
-            <span id="s1"></span>
-            <span id="s2"></span>
-            <span id="s3"></span>
-          </p>
+          <a href="index.html" class="top_logo">
+            <img id="nav1line_img" src="assets/images/logo.svg" alt="logo">
+          </a>
+          <a href="#" id="nav1line_link" class="top_news_link">новини</a>
+          <!--<span class="header_icon">
+            <svg class="menu_open" onclick="showmenu()" width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H28.5C29.3284 0 30 0.671573 30 1.5C30 2.32843 29.3284 3 28.5 3H1.5C0.671573 3 0 2.32843 0 1.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15.5C0 14.6716 0.671573 14 1.5 14H19.5C20.3284 14 21 14.6716 21 15.5C21 16.3284 20.3284 17 19.5 17H1.5C0.671573 17 0 16.3284 0 15.5Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 29.5C0 28.6716 0.671573 28 1.5 28H34.5C35.3284 28 36 28.6716 36 29.5C36 30.3284 35.3284 31 34.5 31H1.5C0.671573 31 0 30.3284 0 29.5Z" />
+          </svg>
+        </span>-->
+        <div class="header_icon" id="menu_icon" onclick="showmenu()">
+          <div class="line line--1" id="s1"></div>
+          <div class="line line--2" id="s2"></div>
+          <div class="line line--3" id="s3"></div>
+        </div>
         </div>
         <nav id="navnav">
           <ul class="navul">
-            <li><a class="navigation_link" href="index.html">Головна</a></li>
-            <li><a class="navigation_link" href="about.html">Про нас</a></li>
-            <li><a class="navigation_link" href="partners.html">Партнери</a></li>
-            <li><a class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
-            <li><a class="navigation_link" href="energydeliveries.html">Постачання електроенергії</a></li>
-            <li><a class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
-            <li><a class="navigation_link" href="contacts.html">Контакти</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="index.html">Головна</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="about.html">Про нас</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="partners.html">Партнери</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="howto.html">Як стати клієнтом компанії</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="energydeliveries.html">Постачання електроенергії</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="gasdeliveries.html">Постачання природного газу</a></li>
+            <li><a tabindex="-1" class="navigation_link" href="contacts.html">Контакти</a></li>
           </ul>
         </nav>
-        <div class="nav3line">
-          <div>
+        <div class="nav3line" id="nav_social_line">
+          <div class="nav3line_left">
             <span class="nav3line_label">слідкуйте за нами:</span>
-            <a class="social_link" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
-            <a class="social_link" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-facebook fa-2x"></i></a>
+            <a class="social_link" href="#"><i class="fa fa-instagram fa-2x"></i></a><br>
+            <img src="assets/images/apple-pay.svg" alt='apple_pay' id="menu_applepay"></img>
+            <img src="assets/images/android-pay.svg" alt='android_pay' id="menu_androidpay"></img>
           </div>
-          <div>
-            <a class="lang" href="#">RU</a>
+          <div class="nav3line_right">
             <a class="lang" href="#">UK</a>
+            <a class="lang" href="#">RU</a>
             <a class="lang" href="#">EN</a>
           </div>
         </div>
@@ -49,25 +60,122 @@
 
     <div class="activesidebar" id="sidebar">
       <ul>
-        <li class="sidebar_list" onclick="openMenu()"><span class="toggle_btn"><p>згорнути</p></span></li>
-        <li class="sidebar_list tab_active" id="sidebar_profile" onclick="showProfileInfo(21)"><i class="fas fa-user-circle"></i><p>Профіль</p></li>
-        <li class="sidebar_list" id="sidebar_info" onclick="showProfileInfo(22)"><i class="fas fa-info-square"></i><p>Загальна інформація</p></li>
-        <li class="sidebar_list" id="sidebar_pay" onclick="showProfileInfo(23)"><i class="fas fa-credit-card"></i><p>Оплатити через сайт</p></li>
-
-        <li class="sidebar_sublist" id="sidebar_electr"><i class="far fa-bolt"></i><span onclick="openSubMenu(1)" class="subbar_span"><p class="subbar_title">електроенергія</p></span>
+        <li class="sidebar_list" onclick="openMenu()">
+          <span class="toggle_btn"><p>згорнути</p></span>
+        </li>
+        <li class="sidebar_list tab_active" id="sidebar_profile" onclick="showProfileInfo(21)">
+          <svg class="sidebar_icons" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.7773 34.2222C25.3329 34.2222 27.3329 31.0202 27.3329 31.0202C29.2677 32.2099 30.9007 33.843 32.0905 35.7778C32.0905 35.7778 27.1107 39.7778 19.8729 39.7778C12.6351 39.7778 7.65527 35.4754 7.65527 35.4754C8.8263 33.6726 10.3886 32.1474 12.2218 31.0202C12.2218 31.0202 14.2218 34.2222 19.7773 34.2222Z" fill=""/>
+          <path d="M9.35645 15.1647C9.35645 17.503 10.7832 21.099 11.4966 22.6047C10.694 24.4647 12.8449 32.0528 19.7897 32.4361C24.605 32.7018 28.8853 26.5904 28.0827 22.6047C28.7961 21.3647 30.2229 18.0344 30.2229 14.6333C30.2229 10.3819 27.0127 8.52188 25.6751 8.52188C24.605 8.52188 23.8024 7.19332 23.2674 6.66189C22.8243 6.22181 22.1973 5.33333 18.9871 5.33333C10.9616 5.33333 9.35645 12.2419 9.35645 15.1647Z" fill=""/>
+          <path d="M30.2228 21.2761C30.2228 22.7641 28.6177 24.199 27.8151 24.7304L27.5476 22.8704L29.1527 19.4161C29.5094 19.4161 30.2228 19.7881 30.2228 21.2761Z" fill=""/>
+          <path d="M9.35637 21.0104C9.57038 23.1361 11.229 24.3761 12.0316 24.7304L12.2992 22.339L11.229 20.2133C10.5156 19.5933 9.14235 18.8847 9.35637 21.0104Z" fill=""/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 39.1111C30.5548 39.1111 39.1111 30.5548 39.1111 20C39.1111 9.44523 30.5548 0.888889 20 0.888889C9.44523 0.888889 0.888889 9.44523 0.888889 20C0.888889 30.5548 9.44523 39.1111 20 39.1111ZM20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill=""/>
+          </svg>
+          <p>Профіль</p>
+        </li>
+        <li class="sidebar_list" id="sidebar_info" onclick="showProfileInfo(22)">
+          <svg class="sidebar_icons" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6.25" cy="2.5" r="2.5" fill="#EB4B18"/>
+          <circle cx="4.6875" cy="37.8125" r="2.1875" fill="#EB4B18"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 0C11.1193 0 10 1.11929 10 2.5C10 3.88071 11.1193 5 12.5 5H13.75C14.7855 5 15.625 5.83947 15.625 6.875C15.625 7.91053 14.7855 8.75 13.75 8.75H4.6875C3.47939 8.75 2.5 9.72938 2.5 10.9375C2.5 12.1456 3.47939 13.125 4.6875 13.125H5.625C6.66054 13.125 7.5 13.9645 7.5 15C7.5 16.0355 6.66054 16.875 5.625 16.875H3.125C1.39908 16.875 0 18.2741 0 20C0 21.7259 1.39908 23.125 3.125 23.125H4.6875C5.89561 23.125 6.875 24.1044 6.875 25.3125C6.875 26.5206 5.89561 27.5 4.6875 27.5H3.63258L3.63457 27.5026C2.30743 27.5629 1.25 28.658 1.25 30C1.25 31.3807 2.36931 32.5 3.75 32.5H10.9375C11.8005 32.5 12.5 33.1996 12.5 34.0625C12.5 34.9254 11.8005 35.625 10.9375 35.625C9.72939 35.625 8.75 36.6044 8.75 37.8125C8.75 39.0206 9.72939 40 10.9375 40H29.6875C30.8956 40 31.875 39.0206 31.875 37.8125C31.875 36.6044 30.8956 35.625 29.6875 35.625H29.6072C29.2919 36.0067 28.815 36.25 28.2812 36.25H15.4688C14.5195 36.25 13.75 35.4805 13.75 34.5312V31.7188C13.75 30.7695 14.5195 30 15.4688 30H18.75V21.875H15.4688C14.5195 21.875 13.75 21.1055 13.75 20.1562V16.7188C13.75 15.7695 14.5195 15 15.4688 15H23.2812C24.2305 15 25 15.7695 25 16.7188V30H28.2812C29.2305 30 30 30.7695 30 31.7188V33.2031H37.4609C38.8632 33.2031 40 32.0663 40 30.6641C40 29.2618 38.8632 28.125 37.4609 28.125H34.8689C34.884 28.1142 34.8991 28.1032 34.9139 28.0921C34.2047 27.9443 33.6719 27.3156 33.6719 26.5625C33.6719 25.6996 34.3714 25 35.2344 25H35.9989L35.9918 24.9733C37.1986 24.7958 38.125 23.7561 38.125 22.5C38.125 21.1193 37.0057 20 35.625 20H32.8125C31.6044 20 30.625 19.0206 30.625 17.8125C30.625 16.6044 31.6044 15.625 32.8125 15.625H35.9375C37.4908 15.625 38.75 14.3658 38.75 12.8125C38.75 11.2592 37.4908 10 35.9375 10H30.625C29.2443 10 28.125 8.88071 28.125 7.5C28.125 6.11929 29.2443 5 30.625 5H31.875C33.2557 5 34.375 3.88071 34.375 2.5C34.375 1.11929 33.2557 0 31.875 0H12.5ZM21.25 12.5C23.6662 12.5 25.625 10.5412 25.625 8.125C25.625 5.70875 23.6662 3.75 21.25 3.75C18.8338 3.75 16.875 5.70875 16.875 8.125C16.875 10.5412 18.8338 12.5 21.25 12.5Z" fill=""/>
+          </svg>
+          <p>Загальна інформація</p>
+        </li>
+        <li class="sidebar_list" id="sidebar_pay" onclick="showProfileInfo(23)">
+          <svg class="sidebar_icons" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.0067 27.1652C23.6208 27.97 22.9689 28.7938 22.0311 28.7938C21.4608 28.7938 21.1396 28.3817 20.9738 27.8138C20.9646 27.8711 20.9527 27.9366 20.9375 28.0125C20.7813 28.7938 20.2499 29.7313 18.7499 29.7313C17.4149 29.7313 16.9513 28.5431 16.8513 27.7459C16.778 27.9237 16.7188 28.0125 16.7188 28.0125C16.5104 28.3771 15.875 29.1063 15 29.1063C13.9062 29.1063 13.4375 28.1688 13.4375 27.075C13.4375 26.2 13.9583 25.3563 14.2188 25.0438L18.125 24.8875L21.4062 24.7313L22.2151 24.8164C23.4428 24.9456 24.5404 26.052 24.0067 27.1652Z" fill=""/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M30.3125 12.075H14.6875C13.8246 12.075 13.125 12.7746 13.125 13.6375V23.0125C13.125 23.8755 13.8246 24.575 14.6875 24.575H30.3125C31.1754 24.575 31.875 23.8755 31.875 23.0125V13.6375C31.875 12.7746 31.1754 12.075 30.3125 12.075ZM14.6875 10.825C13.1342 10.825 11.875 12.0842 11.875 13.6375V23.0125C11.875 24.5658 13.1342 25.825 14.6875 25.825H30.3125C31.8658 25.825 33.125 24.5658 33.125 23.0125V13.6375C33.125 12.0842 31.8658 10.825 30.3125 10.825H14.6875Z" fill=""/>
+          <path d="M12.5 13.95H32.5V16.45H12.5V13.95Z" fill=""/>
+          <path d="M0.3125 19.4188C1.54896 19.2127 2.73003 18.7533 3.77304 18.058C5.25355 17.0711 6.9196 15.9367 7.1875 15.6688C7.65625 15.2 10.3125 12.7 10.7812 12.7C11.25 12.7 12.6562 12.5438 12.8125 12.8563C12.9337 13.0987 12.8688 18.6016 12.8173 21.3567L18.75 18.6375C19.375 18.3771 20.7812 18.075 21.4062 18.95C22.0759 19.8875 22.5 20.9813 21.0938 22.3875C19.0625 24.4188 17.0044 24.5103 16.5625 24.7313C16.25 24.8875 15.0521 26.1375 14.5312 26.7625C13.8347 27.5983 12.6875 28.2 12.1875 28.325C10.7812 28.6766 5.3125 28.7938 2.1875 28.95L0.46875 23.4813L0.3125 20.825V19.4188Z" fill=""/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 39.3111C30.5548 39.3111 39.1111 30.7548 39.1111 20.2C39.1111 9.64524 30.5548 1.0889 20 1.0889C9.44523 1.0889 0.888889 9.64524 0.888889 20.2C0.888889 30.7548 9.44523 39.3111 20 39.3111ZM20 40.2C31.0457 40.2 40 31.2457 40 20.2C40 9.15432 31.0457 0.200012 20 0.200012C8.9543 0.200012 0 9.15432 0 20.2C0 31.2457 8.9543 40.2 20 40.2Z" fill=""/>
+          </svg>
+          <p>Оплатити через сайт</p>
+        </li>
+        <li class="sidebar_sublist" id="sidebar_electr">
+          <svg onclick="openSubMenu(1)" class="sidebar_icons" width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.532258 11.088L4.79032 0H9.40323L6.3871 7.744H11L0 22L4.79032 11.088H0.532258Z" fill=""/>
+          </svg>
+          <span onclick="openSubMenu(1)" class="subbar_span">
+          <p class="subbar_title">електроенергія</p></span>
           <ul class="sidebar_sub_ul" id="sub_ul1">
-            <li class="sidebar_list" id="sidebar_el_price" onclick="showProfileInfo(24)"><i class="fa fa-usd-circle"></i><p>Відпускні ціни на електроенергію</p></li>
-            <li class="sidebar_list" id="sidebar_el_calc" onclick="showProfileInfo(25)"><i class="far fa-list-alt"></i><p>Розрахунки за електроенергію</p></li>
-            <li class="sidebar_list" id="sidebar_el_amount" onclick="showProfileInfo(26)"><i class="fas fa-bolt"></i><p>Обсяг споживання електроенергії</p></li>
-            <li class="sidebar_list" id="sidebar_el_graf" onclick="showProfileInfo(27)"><i class="fas fa-chart-bar"></i><p>Графіки</p></li>
+            <li class="sidebar_list" id="sidebar_el_price" onclick="showProfileInfo(24)">
+              <svg class="sidebar_icons" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20 39.1111C30.5548 39.1111 39.1111 30.5548 39.1111 20C39.1111 9.44523 30.5548 0.888889 20 0.888889C9.44523 0.888889 0.888889 9.44523 0.888889 20C0.888889 30.5548 9.44523 39.1111 20 39.1111ZM20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill=""/>
+              <path d="M23.1905 24.5426C23.1905 23.8275 22.966 23.2387 22.5169 22.776C22.0678 22.3049 21.3194 21.8843 20.2716 21.5142C19.2238 21.1356 18.4088 20.7865 17.8267 20.4669C15.889 19.4154 14.9202 17.8591 14.9202 15.7981C14.9202 14.4017 15.3402 13.2534 16.1801 12.3533C17.02 11.4532 18.1593 10.919 19.598 10.7508V8H21.5938V10.776C23.0408 10.9863 24.1593 11.6088 24.9493 12.6435C25.7394 13.6698 26.1344 15.0074 26.1344 16.6562H23.1157C23.1157 15.5962 22.8786 14.7634 22.4046 14.1577C21.9389 13.5436 21.3028 13.2366 20.4961 13.2366C19.6978 13.2366 19.0741 13.4553 18.625 13.8927C18.1759 14.3302 17.9514 14.9569 17.9514 15.7729C17.9514 16.5047 18.1718 17.0936 18.6125 17.5394C19.0616 17.9769 19.8184 18.3933 20.8828 18.7886C21.9473 19.184 22.783 19.5499 23.3901 19.8864C23.9971 20.2229 24.5086 20.6099 24.9244 21.0473C25.3402 21.4763 25.6603 21.9727 25.8849 22.5363C26.1094 23.0999 26.2217 23.7603 26.2217 24.5173C26.2217 25.939 25.7892 27.0915 24.9244 27.9748C24.0678 28.858 22.8703 29.3796 21.3319 29.5394V32H19.3485V29.552C17.7019 29.367 16.4337 28.7697 15.5439 27.7603C14.6624 26.7508 14.2217 25.4132 14.2217 23.7476H17.2529C17.2529 24.8076 17.5148 25.6278 18.0387 26.2082C18.571 26.7886 19.3194 27.0789 20.284 27.0789C21.2321 27.0789 21.9514 26.8475 22.4421 26.3849C22.941 25.9222 23.1905 25.3081 23.1905 24.5426Z" fill=""/>
+              </svg>
+              <p>Відпускні ціни на електроенергію</p>
+            </li>
+            <li class="sidebar_list" id="sidebar_el_calc" onclick="showProfileInfo(25)">
+              <svg class="sidebar_icons" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.6 1.2H2.4C1.73726 1.2 1.2 1.73726 1.2 2.4V34H38.8V2.4C38.8 1.73726 38.2627 1.2 37.6 1.2ZM2.4 0C1.07452 0 0 1.07452 0 2.4V34.4C0 34.8418 0.358171 35.2 0.799999 35.2H39.2C39.6418 35.2 40 34.8418 40 34.4V2.4C40 1.07452 38.9255 0 37.6 0H2.4Z" fill=""/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2 6.4H0.8V34.4H39.2V6.4ZM8 11.2H32V12.8H8V11.2ZM13.6 17.6H32V19.2H13.6V17.6ZM10.4 17.6H8V19.2H10.4V17.6ZM13.6 22.4H32V24H13.6V22.4ZM10.4 22.4H8V24H10.4V22.4ZM13.6 27.2H32V28.8H13.6V27.2ZM10.4 27.2H8V28.8H10.4V27.2Z" fill=""/>
+              </svg>
+              <p>Розрахунки за електроенергію</p>
+            </li>
+            <li class="sidebar_list" id="sidebar_el_amount" onclick="showProfileInfo(26)">
+              <svg class="sidebar_icons" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.0133 15.5556C13.0133 12 10.3111 8.88889 8.96001 7.77778C9.38665 10.8889 8.10665 14.4444 7.25332 15.1111C7.25332 13.5556 6.61335 13.1111 5.75999 12C5.75999 13.5556 3.62666 16 3.62666 17.7778C3.62666 19.5556 4.26669 20.8889 5.33332 22C2.98666 22 0 18.6667 0 15.1111C0 12 2.13336 8.88889 4.26669 5.55555C5.33332 3.88893 5.97332 2.2222 6.61335 0C14.5066 5.99997 16 10 16 15.5556C16 20 12.16 21.7037 10.24 22C11.1645 21.3333 13.0133 19.1111 13.0133 15.5556Z" fill=""/>
+              </svg>
+              <p>Обсяг споживання електроенергії</p>
+            </li>
+            <li class="sidebar_list" id="sidebar_el_graf" onclick="showProfileInfo(27)">
+              <svg class="sidebar_icons" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 27.6091C0 26.605 0.814028 25.7909 1.81818 25.7909H5.45455C6.4587 25.7909 7.27273 26.605 7.27273 27.6091V40.3364H0V27.6091Z" fill=""/>
+              <path d="M10.9091 20.3364C10.9091 19.3322 11.7231 18.5182 12.7273 18.5182H16.3636C17.3678 18.5182 18.1818 19.3322 18.1818 20.3364V40.3364H10.9091V20.3364Z" fill=""/>
+              <path d="M21.8182 23.9727C21.8182 22.9686 22.6322 22.1546 23.6364 22.1546H27.2727C28.2769 22.1546 29.0909 22.9686 29.0909 23.9727V40.3364H21.8182V23.9727Z" fill=""/>
+              <path d="M32.7273 16.7C32.7273 15.6959 33.5413 14.8818 34.5455 14.8818H38.1818C39.186 14.8818 40 15.6959 40 16.7V40.3364H32.7273V16.7Z" fill=""/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1395 4.90386L25.6214 14.5023L14.6324 9.00778L4.30859 15.8903L2.96387 13.8732L14.4582 6.21031L25.2874 11.6249L35.5875 3.0415L37.1395 4.90386Z" fill=""/>
+              <path d="M7.27273 14.8818C7.27273 16.8901 5.64467 18.5182 3.63636 18.5182C1.62806 18.5182 0 16.8901 0 14.8818C0 12.8735 1.62806 11.2455 3.63636 11.2455C5.64467 11.2455 7.27273 12.8735 7.27273 14.8818Z" fill="#EB4B18"/>
+              <path d="M18.1818 7.60909C18.1818 9.6174 16.5538 11.2455 14.5455 11.2455C12.5371 11.2455 10.9091 9.6174 10.9091 7.60909C10.9091 5.60078 12.5371 3.97273 14.5455 3.97273C16.5538 3.97273 18.1818 5.60078 18.1818 7.60909Z" fill="#EB4B18"/>
+              <path d="M29.0909 13.0636C29.0909 15.0719 27.4629 16.7 25.4545 16.7C23.4462 16.7 21.8182 15.0719 21.8182 13.0636C21.8182 11.0553 23.4462 9.42727 25.4545 9.42727C27.4629 9.42727 29.0909 11.0553 29.0909 13.0636Z" fill="#EB4B18"/>
+              <path d="M40 3.97273C40 5.98104 38.3719 7.60909 36.3636 7.60909C34.3553 7.60909 32.7273 5.98104 32.7273 3.97273C32.7273 1.96442 34.3553 0.336365 36.3636 0.336365C38.3719 0.336365 40 1.96442 40 3.97273Z" fill="#EB4B18"/>
+              </svg>
+              <p>Графіки</p>
+            </li>
           </ul>
         </li>
-        <li class="sidebar_sublist" id="sidebar_gas"><i class="fas fa-fire-alt"></i><span onclick="openSubMenu(2)" class="subbar_span"><p class="subbar_title">природний газ</p></span>
+        <li class="sidebar_sublist" id="sidebar_gas">
+          <svg onclick="openSubMenu(2)" class="sidebar_icons" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.0133 15.5556C13.0133 12 10.3111 8.88889 8.96001 7.77778C9.38665 10.8889 8.10665 14.4444 7.25332 15.1111C7.25332 13.5556 6.61335 13.1111 5.75999 12C5.75999 13.5556 3.62666 16 3.62666 17.7778C3.62666 19.5556 4.26669 20.8889 5.33332 22C2.98666 22 0 18.6667 0 15.1111C0 12 2.13336 8.88889 4.26669 5.55555C5.33332 3.88893 5.97332 2.2222 6.61335 0C14.5066 5.99997 16 10 16 15.5556C16 20 12.16 21.7037 10.24 22C11.1645 21.3333 13.0133 19.1111 13.0133 15.5556Z" fill=""/>
+          </svg>
+          <span onclick="openSubMenu(2)" class="subbar_span"><p class="subbar_title">природний газ</p></span>
           <ul class="sidebar_sub_ul" id="sub_ul2">
-            <li class="sidebar_list" id="sidebar_gas_price" onclick="showProfileInfo(28)"><i class="fa fa-usd-circle"></i><p>Відпускні ціни на газ</p></li>
-            <li class="sidebar_list" id="sidebar_gas_calc" onclick="showProfileInfo(29)"><i class="far fa-list-alt"></i><p>Розрахунки за газ</p></li>
-            <li class="sidebar_list" id="sidebar_gas_amount" onclick="showProfileInfo(210)"><i class="fab fa-free-code-camp"></i><p>Обсяг споживання газу</p></li>
-            <li class="sidebar_list" id="sidebar_gas_graf" onclick="showProfileInfo(211)"><i class="fas fa-chart-bar"></i><p>Графіки</p></li>
+            <li class="sidebar_list" id="sidebar_gas_price" onclick="showProfileInfo(28)">
+              <svg class="sidebar_icons" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20 39.1111C30.5548 39.1111 39.1111 30.5548 39.1111 20C39.1111 9.44523 30.5548 0.888889 20 0.888889C9.44523 0.888889 0.888889 9.44523 0.888889 20C0.888889 30.5548 9.44523 39.1111 20 39.1111ZM20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill=""/>
+              <path d="M23.1905 24.5426C23.1905 23.8275 22.966 23.2387 22.5169 22.776C22.0678 22.3049 21.3194 21.8843 20.2716 21.5142C19.2238 21.1356 18.4088 20.7865 17.8267 20.4669C15.889 19.4154 14.9202 17.8591 14.9202 15.7981C14.9202 14.4017 15.3402 13.2534 16.1801 12.3533C17.02 11.4532 18.1593 10.919 19.598 10.7508V8H21.5938V10.776C23.0408 10.9863 24.1593 11.6088 24.9493 12.6435C25.7394 13.6698 26.1344 15.0074 26.1344 16.6562H23.1157C23.1157 15.5962 22.8786 14.7634 22.4046 14.1577C21.9389 13.5436 21.3028 13.2366 20.4961 13.2366C19.6978 13.2366 19.0741 13.4553 18.625 13.8927C18.1759 14.3302 17.9514 14.9569 17.9514 15.7729C17.9514 16.5047 18.1718 17.0936 18.6125 17.5394C19.0616 17.9769 19.8184 18.3933 20.8828 18.7886C21.9473 19.184 22.783 19.5499 23.3901 19.8864C23.9971 20.2229 24.5086 20.6099 24.9244 21.0473C25.3402 21.4763 25.6603 21.9727 25.8849 22.5363C26.1094 23.0999 26.2217 23.7603 26.2217 24.5173C26.2217 25.939 25.7892 27.0915 24.9244 27.9748C24.0678 28.858 22.8703 29.3796 21.3319 29.5394V32H19.3485V29.552C17.7019 29.367 16.4337 28.7697 15.5439 27.7603C14.6624 26.7508 14.2217 25.4132 14.2217 23.7476H17.2529C17.2529 24.8076 17.5148 25.6278 18.0387 26.2082C18.571 26.7886 19.3194 27.0789 20.284 27.0789C21.2321 27.0789 21.9514 26.8475 22.4421 26.3849C22.941 25.9222 23.1905 25.3081 23.1905 24.5426Z" fill=""/>
+              </svg>
+              <p>Відпускні ціни на газ</p>
+            </li>
+            <li class="sidebar_list" id="sidebar_gas_calc" onclick="showProfileInfo(29)">
+              <svg class="sidebar_icons" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.6 1.2H2.4C1.73726 1.2 1.2 1.73726 1.2 2.4V34H38.8V2.4C38.8 1.73726 38.2627 1.2 37.6 1.2ZM2.4 0C1.07452 0 0 1.07452 0 2.4V34.4C0 34.8418 0.358171 35.2 0.799999 35.2H39.2C39.6418 35.2 40 34.8418 40 34.4V2.4C40 1.07452 38.9255 0 37.6 0H2.4Z" fill=""/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2 6.4H0.8V34.4H39.2V6.4ZM8 11.2H32V12.8H8V11.2ZM13.6 17.6H32V19.2H13.6V17.6ZM10.4 17.6H8V19.2H10.4V17.6ZM13.6 22.4H32V24H13.6V22.4ZM10.4 22.4H8V24H10.4V22.4ZM13.6 27.2H32V28.8H13.6V27.2ZM10.4 27.2H8V28.8H10.4V27.2Z" fill=""/>
+              </svg>
+              <p>Розрахунки за газ</p>
+            </li>
+            <li class="sidebar_list" id="sidebar_gas_amount" onclick="showProfileInfo(210)">
+              <svg class="sidebar_icons" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5904 36.4649C13.2519 36.4649 13.7881 35.9369 13.7881 35.2855H16.1836C16.1836 35.9369 16.7198 36.4649 17.3813 36.4649C18.0428 36.4649 18.5791 35.9369 18.5791 35.2855H20.9745C20.9745 35.9369 21.5108 36.4649 22.1723 36.4649C22.8338 36.4649 23.37 35.9369 23.37 35.2855H25.7655C25.7655 35.9369 26.3018 36.4649 26.9632 36.4649C27.6247 36.4649 28.161 35.9369 28.161 35.2855H29.758C30.4242 35.2855 31.0427 35.4863 31.5546 35.8299C30.3568 36.6615 28.9595 37.6444 28.3606 38.0376L24.5678 39.6102L19.7768 40.2L14.7864 39.6102L11.1933 38.0376C10.1953 37.4479 9.19715 36.8581 7.99902 35.8299C8.5109 35.4863 9.12945 35.2855 9.79563 35.2855H11.3926C11.3926 35.9369 11.9289 36.4649 12.5904 36.4649Z" fill=""/>
+              <path d="M29.3586 26.0461C29.3586 32.9819 23.4365 34.1715 20.7748 33.9094C23.5693 33.1231 24.5679 29.9778 24.5679 27.6188C24.5679 25.2598 22.7711 19.1658 20.9747 18.7726C20.9747 24.8667 19.1781 25.653 18.3796 25.653C17.3813 25.653 16.6495 24.3424 16.1838 23.6872C15.5849 24.2114 14.7864 25.8287 14.7864 28.2085C14.7864 30.3709 16.1835 32.7299 18.3796 33.9094C13.7883 34.106 10.1949 30.9607 10.1949 26.2427C10.1948 22.1098 12.3907 18.7726 13.5885 17.0034C14.9219 15.0338 16.1838 12.6786 16.1835 10.7128C16.1834 10.3196 16.3829 9.53333 17.3812 9.53333C18.3796 9.53333 22.0217 12.5304 22.7711 13.2684C23.2381 13.7283 29.3586 19.1658 29.3586 26.0461Z" fill=""/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20 39.3111C30.5548 39.3111 39.1111 30.7548 39.1111 20.2C39.1111 9.64524 30.5548 1.0889 20 1.0889C9.44523 1.0889 0.888889 9.64524 0.888889 20.2C0.888889 30.7548 9.44523 39.3111 20 39.3111ZM20 40.2C31.0457 40.2 40 31.2457 40 20.2C40 9.15432 31.0457 0.200012 20 0.200012C8.9543 0.200012 0 9.15432 0 20.2C0 31.2457 8.9543 40.2 20 40.2Z" fill=""/>
+              </svg>
+              <p>Обсяг споживання газу</p>
+            </li>
+            <li class="sidebar_list" id="sidebar_gas_graf" onclick="showProfileInfo(211)">
+              <svg class="sidebar_icons" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 27.6091C0 26.605 0.814028 25.7909 1.81818 25.7909H5.45455C6.4587 25.7909 7.27273 26.605 7.27273 27.6091V40.3364H0V27.6091Z" fill=""/>
+              <path d="M10.9091 20.3364C10.9091 19.3322 11.7231 18.5182 12.7273 18.5182H16.3636C17.3678 18.5182 18.1818 19.3322 18.1818 20.3364V40.3364H10.9091V20.3364Z" fill=""/>
+              <path d="M21.8182 23.9727C21.8182 22.9686 22.6322 22.1546 23.6364 22.1546H27.2727C28.2769 22.1546 29.0909 22.9686 29.0909 23.9727V40.3364H21.8182V23.9727Z" fill=""/>
+              <path d="M32.7273 16.7C32.7273 15.6959 33.5413 14.8818 34.5455 14.8818H38.1818C39.186 14.8818 40 15.6959 40 16.7V40.3364H32.7273V16.7Z" fill=""/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1395 4.90386L25.6214 14.5023L14.6324 9.00778L4.30859 15.8903L2.96387 13.8732L14.4582 6.21031L25.2874 11.6249L35.5875 3.0415L37.1395 4.90386Z" fill=""/>
+              <path d="M7.27273 14.8818C7.27273 16.8901 5.64467 18.5182 3.63636 18.5182C1.62806 18.5182 0 16.8901 0 14.8818C0 12.8735 1.62806 11.2455 3.63636 11.2455C5.64467 11.2455 7.27273 12.8735 7.27273 14.8818Z" fill="#EB4B18"/>
+              <path d="M18.1818 7.60909C18.1818 9.6174 16.5538 11.2455 14.5455 11.2455C12.5371 11.2455 10.9091 9.6174 10.9091 7.60909C10.9091 5.60078 12.5371 3.97273 14.5455 3.97273C16.5538 3.97273 18.1818 5.60078 18.1818 7.60909Z" fill="#EB4B18"/>
+              <path d="M29.0909 13.0636C29.0909 15.0719 27.4629 16.7 25.4545 16.7C23.4462 16.7 21.8182 15.0719 21.8182 13.0636C21.8182 11.0553 23.4462 9.42727 25.4545 9.42727C27.4629 9.42727 29.0909 11.0553 29.0909 13.0636Z" fill="#EB4B18"/>
+              <path d="M40 3.97273C40 5.98104 38.3719 7.60909 36.3636 7.60909C34.3553 7.60909 32.7273 5.98104 32.7273 3.97273C32.7273 1.96442 34.3553 0.336365 36.3636 0.336365C38.3719 0.336365 40 1.96442 40 3.97273Z" fill="#EB4B18"/>
+              </svg>
+              <p>Графіки</p>
+            </li>
           </ul>
         </li>
       </ul>
@@ -104,16 +212,40 @@
       }
     }
 
+    var counter = 0;
     function showmenu() {
-      frame_inner.style.height = "100%";
-      frame_inner.style.background = "#2D3039";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/nav_logo.png" alt="logo"><a href="login.html" class="profile_link">особистий кабiнет</a><p class="nav_icon" onclick="closemenu();"></p>';
-    }
-
-    function closemenu() {
-      frame_inner.style.height = "155px";
-      frame_inner.style.background = "inherit";
-      nav1line.innerHTML = '<img class="top_logo" src="assets/images/header_logo.png" alt="logo"><a href="#" class="top_news_link">новини</a><p class="header_icon" onclick="showmenu()"><span id="s1"></span><span id="s2"></span><span id="s3"></span></p>';
+      counter+=1;
+      if (counter == 1) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "100%";
+        frame_inner.style.position = "fixed";
+        navnav.style.right = "40%";
+        nav_social_line.style.display = "flex";
+        frame_inner.style.background = "#2D3039";
+        nav1line_img.src = "assets/images/logo-menu.svg";
+        nav1line_link.innerHTML = "особистий кабiнет";
+        nav1line_link.href = "login.html";
+        nav1line_link.classList.add("profile_link");
+        nav1line_link.classList.remove("top_news_link");
+      } else if (counter == 2) {
+        s1.classList.toggle('line-cross');
+        s2.classList.toggle('line-fade-out');
+        s3.classList.toggle('line-cross');
+        frame_inner.style.height = "155px";
+        frame_inner.style.position = "absolute";
+        navnav.style.right = "-100%";
+        nav_social_line.style.display = "none";
+        frame_inner.style.background = "inherit";
+        nav1line_img.src = "assets/images/logo.svg";
+        nav1line_link.innerHTML = "новини";
+        nav1line_link.href = "#";
+        nav1line_link.classList.remove("profile_link");
+        nav1line_link.classList.add("top_news_link");
+        counter = 0;
+      }
+      //nav1line.innerHTML = '<a href="index.html" class="top_logo"><img src="assets/images/logo-menu.svg" alt="logo"></a><a href="login.html" class="profile_link">особистий кабiнет</a><span class="header_icon"><svg class="menu_close" onclick="closemenu();" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.06068 24.0606C0.474894 23.4748 0.474894 22.5251 1.06068 21.9393L21.6283 1.37172C22.214 0.785929 23.1638 0.785929 23.7496 1.37172C24.3354 1.9575 24.3354 2.90725 23.7496 3.49304L3.182 24.0606C2.59621 24.6464 1.64647 24.6464 1.06068 24.0606Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M1.06068 1.06068C1.64647 0.474894 2.55753 0.436207 3.09559 0.97427L24.5291 22.4078C25.0672 22.9458 25.0285 23.8569 24.4427 24.4427C23.8569 25.0285 22.9458 25.0672 22.4078 24.5291L0.97427 3.09559C0.436207 2.55753 0.474894 1.64647 1.06068 1.06068Z" /></svg></span>';
     }
 
     function showProfileInfo(tab) {
