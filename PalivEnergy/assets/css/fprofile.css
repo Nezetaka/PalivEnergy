@@ -402,7 +402,7 @@ ul {
   min-width: 90px;
   overflow-x: hidden;
   overflow-y: scroll;
-  transition: .1s ease-out;
+  transition: .2s ease-out;
 }
 
 #sidebar p {
@@ -415,6 +415,13 @@ ul {
 
 #sidebar.activesidebar {
   width: 8vw;
+}
+
+@media (max-width: 1400px){
+#sidebar.activesidebar {
+  width: 12vw;
+  min-width: 12vw;
+  }
 }
 
 #sidebar.activesidebar .sidebar_list p {
@@ -526,6 +533,13 @@ ul {
 
 .content_shift {
   padding-left: 28vw;
+  transition: .2s ease-out;
+}
+
+@media (max-width: 1400px){
+.content_shift {
+  padding-left: 32vw;
+  }
 }
 
 .profile_data {
